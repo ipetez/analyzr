@@ -7,7 +7,7 @@
 ```sh
 $ npm install -g grunt-cli
 ```
-+ Install Bower to manage this template dependencies(plugin, library etc)
++ Instalsl Bower to manage this template dependencies(plugin, library etc)
 ```sh
 $ npm install -g bower
 ```

@@ -1,4 +1,6 @@
-*copy this text. The go to http://dillinger.io/ and paste it inside the markdown section
+# analyzr
+
+An angularJS + nodeJS Admin dashboard that comprises of all the essential features you would want such as graphing visuals, account/profie settings, task manager and more.  It includes a lot of rich interactions and can be integrated with almost any platform.
 
 ### Prerequisite
 
@@ -18,7 +20,7 @@ $ npm install
 ```sh
 $ bower install
 ```
-+ Then you can run the Command Line Instruction available in analyzr. Just make sure that you **cd** to the analzyr folder.
++ Then you can run the Command Line Instruction available in analyzr. Just make sure that you **cd** to the analyzr folder.
 
 
 ### Command Line Instruction

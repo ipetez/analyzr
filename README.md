@@ -1,6 +1,7 @@
 # analyzr
 
 An angularJS + nodeJS Admin dashboard that comprises of all the essential features you would want such as graphing visuals, account/profie settings, task manager and more.  It includes a lot of rich interactions and can be integrated with almost any platform.
+![Alt text](/analyzr_pic.png?raw=true "Analyzr screenshot")
 
 ### Prerequisite
 

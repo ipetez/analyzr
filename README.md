@@ -18,7 +18,7 @@ $ npm install
 ```sh
 $ bower install
 ```
-+ Then you can run the Command Line Instruction available in Miveus. Just make sure that you **cd** to the Miveus folder.
++ Then you can run the Command Line Instruction available in analyzr. Just make sure that you **cd** to the analzyr folder.
 
 
 ### Command Line Instruction

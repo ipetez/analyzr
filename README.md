@@ -23,7 +23,7 @@ $ bower install
 + Then you can run the Command Line Instruction available in analyzr. Just make sure that you **cd** to the analyzr folder.
 
 
-### Command Line Instruction
+### Command Line Actions
 
 + Build temporary web server and enable auto reload. Good for development purpose
 ```sh

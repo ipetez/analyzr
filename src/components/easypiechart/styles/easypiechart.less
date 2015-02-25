@@ -1,0 +1,25 @@
+//
+// Easy pie chart
+// --------------------------------------------------
+
+// Core variables and mixins
+@import "../../../assets/styles/less/variables.less";
+@import "../../../assets/styles/less/mixins.less";
+
+
+// Flot tooltip
+// -------------------------
+.easypiechart {
+  display: inline-block;
+  position: relative;
+
+  > .meta {
+    position: absolute;
+    left: 15px;
+    right: 15px;
+  }
+
+  + .easypiechart {
+    margin-left: 15px;
+  }
+}

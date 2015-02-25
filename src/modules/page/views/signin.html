@@ -1,0 +1,75 @@
+<!-- add some space to the top -->
+<div class="visible-sm-block visible-md-block visible-lg-block" style="margin-top:3%;"></div>
+
+<!-- start: container -->
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 col-sm-6 col-md-offset-4 col-sm-offset-3">
+      <!-- start: top section -->
+      <div class="pt-lg pb-lg">
+        <div class="text-center">
+          <!-- brand -->
+          <a class="brand brand-lg mb-sm" href="">
+            <span class="brand-figure"></span>
+          </a>
+          <!--/ brand -->
+          <h3 class="fw-b text-muted">Analyzr.</h3>
+          <p class="text-muted fs-14 fw-sb">Sign in to your account</p>
+        </div>
+      </div>
+      <!--/ end: top section -->
+
+      <!-- start: form -->
+      <div class="panel">
+        <form class="panel-body form-horizontal">
+          <div class="form-group">
+            <div class="col-sm-12">
+              <a href="" class="btn btn-block btn-info"><span class="fa fa-twitter"></span> Sign with Twitter</a>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-md-12">
+              <h5 class="text-muted fw-sb text-center">-OR-</h5>
+            </div>
+          </div>
+          <div class="form-group form-stack">
+            <div class="col-md-12">
+              <input type="text" name="email" class="form-control input-lg fs-base" placeholder="your@email.com">
+              <div class="form-control-icon form-control-icon-right">
+                <input type="password" name="password" class="form-control input-lg fs-base" placeholder="your password">
+                <a ui-sref="minimal.page.lostpassword" class="the-icon ai ai-info-outline text-primary" title="Forgot password?"></a><!-- must below `form-control` -->
+              </div>
+            </div>
+          </div>
+          <div class="form-group mb-0">
+            <div class="col-xs-12">
+              <div class="box-layout">
+                <div class="col-xs-6 va-m">
+                  <div class="checkbox custom pt-xs">
+                    <label><input type="checkbox" value=""><span></span> Remember</label>
+                  </div>
+                </div>
+                <div class="col-xs-6 text-right va-m">
+                  <button type="button" class="btn btn-lg btn-primary">SIGN IN</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <!--/ end: form -->
+
+      <hr><!-- horizontal rule -->
+
+      <!-- start: bottom section -->
+      <div class="container-fluid">
+        <div class="text-center">
+          <p>Forgot your password? <a ui-sref="minimal.page.lostpassword" class="fw-sb">Click here</a></p>
+          <p class="nm">Don't have any account? <a ui-sref="minimal.page.signup" class="fw-sb">Sign Up</a></p>
+        </div>
+      </div>
+      <!--/ end: bottom section -->
+    </div>
+  </div>
+</div>
+<!--/ end: container -->

@@ -1,0 +1,93 @@
+//
+// Spinner
+// --------------------------------------------------
+
+@spinner-width: 46px;
+@spinner-height: 42px;
+@span-width: 8px;
+
+@keyframes reveal {
+  from { transform: scale(0.001); }
+  to { transform: scale(1); }
+}
+
+@keyframes slide {
+  to { transform: translateX(@span-width + (@span-width / 2)) }
+}
+
+.spinner-wrapper {
+  display: none;
+  position: absolute;
+  z-index: @footer-zindex - 2;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: fade(@body-bg-color, 50%)
+  }
+
+  &.show {
+    display: block;
+  }
+}
+
+.spinner {
+  display: inline-block;
+  position: fixed;
+  z-index: @footer-zindex - 1;
+  top: 50%;
+  margin-top: -@spinner-height / 2;
+  margin-left: -@spinner-width / 2;
+  background-color: white;
+  width: @spinner-width;
+  height: @spinner-height;
+  border-radius: @border-radius-base;
+  box-shadow: 0 1px 1px 1px rgba(0,0,0,0.08);
+
+  > .dot {
+    position: relative;
+    display: block;
+    height: @span-width;
+    width: @span-width * 4;
+    margin: ((@spinner-height - @span-width) / 2)  auto;
+
+    > span {
+      position: absolute;
+      width: @span-width;
+      height: @span-width;
+      border-radius: @span-width / 2;
+      animation-duration: 0.5s;
+      animation-timing-function: ease;
+      animation-iteration-count: infinite;
+
+      &:nth-of-type(1) {
+        animation-name: reveal;
+        left: 0;
+      }
+
+      &:nth-of-type(2) {
+        animation-name: slide;
+        left: 0;
+      }
+
+      &:nth-of-type(3) {
+        animation-name: slide;
+        left: @span-width + (@span-width / 2);
+      }
+
+      &:nth-of-type(4) {
+        animation-name: reveal;
+        animation-direction: reverse;
+        left: (@span-width + (@span-width / 2)) * 2;
+      }
+    }
+  }
+}

@@ -1,0 +1,48 @@
+//
+// Layout Content
+// --------------------------------------------------
+
+#app-content {
+  position: relative;
+  transition: transform .3s ease;
+
+  // content body
+  // -------------------------
+  > .content-body {
+    //position: relative;
+    width: 100%;
+    float: left;
+
+    // if `app-footer` is presented, add bottom padding
+    #app-footer ~& {
+      padding-bottom: @footer-height;
+    }
+
+    // if `app-header` is presented, add top padding
+    #app-header.navbar ~& {
+      padding-top: @header-height;
+    }
+  }
+}
+
+// breakpoint screen-sm and up
+// -------------------------
+@media (min-width: @screen-sm-min) {
+  #app-content {
+    // content body
+    // -------------------------
+    > .content-body {
+      #app-header.navbar ~& {
+        padding-top: @header-height-lg;
+      }
+    }
+
+    // if sidebar-left is presented, reset the left pos
+    .sidebar-left ~& {
+      margin-left: @sidebar-left-width;
+      .sidebar-left-collapse & {
+        margin-left: @sidebar-left-collapse-width;
+      }
+    }
+  }
+}

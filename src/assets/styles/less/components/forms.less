@@ -1,0 +1,324 @@
+//
+// Forms
+// --------------------------------------------------
+
+
+// Normalize non-controls
+// -------------------------
+label {
+  font-weight: 500;
+}
+
+// The form
+// -------------------------
+.form-control {
+  font-size: @font-size-base;
+  line-height: @line-height-base;
+  border-radius: @border-radius-base;
+  box-shadow: none;
+  transition: @border-color ease-in-out .15s;
+  .form-control-focus();
+}
+
+// Form control sizing
+// -------------------------
+.input-sm,
+.form-group-sm .form-control {
+  .input-size(28px; @padding-sm-vertical; @padding-sm-horizontal; @font-size-sm; @line-height-sm; @border-radius-base);
+}
+.input-lg,
+.form-group-lg .form-control {
+  .input-size(40px; @padding-lg-vertical; @padding-lg-horizontal; @font-size-lg; @line-height-lg; @border-radius-base);
+}
+
+// Stacked form
+// -------------------------
+.form-stack {
+  .form-control {
+    position: relative;
+    border-radius: 0;
+    // focus state
+    &:focus {
+      z-index: 1;
+    }
+    + .form-control,
+    + .form-control-icon {
+      margin-top: -1px;
+    }
+
+    // reset radius
+    &:first-child {
+      border-radius: @border-radius-base @border-radius-base 0 0;
+    }
+    &:last-child {
+      border-radius: 0 0 @border-radius-base @border-radius-base;
+    }
+
+    // input-lg reset radius
+    &.input-lg {
+      &:first-child {
+        border-radius: @border-radius-lg @border-radius-lg 0 0;
+      }
+      &:last-child {
+        border-radius: 0 0 @border-radius-lg @border-radius-lg;
+      }
+    }
+
+    // input-sm reset radius
+    &.input-sm {
+      &:first-child {
+        border-radius: @border-radius-sm @border-radius-sm 0 0;
+      }
+      &:last-child {
+        border-radius: 0 0 @border-radius-sm @border-radius-sm;
+      }
+    }
+  }
+  .form-control-icon {
+    &:first-child {
+      > .form-control {
+        border-radius: @border-radius-base @border-radius-base 0 0;
+        // input-lg reset radius
+        &.input-lg {
+          border-radius: @border-radius-lg @border-radius-lg 0 0;
+        }
+        // input-sm reset radius
+        &.input-sm {
+          border-radius: @border-radius-sm @border-radius-sm 0 0;
+        }
+      }
+    }
+    &:last-child {
+      > .form-control {
+        border-radius: 0 0 @border-radius-base @border-radius-base;
+        // input-lg reset radius
+        &.input-lg {
+          border-radius: 0 0 @border-radius-lg @border-radius-lg;
+        }
+        // input-lg reset radius
+        &.input-sm {
+          border-radius: 0 0 @border-radius-sm @border-radius-sm;
+        }
+      }
+    }
+    + .form-control-icon {
+      margin-top: -1px;
+    }
+  }
+}
+
+// Form with icon
+// -------------------------
+.form-control-icon {
+  position: relative;
+  .form-control {
+    padding-left: @input-height-base;
+    &.input-lg {
+      padding-left: @input-height-lg;
+      + .the-icon {
+        font-size: @font-size-lg;
+        line-height: @input-height-lg;
+        width: @input-height-lg;
+      }
+    }
+    &.input-sm {
+      padding-left: @input-height-sm;
+      + .the-icon {
+        font-size: @font-size-sm;
+        line-height: @input-height-sm;
+        width: @input-height-sm;
+      }
+    }
+  }
+  .the-icon {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    line-height: @input-height-base;
+    width: @input-height-base;
+    text-align: center;
+  }
+  &.form-control-icon-right {
+    .the-icon {
+      right: 0;
+      left: auto;
+    }
+    .form-control {
+      padding-left: @padding-base-horizontal;
+      padding-right: @input-height-base;
+      &.input-lg {
+        padding-left: @padding-lg-horizontal;
+        padding-right: @input-height-lg;
+      }
+      &.input-sm {
+        padding-left: @padding-sm-horizontal;
+        padding-right: @input-height-sm;
+      }
+    }
+  }
+}
+
+// Custom file input
+// -------------------------
+.btn-file {
+  position: relative;
+  overflow: hidden;
+}
+.btn-file input[type=file] {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  min-width: 100%;
+  min-height: 100%;
+  font-size: 999px;
+  text-align: right;
+  opacity: 0;
+  cursor: inherit;
+  display: block;
+}
+
+// Custom radio & checkbox
+// -------------------------
+.checkbox,
+.radio,
+.checkbox-inline,
+.radio-inline {
+  label {
+    font-weight: normal;
+  }
+
+  &[class*=" custom"],
+  &[class^="custom"] {
+    position: relative;
+    &.disabled {
+      label {
+        cursor: not-allowed;
+      }
+    }
+    label {
+      cursor: pointer;
+      padding-left: 24px;
+      input {
+        position: absolute;
+        opacity: 0;
+        + span {
+          display: inline-block;
+          vertical-align: top;
+          position: relative;
+          width: 16px;
+          height: 16px;
+          margin-left: -25px;
+          margin-right: 4px;
+          margin-top: 2px;
+          border: 1px solid rgba(0,0,0,0.2);
+        }
+        // disabled state
+        &:disabled {
+          + span {
+            opacity: 0.4;
+            &:hover {
+              cursor: not-allowed;
+            }
+          }
+        }
+        // checked state
+        &:checked {
+          + span {
+            border: 1px solid @color-blue-500;
+          }
+        }
+      }
+      // hover state
+      &:hover {
+        input {
+          + span {
+            border: 1px solid rgba(0,0,0,0.3);
+          }
+          &:checked {
+            + span {
+              border: 1px solid @color-blue-500;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// checkbox
+.checkbox,
+.checkbox-inline {
+  &[class*=" custom"],
+  &[class^="custom"] {
+    label {
+      input {
+        + span {
+          border-radius: @border-radius-base;
+          &:after {
+            position: absolute;
+            left: 0.135em;
+            top: 0.06em;
+            font-family: 'FontAwesome';
+            font-size: 11px;
+            line-height: 14px;
+            width: 14px;
+            content: "";
+            color: @color-blue-500;
+          }
+        }
+        // checked state
+        &:checked {
+          + span {
+            &:after {
+              content: "\f00c";
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// radio
+.radio,
+.radio-inline {
+  &[class*=" custom"],
+  &[class^="custom"] {
+    label {
+      input {
+        + span {
+          border-radius: 50%;
+          &:after {
+            content: "";
+            position: absolute;
+            left: 3px;
+            top: 3px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+          }
+        }
+        // checked state
+        &:checked {
+          + span {
+            &:after {
+              background-color: @color-blue-500;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// label reset
+.checkbox-inline,
+.radio-inline {
+  &[class*=" custom"],
+  &[class^="custom"] {
+    label {
+      padding-left: 4px;
+    }
+  }
+}

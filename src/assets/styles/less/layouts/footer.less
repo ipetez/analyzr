@@ -1,0 +1,40 @@
+//
+// Layout Footer
+// --------------------------------------------------
+
+#app-footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: @footer-zindex;
+  height: @footer-height;
+  line-height: @footer-height;
+  background-color: @footer-bg-color;
+  transition: transform .3s ease;
+
+  &:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 0;
+    top: -1px;
+    height: inherit;
+    border-top: 1px solid @border-color;
+  }
+}
+
+// breakpoint screen-sm and up
+// -------------------------
+@media (min-width: @screen-sm-min) {
+  #app-footer {
+    // if sidebar-left is presented, reset the left pos
+    .sidebar-left ~& {
+      left: @sidebar-left-width;
+      .sidebar-left-collapse & {
+        left: @sidebar-left-collapse-width;
+      }
+    }
+  }
+}

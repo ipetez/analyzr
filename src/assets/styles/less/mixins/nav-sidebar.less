@@ -1,0 +1,67 @@
+//
+// Sidebar nav variant
+// --------------------------------------------------
+
+.nav-sidebar-variants(@bgcolor) {
+  > .nav-group {
+    a {
+      color: fade(contrast(@bgcolor), 60%);
+      &:hover,
+      &:focus,
+      &:active {
+        outline: 0;
+        background-color: transparent;
+        color: fade(contrast(@bgcolor), 90%);
+      }
+
+      &.nav-toggle {
+        // border
+        &:before {
+          background-color: lighten(@bgcolor, 2%);
+        }
+
+        // bar
+        &:after {
+          background-color: @color-yellow-600;
+        }
+      }
+    }
+
+    // Active state
+    &.active {
+      .nav-toggle {
+        color: fade(contrast(@bgcolor), 90%);
+      }
+    }
+
+    // `nav-submenu`
+    > .nav-submenu {
+      background-color: darken(@bgcolor, 1.5%);
+
+      > li {
+        &.active,
+        &.open {
+          a {
+            color: fade(contrast(@bgcolor), 90%);
+          }
+        }
+      }
+    }
+  }
+
+  // nav-heading
+  // -------------------------
+  .nav-heading {
+    color: fade(contrast(@bgcolor), 35%);
+  }
+
+  // on sidebar collapse
+  // -------------------------
+  .sidebar-left-collapse & {
+    > .nav-group {
+      > .nav-submenu {
+        background-color: @bgcolor;
+      }
+    }
+  }
+}

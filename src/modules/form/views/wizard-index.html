@@ -1,0 +1,86 @@
+<!-- start: box layout -->
+<div class="box-layout">
+  <!-- start: left side -->
+  <div class="col-md-3 bg-white height-auto">
+    <div class="pr-lg pl-lg pt-md pb-md">
+      <h3 class="mb-sm">Registration</h3>
+      <p class="text-muted mb-lg">Register now while seats are available! It's a lifetime opportunity.</p>
+      <ul class="step">
+        <li>
+          <div ng-class="{ 'active': $state.includes('*.form.wizard.basic')}" class="steps">
+            <span class="steps-figure">1</span>
+            <span class="steps-text">Basic Information</span>
+          </div>
+        </li>
+        <li>
+          <div ng-class="{ 'active': $state.includes('*.form.wizard.medical')}" class="steps">
+            <span class="steps-figure">2</span>
+            <span class="steps-text">Medical History</span>
+          </div>
+        </li>
+        <li>
+          <div ng-class="{ 'active': $state.includes('*.form.wizard.suggestion')}" class="steps">
+            <span class="steps-figure">3</span>
+            <span class="steps-text">Your Suggestion</span>
+          </div>
+        </li>
+        <li>
+          <div ng-class="{ 'active': $state.includes('*.form.wizard.finish')}" class="steps">
+            <span class="steps-figure">4</span>
+            <span class="steps-text">Finish</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <hr class="nm visible-xs visible-sm"><!-- horizontal rule -->
+  <!--/ end: left side -->
+
+  <div class="col-md-9 bdr-l bg-auto height-auto">
+    <!-- start: page header -->
+    <div class="page-header">
+      <!-- basic info heading -->
+      <div class="box-layout" data-ng-show="$state.includes('*.form.wizard.basic')">
+        <div class="col-sm-12 va-m">
+          <h4>Basic Information</h4>
+          <p class="text-muted mb-0">Tell us something about yourself</p>
+        </div>
+      </div>
+      <!--/ basic info heading -->
+
+      <!-- medical info heading -->
+      <div class="box-layout" data-ng-show="$state.includes('*.form.wizard.medical')">
+        <div class="col-sm-12 va-m">
+          <h4 class="fw-sb">Participant Medical History</h4>
+          <p class="text-muted mb-0">Detail about your pass illness</p>
+        </div>
+      </div>
+      <!--/ medical info heading -->
+
+      <!-- suggestion heading -->
+      <div class="box-layout" data-ng-show="$state.includes('*.form.wizard.suggestion')">
+        <div class="col-sm-12 va-m">
+          <h4 class="fw-sb">Your Suggestion</h4>
+          <p class="text-muted mb-0">Please let us know what you think.</p>
+        </div>
+      </div>
+      <!--/ suggestion heading -->
+
+      <!-- finish heading -->
+      <div class="box-layout" data-ng-show="$state.includes('*.form.wizard.finish')">
+        <div class="col-sm-12 va-m">
+          <h4 class="fw-sb">Your Suggestion</h4>
+          <p class="text-muted mb-0">Please let us know what you think.</p>
+        </div>
+      </div>
+      <!--/ finish heading -->
+    </div>
+    <!--/ end: page header -->
+
+
+    <div class="container-fluid pt-md pb-md">
+      <div class="slide-down" data-ui-view></div>
+    </div>
+  </div>
+</div>
+<!--/ end: box layout -->

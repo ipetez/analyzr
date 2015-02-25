@@ -1,0 +1,52 @@
+//
+// Media objects
+// --------------------------------------------------
+
+.media {
+  // Proper spacing between instances of .media
+  position: relative;
+  margin-top: 0;
+  padding: 10px 15px;
+  border-bottom: 1px solid @border-color;
+
+  &:last-child {
+    border-bottom-width: 0;
+  }
+
+  // new state
+  &.media-new {
+    background-color: @color-gray-50;
+  }
+
+  // media alignment
+  .media-left,
+  .media.pull-left {
+    margin-right: 15px;
+  }
+  .media-right,
+  .media.pull-right {
+    margin-left: 15px;
+  }
+  .media-left,
+  .media-right {
+    min-width: 57px;
+    img,
+    .img-wrapper {
+      width: 42px;
+      height: 42px;
+    }
+  }
+
+  // media variation
+  &.media-sm {
+    .media-left,
+    .media-right {
+      min-width: 47px;
+      img,
+      .img-wrapper {
+        width: 32px;
+        height: 32px;
+      }
+    }
+  }
+}

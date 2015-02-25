@@ -1,0 +1,48 @@
+<!-- start: box-layout -->
+<div class="box-layout" data-ng-controller="fullCalendarCtrl">
+  <div class="col-md-3 bg-auto height-auto bdr-r-md bdr-b-sm bdr-b-xs">
+    <div class="pa-md">
+      <h3 class="mb-sm">Add Event</h3>
+      <p class="text-muted mb-lg">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      <form role="form">
+        <div class="form-group">
+          <label class="control-label">Event name</label>
+          <input type="text" class="form-control" placeholder="Event name">
+        </div>
+        <div class="form-group">
+          <label class="control-label">Event description</label>
+          <textarea class="form-control" placeholder="Event description" rows="3"></textarea>
+        </div>
+        <div class="form-group">
+          <label class="switch switch-sm switch-success">
+            <input type="checkbox">
+            <span class="switch"></span><span class="text ml-xs">All day event?</span>
+          </label>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="col-md-9 bg-white height-auto">
+    <!-- start: page header -->
+    <div class="page-header clearfix">
+      <div class="btn-group">
+        <button class="btn btn-default" data-ng-click="changeMonth('prev')"><i class="fa fa-chevron-left"></i></button>
+        <button class="btn btn-default" data-ng-click="changeMonth('today')">Today</button>
+        <button class="btn btn-default" data-ng-click="changeMonth('next')"><i class="fa fa-chevron-right"></i></button>
+      </div>
+      <div class="btn-group pull-right">
+        <button class="btn btn-default active" data-ng-click="changeView('month')" data-ng-model="calendarView" btn-radio="'month'">Month</button>
+        <button class="btn btn-default" data-ng-click="changeView('agendaWeek')" data-ng-model="calendarView" btn-radio="'week'">Week</button>
+        <button class="btn btn-default" data-ng-click="changeView('agendaDay')" data-ng-model="calendarView" btn-radio="'day'">Day</button>
+      </div>
+    </div>
+    <!--/ end: page header -->
+
+    <!-- start: panel -->
+    <div class="panel fullcalendar">
+      <div ng-model="eventSources" ui-calendar="options"></div>
+    </div>
+    <!--/ end: padder -->
+  </div>
+</div>
+<!--/ end: box-layout -->

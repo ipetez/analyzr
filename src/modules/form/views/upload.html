@@ -1,0 +1,153 @@
+<!-- start: page header -->
+<div class="page-header">
+  <div class="box-layout">
+    <div class="col-sm-6 va-m">
+      <h3>Form Upload</h3>
+    </div>
+    <div class="col-sm-6 va-m">
+      <ol class="breadcrumb pull-right-sm mb-0">
+        <li><a href="#">Form</a></li>
+        <li class="active">Upload</li>
+      </ol>
+    </div>
+  </div>
+</div>
+<!--/ end: page header -->
+
+<!-- start: padder -->
+<div class="pa-md">
+  <div class="row">
+    <div class="col-md-12">
+      <!-- alert -->
+      <div class="alert alert-warning">This is just an example of flow.js. No files are actually uploaded.</div>
+      <!--/ alert -->
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <!-- panel -->
+      <div class="panel flow-upload"
+      data-flow-init="{singleFile:true}"
+      data-flow-files-submitted="$flow.upload()"
+      >
+        <div class="panel-body">
+          <h4 class="mb-xs">Basic Uploader</h4>
+          <hr class="mnr-md mnl-md"><!-- horizontal rule -->
+          <div class="input-group">
+            <input type="text" class="form-control" readonly="">
+            <div class="input-group-btn">
+              <span class="btn btn-default btn-file" data-flow-btn><i class="fa fa-folder-open"></i> BROWSE</span>
+            </div>
+          </div>
+
+          <!-- file list -->
+          <div class="list-group mt-md mb-0" data-ng-show="$flow.files.length" data-ng-repeat="file in $flow.files">
+            <div class="box-layout list-group-item">
+              <div class="col-xs-2 va-m">
+                <span class="img-wrapper img-rounded" style="width:50px;"><img flow-img="file" alt=""></span>
+              </div>
+              <div class="col-xs-5 va-m"><strong>{{file.name}}</strong> - {{file.size}} bytes</div>
+              <div class="col-xs-5 va-m">
+                <div class="progress progress-sm nm">
+                  <div class="progress-bar" ng-style="{width: (file.progress() * 100) + '%'}"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--/ file list -->
+        </div>
+      </div>
+      <!--/ panel -->
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <!-- panel -->
+      <div class="panel flow-upload"
+      data-flow-init
+      data-flow-files-submitted="$flow.upload()"
+      >
+        <div class="panel-body">
+          <h4 class="mb-xs">Drag and Drop</h4>
+          <hr class="mnr-md mnl-md"><!-- horizontal rule -->
+          <div class="flow-drop text-center" data-flow-drop>
+            <h4 class="fw-sb mb-md">Drag And Drop your file here</h4>
+            <span class="btn btn-primary mb-sm" data-flow-btn><i class="fa fa-folder-open"></i> BROWSE</span>
+            <p class="text-muted mb-0">Accept any files :)</p>
+          </div>
+        </div>
+        <table class="table" data-ng-show="$flow.files.length">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>File name</th>
+              <th>Size</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-ng-repeat="file in $flow.files">
+              <td width="10px">{{$index+1}}</td>
+              <td><div class="ellipsis" style="width:150px;">{{file.name}}</div></td>
+              <td>{{file.size}} bytes</td>
+              <td width="100px">
+                <div class="progress progress-sm nm">
+                  <div class="progress-bar" ng-style="{width: (file.progress() * 100) + '%'}"></div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!--/ panel -->
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <!-- panel -->
+      <div class="panel flow-upload mb-0"
+      data-flow-init
+      data-flow-files-submitted="$flow.upload()"
+      flow-file-added="!!{png:1,jpg:1,jpeg:1}[$file.getExtension()]"
+      >
+        <div class="panel-body">
+          <h4 class="mb-xs">Gallery Upload</h4>
+          <hr class="mnr-md mnl-md"><!-- horizontal rule -->
+          <div class="flow-drop text-center" data-flow-drop>
+            <h4 class="fw-sb mb-md">Drag And Drop your file here</h4>
+            <div class="clearfix mb-sm">
+              <span class="btn btn-primary" data-flow-btn><i class="fa fa-file-image-o"></i> UPLOAD IMAGES</span>
+              &nbsp;&nbsp;<i class="fw-sb text-muted">OR</i>&nbsp;&nbsp;
+              <span class="btn btn-default" flow-btn flow-directory ng-show="$flow.supportDirectory"><i class="fa fa-folder-open"></i> UPLOAD FOLDER</span>
+            </div>
+            <p class="text-muted mb-0">Accept only *.jpg and *.png files :)</p>
+          </div>
+        </div>
+        <!-- start: thumbnail row -->
+        <div class="pa-md">
+          <div class="row">
+            <div class="col-sm-6 col-md-3" ng-repeat="file in $flow.files">
+              <!-- thumbnail -->
+              <div class="thumbnail" ng-show="$flow.files.length">
+                <img flow-img="file" style="height:150px;">
+                <div class="caption">
+                  <h4 class="ellipsis mb-xs">{{file.name}}</h4>
+                  <div class="progress progress-sm nm">
+                    <div class="progress-bar" ng-style="{width: (file.progress() * 100) + '%'}"></div>
+                  </div>
+                </div>
+              </div>
+              <!--/ thumbnail -->
+            </div>
+          </div>
+        </div>
+        <!-- start: thumbnail row -->
+      </div>
+      <!--/ panel -->
+    </div>
+  </div>
+</div>
+<!--/ end: padder -->

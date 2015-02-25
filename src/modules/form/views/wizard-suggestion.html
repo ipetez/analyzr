@@ -1,0 +1,47 @@
+<!-- start: suggestion form -->
+<form name="formWizard" novalidate data-ng-submit="$state.go('default.form.wizard.finish')"><!-- replace data-ng-submit expression with your controller logic -->
+  <div class="form-group mb-0">
+    <label class="control-label">Which service area do you have a suggestion for?</label>
+    <div class="radio custom-info">
+      <label>
+        <input type="radio" name="areaSuggestion" value="1" checked>
+        <span></span> Admissions
+      </label>
+    </div>
+    <div class="radio custom-info">
+      <label>
+        <input type="radio" name="areaSuggestion" value="2">
+        <span></span> Health Services
+      </label>
+    </div>
+    <div class="radio custom-info">
+      <label>
+        <input type="radio" name="areaSuggestion" value="3">
+        <span></span> Community Services
+      </label>
+    </div>
+  </div>
+  <hr class="mnr-md mnl-md"><!-- horizontal line -->
+
+  <div class="form-group mb-0" data-ng-class="{ 'has-error': formWizard.subject.$dirty && formWizard.subject.$invalid }">
+    <label class="control-label">Subject <span class="text-danger">*</span></label>
+    <input type="text" class="form-control" name="subject" data-ng-model="subject" required>
+    <p class="help-block text-danger fs-12 mb-0" data-ng-show="formWizard.subject.$dirty && formWizard.subject.$invalid">- Fill in your suggestion subject</p>
+  </div>
+  <hr class="mnr-md mnl-md"><!-- horizontal line -->
+
+  <div class="form-group mb-0" data-ng-class="{ 'has-error': formWizard.messages.$dirty && formWizard.messages.$invalid }">
+    <label class="control-label">Message <span class="text-danger">*</span></label>
+    <textarea class="form-control" rows="5" name="messages" data-ng-model="messages" required></textarea>
+    <p class="help-block text-danger fs-12 mb-0" data-ng-show="formWizard.messages.$dirty && formWizard.messages.$invalid">- Fill in your messages subject</p>
+  </div>
+  <hr class="mnr-md mnl-md"><!-- horizontal line -->
+
+  <!-- Buttons -->
+  <div class="clearfix">
+    <a ui-sref="default.form.wizard.medical" class="btn btn-primary"><span class="fa fa-long-arrow-left"></span> Back</a>
+    <button type="submit" class="btn btn-success pull-right" data-ng-disabled="formWizard.$invalid">Finish <span class="fa fa-check"></span></button>
+  </div>
+  <!--/ Buttons -->
+</form>
+<!--/ end: suggestion form -->

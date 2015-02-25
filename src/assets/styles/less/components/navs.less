@@ -1,0 +1,243 @@
+//
+// Navs
+// --------------------------------------------------
+
+.nav {
+  > li {
+    > a {
+      color: lighten(@text-color, 10%);
+
+      &:hover,
+      &:focus {
+        color: @text-color;
+      }
+    }
+  }
+
+  > .nav-heading {
+    padding: 5px 15px;
+    color: @secondary-text-color;
+    font-size: 11px;
+    font-weight: 700;
+  }
+}
+
+// Nav sidebar
+// -------------------------
+
+@nav-toggle-padding-left: 20px;
+@nav-toggle-padding-right: 20px;
+@nav-toggle-figure-width: 40px;
+
+.nav-sidebar {
+  margin: 10px 0;
+  > .nav-group {
+    a {
+      display: table;
+      table-layout: fixed;
+      width: 100%;
+      text-decoration: none;
+      line-height: 28px;
+      .figure,
+      .text,
+      .number,
+      .arrow {
+        position: relative;
+        display: table-cell;
+        vertical-align: middle;
+      }
+
+      // figure
+      // -------------------------
+      .figure {
+        width: @nav-toggle-figure-width;
+        &.figure-left {
+          text-align: left;
+        }
+        &.figure-right {
+          text-align: right;
+        }
+        &.arrow {
+          font-family: 'appicon';
+          font-size: 18px;
+          font-style: normal;
+          &:after {
+            position: relative;
+            right: -6px;
+            content: "\e7c3";
+          }
+        }
+      }
+
+      // nav toggle
+      // -------------------------
+      &.nav-toggle {
+        padding: 0;
+        padding-left: @nav-toggle-padding-left;
+        padding-right: @nav-toggle-padding-right;
+        line-height: 46px;
+
+        .figure {
+          &.icon {
+            font-size: 24px;
+          }
+        }
+        .text {
+          width: 100%;
+          font-size: 14px;
+        }
+
+        &.no-icon {
+          &:before {
+            left: @nav-toggle-padding-left;
+          }
+        }
+
+        // border
+        &:before {
+          content: '';
+          position: absolute;
+          z-index: 1;
+          left: @nav-toggle-figure-width + @nav-toggle-padding-left;
+          right: 0;
+          bottom: 0;
+          height: 1px;
+          background-color: transparent;
+        }
+
+        // bar
+        &:after {
+          content: '';
+          position: absolute;
+          z-index: 1;
+          left: -4px;
+          top: 0;
+          bottom: 0;
+          width: 2px;
+          background-color: @sidebar-left-header-bg-color;
+          transition: left 0.2s ease-in-out;
+        }
+      }
+    }
+
+    // submenu
+    // -------------------------
+    > .nav-submenu {
+      display: none;
+      overflow: hidden;
+      list-style: none;
+      padding-left: 60px;
+      padding-right: 15px;
+
+      > li {
+        &:first-child {
+          padding-top: 10px;
+        }
+        &:last-child {
+          padding-bottom: 10px;
+        }
+      }
+    }
+
+    // active state
+    // -------------------------
+    &.active {
+      .nav-toggle {
+        .figure {
+          &.arrow {
+            &:after {
+              content: "\e7c1";
+            }
+          }
+        }
+
+        &:after {
+          left: 0;
+          transition: left 0.2s ease-in-out;
+        }
+      }
+
+      > .nav-submenu {
+        display: block;
+      }
+    }
+  }
+
+  // nav-heading
+  // -------------------------
+  > .nav-heading {
+    text-transform: uppercase;
+    padding: 8px 20px;
+  }
+
+  // on sidebar collapse
+  // -------------------------
+  .sidebar-left-collapse & {
+    > .nav-group {
+      a {
+        &.nav-toggle {
+          padding: 4px 0;
+          .text {
+            display: none;
+          }
+
+          .figure {
+            width: 100%;
+            &.icon {
+              text-align: center;
+              font-size: 24px;
+            }
+            &.figure-right {
+              display: none;
+            }
+          }
+
+          &:before {
+            left: 0;
+          }
+        }
+      }
+
+      > .nav-submenu {
+        display: none;
+        width: @sidebar-left-width - @sidebar-left-collapse-width;
+        position: absolute;
+        top: 0;
+        left: @sidebar-left-collapse-width;
+        padding: 15px;
+        border-top-right-radius: @border-radius-base;
+        border-bottom-right-radius: @border-radius-base;
+
+        > li {
+          &:first-child {
+            padding-top: 0;
+          }
+          &:last-child {
+            padding-bottom: 0;
+          }
+        }
+      }
+
+      &.hover,
+      &:hover {
+        > .nav-submenu {
+          display: block;
+        }
+      }
+    }
+
+    > .nav-heading {
+      display: none;
+    }
+  }
+}
+
+// Pills
+// -------------------------
+.nav-pills {
+  > li {
+    + li {
+      margin-left: 5px;
+    }
+  }
+}

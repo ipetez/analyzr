@@ -1,0 +1,140 @@
+<!-- start: navbar-nocollapse -->
+<div class="navbar-nocollapse clearfix">
+  <!-- start: left nav -->
+  <ul class="nav navbar-nav navbar-left">
+    <li class="visible-xs">
+      <a href="" data-ng-click="core.settings.sidebarLeftOpen = !core.settings.sidebarLeftOpen">
+        <i class="ai ai-menu fs-24 pos-t-5"></i>
+      </a>
+    </li>
+    <li class="hidden-xs">
+      <a href="" data-ng-click="core.settings.sidebarLeftCollapse = !core.settings.sidebarLeftCollapse">
+        <i class="ai fs-24 pos-t-5" ng-class="{'ai-arrow-forward':core.settings.sidebarLeftCollapse || core.screen.sm, 'ai-arrow-back':!core.settings.sidebarLeftCollapse || !core.screen.sm}"></i>
+      </a>
+    </li>
+  </ul>
+  <!--/ end: left nav -->
+
+  <!-- start: navbar form -->
+  <form class="navbar-form navbar-left" name="form-search" data-ng-class="{'open':core.settings.headerSearchForm}">
+    <div class="form-group">
+      <div class="form-control-icon form-control-icon-right">
+        <input type="search" class="form-control" placeholder="Search application...">
+        <span class="the-icon ai ai-search fs-18" data-ng-hide="core.screen.xs"></span>
+        <a href="" class="the-icon ai ai-cancel fs-18" data-ng-show="core.screen.xs" data-ng-click="core.settings.headerSearchForm = !core.settings.headerSearchForm"></a>
+      </div>
+    </div>
+  </form>
+  <!--/ end: navbar form -->
+
+  <!-- start: right nav -->
+  <ul class="nav navbar-nav navbar-right">
+    <li class="hidden-sm hidden-xs">
+      <button type="button" class="btn btn-success"><i class="fa fa-plus"></i> Create New</button>
+    </li>
+    <li class="hidden-xs">
+      <a href="" full-screen>
+        <i class="ai fs-24 pos-t-5" data-ng-class="{'ai-fullscreen-exit':core.settings.fullScreen, 'ai-fullscreen':!core.settings.fullScreen}"></i>
+      </a>
+    </li>
+    <li class="dropdown dropdown-custom">
+      <a href="#" class="dropdown-toggle">
+        <span class="bullet bullet-danger"></span>
+        <span class="ai ai-notifications fs-22 pos-t-4"></span>
+      </a>
+      <div class="dropdown-menu np">
+        <!--<div class="box-layout pa-md bdr-b bg-gray-50">
+          <div class="col-xs-8 va-m"><h5 class="fw-sb text-muted">1 Unread Notification</h5></div>
+          <div class="col-xs-4 va-m text-right"><a href="" title="Clear all"><i class="ai ai-clear-all fs-24 pos-t-2"></i></a></div>
+        </div>-->
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">1 new notification</h4>
+          </div>
+          <div class="scroll-content" style="height:250px" slim-scroll="{height:'250px'}">
+            <!-- media list -->
+            <ul class="media-list">
+              <li class="media">
+                <div class="media-left text-muted">
+                  <i class="ai ai-receipt fs-24 pos-t-4 text-success"></i>
+                </div>
+                <div class="media-body">
+                  <span class="fs-10 text-muted pull-right">35M</span>
+                  <h5 class="media-heading mb-2 fw-sb"><a href="">You've receive a receipt</a></h5>
+                  <p class="mb-0"><span class="text-muted">Google has sent your monthly payment receipt...</span></p>
+                </div>
+              </li>
+              <li class="media">
+                <div class="media-left text-warning">
+                  <i class="ai ai-note-add fs-24 pos-t-4"></i>
+                </div>
+                <div class="media-body">
+                  <span class="fs-10 text-muted pull-right">2H</span>
+                  <h5 class="media-heading mb-2 fw-sb"><a href="">Readme.md added!</a></h5>
+                  <p class="mb-0"><span class="text-muted">Your Github readme file is successfuly added...</span></p>
+                </div>
+              </li>
+              <li class="media">
+                <a href="" class="media-left pt-xs">
+                  <span class="img-wrapper img-rounded">
+                    <img src="assets/images/avatar/avatar9.jpg">
+                  </span>
+                </a>
+                <div class="media-body">
+                  <span class="fs-10 text-muted pull-right">1H</span>
+                  <h5 class="media-heading mb-2 fw-sb"><a href="">Lunch together?</a></h5>
+                  <p class="mb-0">Ashton Cooley - <span class="text-muted">Nam porttitor scelerisque neque. Nullam nisl...</span></p>
+                </div>
+              </li>
+              <li class="media media-new">
+                <a href="" class="media-left pt-xs">
+                  <span class="img-wrapper img-rounded">
+                    <img src="assets/images/avatar/avatar7.jpg">
+                  </span>
+                </a>
+                <div class="media-body">
+                  <span class="fs-10 text-muted pull-right">5H</span>
+                  <h5 class="media-heading mb-2 fw-sb"><a href=""><span class="bullet bullet-success"></span> Angular is awesome</a></h5>
+                  <p class="mb-0">Brendan Dickerson - <span class="text-muted">Cras pellente. Sed dictum. Proin eget odio...</span></p>
+                </div>
+              </li>
+              <li class="media">
+                <a href="" class="media-left pt-xs">
+                  <span class="img-wrapper img-rounded">
+                    <img src="assets/images/avatar/avatar6.jpg">
+                  </span>
+                </a>
+                <div class="media-body">
+                  <span class="fs-10 text-muted pull-right">1D</span>
+                  <h5 class="media-heading mb-2 fw-sb"><a href="">Another job offer</a></h5>
+                  <p class="mb-0">Joel Bowen - <span class="text-muted">Donec egestas. Duis ac arcu. Nunc mauris...</span></p>
+                </div>
+              </li>
+            </ul>
+            <!--/ media list -->
+          </div>
+        </div>
+      </div>
+    </li>
+    <li class="visible-xs">
+      <a href="" class="dropdown-toggle" data-ng-click="core.settings.headerSearchForm = !core.settings.headerSearchForm">
+        <i class="ai ai-search fs-22 pos-t-4"></i>
+      </a>
+    </li>
+    <li class="dropdown">
+      <a href="" class="dropdown-toggle">
+        <span class="img-wrapper img-rounded"><img src="assets/images/avatar/avatar2.jpg" alt=""></span>
+        <span class="text fw-sb ml-xs hidden-xs">Ike P</span>
+        <span class="caret"></span>
+      </a>
+      <ul class="dropdown-menu">
+        <li><a ui-sref="default.setting.profile"><i class="ai ai-person fs-16 pos-t-1 mr-xs"></i> Profile</a></li>
+        <li><a href=""><i class="ai ai-info-outline fs-16 pos-t-1 mr-xs"></i> Help</a></li>
+        <li class="divider"></li>
+        <li><a ui-sref="minimal.page.signin"><i class="ai ai-lock fs-16 pos-t-1 mr-xs"></i> Logout</a></li>
+      </ul>
+    </li>
+  </ul>
+  <!--/ end: right nav -->
+</div>
+<!--/ end: navbar-nocollapse -->

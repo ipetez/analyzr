@@ -1,0 +1,2296 @@
+@font-face {
+  font-family: 'appicon';
+  src: url('@{icon-font-path}appicon.eot');
+  src: url('@{icon-font-path}appicon.eot') format('embedded-opentype'),
+       url('@{icon-font-path}appicon.woff') format('woff'),
+       url('@{icon-font-path}appicon.ttf') format('truetype'),
+       url('@{icon-font-path}appicon.svg') format('svg');
+}
+
+.ai {
+  position: relative;
+  display: inline-block;
+  font-family: 'appicon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  &.ai-3d-rotation:before {
+    content: "\e600";
+  }
+  &.ai-accessibility:before {
+    content: "\e601";
+  }
+  &.ai-account-balance:before {
+    content: "\e602";
+  }
+  &.ai-account-balance-wallet:before {
+    content: "\e603";
+  }
+  &.ai-account-box:before {
+    content: "\e604";
+  }
+  &.ai-account-child:before {
+    content: "\e605";
+  }
+  &.ai-account-circle:before {
+    content: "\e606";
+  }
+  &.ai-add-shopping-cart:before {
+    content: "\e607";
+  }
+  &.ai-alarm:before {
+    content: "\e608";
+  }
+  &.ai-alarm-add:before {
+    content: "\e609";
+  }
+  &.ai-alarm-off:before {
+    content: "\e60a";
+  }
+  &.ai-alarm-on:before {
+    content: "\e60b";
+  }
+  &.ai-android:before {
+    content: "\e60c";
+  }
+  &.ai-announcement:before {
+    content: "\e60d";
+  }
+  &.ai-aspect-ratio:before {
+    content: "\e60e";
+  }
+  &.ai-assessment:before {
+    content: "\e60f";
+  }
+  &.ai-assignment:before {
+    content: "\e610";
+  }
+  &.ai-assignment-ind:before {
+    content: "\e611";
+  }
+  &.ai-assignment-late:before {
+    content: "\e612";
+  }
+  &.ai-assignment-return:before {
+    content: "\e613";
+  }
+  &.ai-assignment-returned:before {
+    content: "\e614";
+  }
+  &.ai-assignment-turned-in:before {
+    content: "\e615";
+  }
+  &.ai-autorenew:before {
+    content: "\e616";
+  }
+  &.ai-backup:before {
+    content: "\e617";
+  }
+  &.ai-book:before {
+    content: "\e618";
+  }
+  &.ai-bookmark:before {
+    content: "\e619";
+  }
+  &.ai-bookmark-outline:before {
+    content: "\e61a";
+  }
+  &.ai-bug-report:before {
+    content: "\e61b";
+  }
+  &.ai-cached:before {
+    content: "\e61c";
+  }
+  &.ai-class:before {
+    content: "\e61d";
+  }
+  &.ai-credit-card:before {
+    content: "\e61e";
+  }
+  &.ai-dashboard:before {
+    content: "\e61f";
+  }
+  &.ai-delete:before {
+    content: "\e620";
+  }
+  &.ai-description:before {
+    content: "\e621";
+  }
+  &.ai-dns:before {
+    content: "\e622";
+  }
+  &.ai-done:before {
+    content: "\e623";
+  }
+  &.ai-done-all:before {
+    content: "\e624";
+  }
+  &.ai-event:before {
+    content: "\e625";
+  }
+  &.ai-exit-to-app:before {
+    content: "\e626";
+  }
+  &.ai-explore:before {
+    content: "\e627";
+  }
+  &.ai-extension:before {
+    content: "\e628";
+  }
+  &.ai-face-unlock:before {
+    content: "\e629";
+  }
+  &.ai-favorite:before {
+    content: "\e62a";
+  }
+  &.ai-favorite-outline:before {
+    content: "\e62b";
+  }
+  &.ai-find-in-page:before {
+    content: "\e62c";
+  }
+  &.ai-find-replace:before {
+    content: "\e62d";
+  }
+  &.ai-flip-to-back:before {
+    content: "\e62e";
+  }
+  &.ai-flip-to-front:before {
+    content: "\e62f";
+  }
+  &.ai-get-app:before {
+    content: "\e630";
+  }
+  &.ai-grade:before {
+    content: "\e631";
+  }
+  &.ai-group-work:before {
+    content: "\e632";
+  }
+  &.ai-help:before {
+    content: "\e633";
+  }
+  &.ai-highlight-remove:before {
+    content: "\e634";
+  }
+  &.ai-history:before {
+    content: "\e635";
+  }
+  &.ai-home:before {
+    content: "\e636";
+  }
+  &.ai-https:before {
+    content: "\e637";
+  }
+  &.ai-info:before {
+    content: "\e638";
+  }
+  &.ai-info-outline:before {
+    content: "\e639";
+  }
+  &.ai-input:before {
+    content: "\e63a";
+  }
+  &.ai-invert-colors:before {
+    content: "\e63b";
+  }
+  &.ai-label:before {
+    content: "\e63c";
+  }
+  &.ai-label-outline:before {
+    content: "\e63d";
+  }
+  &.ai-language:before {
+    content: "\e63e";
+  }
+  &.ai-launch:before {
+    content: "\e63f";
+  }
+  &.ai-list:before {
+    content: "\e640";
+  }
+  &.ai-lock:before {
+    content: "\e641";
+  }
+  &.ai-lock-open:before {
+    content: "\e642";
+  }
+  &.ai-lock-outline:before {
+    content: "\e643";
+  }
+  &.ai-loyalty:before {
+    content: "\e644";
+  }
+  &.ai-markunread-mailbox:before {
+    content: "\e645";
+  }
+  &.ai-note-add:before {
+    content: "\e646";
+  }
+  &.ai-open-in-browser:before {
+    content: "\e647";
+  }
+  &.ai-open-in-new:before {
+    content: "\e648";
+  }
+  &.ai-open-with:before {
+    content: "\e649";
+  }
+  &.ai-pageview:before {
+    content: "\e64a";
+  }
+  &.ai-payment:before {
+    content: "\e64b";
+  }
+  &.ai-perm-camera-m:before {
+    content: "\e64c";
+  }
+  &.ai-perm-contact-cal:before {
+    content: "\e64d";
+  }
+  &.ai-perm-data-setting:before {
+    content: "\e64e";
+  }
+  &.ai-perm-device-info:before {
+    content: "\e64f";
+  }
+  &.ai-perm-identity:before {
+    content: "\e650";
+  }
+  &.ai-perm-media:before {
+    content: "\e651";
+  }
+  &.ai-perm-phone-msg:before {
+    content: "\e652";
+  }
+  &.ai-perm-scan-wifi:before {
+    content: "\e653";
+  }
+  &.ai-picture-in-picture:before {
+    content: "\e654";
+  }
+  &.ai-polymer:before {
+    content: "\e655";
+  }
+  &.ai-print:before {
+    content: "\e656";
+  }
+  &.ai-query-builder:before {
+    content: "\e657";
+  }
+  &.ai-question-answer:before {
+    content: "\e658";
+  }
+  &.ai-receipt:before {
+    content: "\e659";
+  }
+  &.ai-redeem:before {
+    content: "\e65a";
+  }
+  &.ai-reorder:before {
+    content: "\e65b";
+  }
+  &.ai-report-problem:before {
+    content: "\e65c";
+  }
+  &.ai-restore:before {
+    content: "\e65d";
+  }
+  &.ai-room:before {
+    content: "\e65e";
+  }
+  &.ai-schedule:before {
+    content: "\e65f";
+  }
+  &.ai-search:before {
+    content: "\e660";
+  }
+  &.ai-settings:before {
+    content: "\e661";
+  }
+  &.ai-settings-applications:before {
+    content: "\e662";
+  }
+  &.ai-settings-backup-restore:before {
+    content: "\e663";
+  }
+  &.ai-settings-bluetooth:before {
+    content: "\e664";
+  }
+  &.ai-settings-cell:before {
+    content: "\e665";
+  }
+  &.ai-settings-display:before {
+    content: "\e666";
+  }
+  &.ai-settings-ethernet:before {
+    content: "\e667";
+  }
+  &.ai-settings-input-antenna:before {
+    content: "\e668";
+  }
+  &.ai-settings-input-component:before {
+    content: "\e669";
+  }
+  &.ai-settings-input-composite:before {
+    content: "\e66a";
+  }
+  &.ai-settings-input-hdmi:before {
+    content: "\e66b";
+  }
+  &.ai-settings-input-svideo:before {
+    content: "\e66c";
+  }
+  &.ai-settings-overscan:before {
+    content: "\e66d";
+  }
+  &.ai-settings-phone:before {
+    content: "\e66e";
+  }
+  &.ai-settings-power:before {
+    content: "\e66f";
+  }
+  &.ai-settings-remote:before {
+    content: "\e670";
+  }
+  &.ai-settings-voice:before {
+    content: "\e671";
+  }
+  &.ai-shop:before {
+    content: "\e672";
+  }
+  &.ai-shop-two:before {
+    content: "\e673";
+  }
+  &.ai-shopping-basket:before {
+    content: "\e674";
+  }
+  &.ai-shopping-cart:before {
+    content: "\e675";
+  }
+  &.ai-speaker-notes:before {
+    content: "\e676";
+  }
+  &.ai-spellcheck:before {
+    content: "\e677";
+  }
+  &.ai-star-rate:before {
+    content: "\e678";
+  }
+  &.ai-stars:before {
+    content: "\e679";
+  }
+  &.ai-store:before {
+    content: "\e67a";
+  }
+  &.ai-subject:before {
+    content: "\e67b";
+  }
+  &.ai-supervisor-account:before {
+    content: "\e67c";
+  }
+  &.ai-swap-horiz:before {
+    content: "\e67d";
+  }
+  &.ai-swap-vert:before {
+    content: "\e67e";
+  }
+  &.ai-swap-vert-circle:before {
+    content: "\e67f";
+  }
+  &.ai-system-update-tv:before {
+    content: "\e680";
+  }
+  &.ai-tab:before {
+    content: "\e681";
+  }
+  &.ai-tab-unselected:before {
+    content: "\e682";
+  }
+  &.ai-theaters:before {
+    content: "\e683";
+  }
+  &.ai-thumb-down:before {
+    content: "\e684";
+  }
+  &.ai-thumb-up:before {
+    content: "\e685";
+  }
+  &.ai-thumbs-up-down:before {
+    content: "\e686";
+  }
+  &.ai-toc:before {
+    content: "\e687";
+  }
+  &.ai-today:before {
+    content: "\e688";
+  }
+  &.ai-track-changes:before {
+    content: "\e689";
+  }
+  &.ai-translate:before {
+    content: "\e68a";
+  }
+  &.ai-trending-down:before {
+    content: "\e68b";
+  }
+  &.ai-trending-neutral:before {
+    content: "\e68c";
+  }
+  &.ai-trending-up:before {
+    content: "\e68d";
+  }
+  &.ai-turned-in:before {
+    content: "\e68e";
+  }
+  &.ai-turned-in-not:before {
+    content: "\e68f";
+  }
+  &.ai-verified-user:before {
+    content: "\e690";
+  }
+  &.ai-view-agenda:before {
+    content: "\e691";
+  }
+  &.ai-view-array:before {
+    content: "\e692";
+  }
+  &.ai-view-carousel:before {
+    content: "\e693";
+  }
+  &.ai-view-column:before {
+    content: "\e694";
+  }
+  &.ai-view-day:before {
+    content: "\e695";
+  }
+  &.ai-view-headline:before {
+    content: "\e696";
+  }
+  &.ai-view-list:before {
+    content: "\e697";
+  }
+  &.ai-view-module:before {
+    content: "\e698";
+  }
+  &.ai-view-quilt:before {
+    content: "\e699";
+  }
+  &.ai-view-stream:before {
+    content: "\e69a";
+  }
+  &.ai-view-week:before {
+    content: "\e69b";
+  }
+  &.ai-visibility:before {
+    content: "\e69c";
+  }
+  &.ai-visibility-off:before {
+    content: "\e69d";
+  }
+  &.ai-wallet-giftcard:before {
+    content: "\e69e";
+  }
+  &.ai-wallet-membership:before {
+    content: "\e69f";
+  }
+  &.ai-wallet-travel:before {
+    content: "\e6a0";
+  }
+  &.ai-work:before {
+    content: "\e6a1";
+  }
+  &.ai-error:before {
+    content: "\e6a2";
+  }
+  &.ai-warning:before {
+    content: "\e6a3";
+  }
+  &.ai-album:before {
+    content: "\e6a4";
+  }
+  &.ai-av-timer:before {
+    content: "\e6a5";
+  }
+  &.ai-closed-caption:before {
+    content: "\e6a6";
+  }
+  &.ai-equalizer:before {
+    content: "\e6a7";
+  }
+  &.ai-explicit:before {
+    content: "\e6a8";
+  }
+  &.ai-fast-forward:before {
+    content: "\e6a9";
+  }
+  &.ai-fast-rewind:before {
+    content: "\e6aa";
+  }
+  &.ai-games:before {
+    content: "\e6ab";
+  }
+  &.ai-hearing:before {
+    content: "\e6ac";
+  }
+  &.ai-high-quality:before {
+    content: "\e6ad";
+  }
+  &.ai-loop:before {
+    content: "\e6ae";
+  }
+  &.ai-mic:before {
+    content: "\e6af";
+  }
+  &.ai-mnone:before {
+    content: "\e6b0";
+  }
+  &.ai-moff:before {
+    content: "\e6b1";
+  }
+  &.ai-movie:before {
+    content: "\e6b2";
+  }
+  &.ai-my-library-add:before {
+    content: "\e6b3";
+  }
+  &.ai-my-library-books:before {
+    content: "\e6b4";
+  }
+  &.ai-my-library-mus:before {
+    content: "\e6b5";
+  }
+  &.ai-new-releases:before {
+    content: "\e6b6";
+  }
+  &.ai-not-interested:before {
+    content: "\e6b7";
+  }
+  &.ai-pause:before {
+    content: "\e6b8";
+  }
+  &.ai-pause-circle-fill:before {
+    content: "\e6b9";
+  }
+  &.ai-pause-circle-outline:before {
+    content: "\e6ba";
+  }
+  &.ai-play-arrow:before {
+    content: "\e6bb";
+  }
+  &.ai-play-circle-fill:before {
+    content: "\e6bc";
+  }
+  &.ai-play-circle-outline:before {
+    content: "\e6bd";
+  }
+  &.ai-play-shopping-bag:before {
+    content: "\e6be";
+  }
+  &.ai-playlist-add:before {
+    content: "\e6bf";
+  }
+  &.ai-queue:before {
+    content: "\e6c0";
+  }
+  &.ai-queue-mus:before {
+    content: "\e6c1";
+  }
+  &.ai-radio:before {
+    content: "\e6c2";
+  }
+  &.ai-recent-actors:before {
+    content: "\e6c3";
+  }
+  &.ai-repeat:before {
+    content: "\e6c4";
+  }
+  &.ai-repeat-one:before {
+    content: "\e6c5";
+  }
+  &.ai-replay:before {
+    content: "\e6c6";
+  }
+  &.ai-shuffle:before {
+    content: "\e6c7";
+  }
+  &.ai-skip-next:before {
+    content: "\e6c8";
+  }
+  &.ai-skip-previous:before {
+    content: "\e6c9";
+  }
+  &.ai-snooze:before {
+    content: "\e6ca";
+  }
+  &.ai-stop:before {
+    content: "\e6cb";
+  }
+  &.ai-subtitles:before {
+    content: "\e6cc";
+  }
+  &.ai-surround-sound:before {
+    content: "\e6cd";
+  }
+  &.ai-video-collection:before {
+    content: "\e6ce";
+  }
+  &.ai-videocam:before {
+    content: "\e6cf";
+  }
+  &.ai-videocam-off:before {
+    content: "\e6d0";
+  }
+  &.ai-volume-down:before {
+    content: "\e6d1";
+  }
+  &.ai-volume-mute:before {
+    content: "\e6d2";
+  }
+  &.ai-volume-off:before {
+    content: "\e6d3";
+  }
+  &.ai-volume-up:before {
+    content: "\e6d4";
+  }
+  &.ai-web:before {
+    content: "\e6d5";
+  }
+  &.ai-business:before {
+    content: "\e6d6";
+  }
+  &.ai-call:before {
+    content: "\e6d7";
+  }
+  &.ai-call-end:before {
+    content: "\e6d8";
+  }
+  &.ai-call-made:before {
+    content: "\e6d9";
+  }
+  &.ai-call-merge:before {
+    content: "\e6da";
+  }
+  &.ai-call-missed:before {
+    content: "\e6db";
+  }
+  &.ai-call-received:before {
+    content: "\e6dc";
+  }
+  &.ai-call-split:before {
+    content: "\e6dd";
+  }
+  &.ai-chat:before {
+    content: "\e6de";
+  }
+  &.ai-clear-all:before {
+    content: "\e6df";
+  }
+  &.ai-comment:before {
+    content: "\e6e0";
+  }
+  &.ai-contacts:before {
+    content: "\e6e1";
+  }
+  &.ai-dialer-sip:before {
+    content: "\e6e2";
+  }
+  &.ai-dialpad:before {
+    content: "\e6e3";
+  }
+  &.ai-dnd-on:before {
+    content: "\e6e4";
+  }
+  &.ai-email:before {
+    content: "\e6e5";
+  }
+  &.ai-forum:before {
+    content: "\e6e6";
+  }
+  &.ai-import-export:before {
+    content: "\e6e7";
+  }
+  &.ai-invert-colors-off:before {
+    content: "\e6e8";
+  }
+  &.ai-invert-colors-on:before {
+    content: "\e6e9";
+  }
+  &.ai-live-help:before {
+    content: "\e6ea";
+  }
+  &.ai-location-off:before {
+    content: "\e6eb";
+  }
+  &.ai-location-on:before {
+    content: "\e6ec";
+  }
+  &.ai-message:before {
+    content: "\e6ed";
+  }
+  &.ai-messenger:before {
+    content: "\e6ee";
+  }
+  &.ai-no-sim:before {
+    content: "\e6ef";
+  }
+  &.ai-phone:before {
+    content: "\e6f0";
+  }
+  &.ai-portable-wifi-off:before {
+    content: "\e6f1";
+  }
+  &.ai-quick-contacts-dialer:before {
+    content: "\e6f2";
+  }
+  &.ai-quick-contacts-mail:before {
+    content: "\e6f3";
+  }
+  &.ai-ring-volume:before {
+    content: "\e6f4";
+  }
+  &.ai-stay-current-landscape:before {
+    content: "\e6f5";
+  }
+  &.ai-stay-current-portrait:before {
+    content: "\e6f6";
+  }
+  &.ai-stay-primary-landscape:before {
+    content: "\e6f7";
+  }
+  &.ai-stay-primary-portrait:before {
+    content: "\e6f8";
+  }
+  &.ai-swap-calls:before {
+    content: "\e6f9";
+  }
+  &.ai-textsms:before {
+    content: "\e6fa";
+  }
+  &.ai-voicemail:before {
+    content: "\e6fb";
+  }
+  &.ai-vpn-key:before {
+    content: "\e6fc";
+  }
+  &.ai-add:before {
+    content: "\e6fd";
+  }
+  &.ai-add-box:before {
+    content: "\e6fe";
+  }
+  &.ai-add-circle:before {
+    content: "\e6ff";
+  }
+  &.ai-add-circle-outline:before {
+    content: "\e700";
+  }
+  &.ai-archive:before {
+    content: "\e701";
+  }
+  &.ai-backspace:before {
+    content: "\e702";
+  }
+  &.ai-block:before {
+    content: "\e703";
+  }
+  &.ai-clear:before {
+    content: "\e704";
+  }
+  &.ai-content-copy:before {
+    content: "\e705";
+  }
+  &.ai-content-cut:before {
+    content: "\e706";
+  }
+  &.ai-content-paste:before {
+    content: "\e707";
+  }
+  &.ai-create:before {
+    content: "\e708";
+  }
+  &.ai-drafts:before {
+    content: "\e709";
+  }
+  &.ai-filter-list:before {
+    content: "\e70a";
+  }
+  &.ai-flag:before {
+    content: "\e70b";
+  }
+  &.ai-forward:before {
+    content: "\e70c";
+  }
+  &.ai-gesture:before {
+    content: "\e70d";
+  }
+  &.ai-inbox:before {
+    content: "\e70e";
+  }
+  &.ai-link:before {
+    content: "\e70f";
+  }
+  &.ai-mail:before {
+    content: "\e710";
+  }
+  &.ai-markunread:before {
+    content: "\e711";
+  }
+  &.ai-redo:before {
+    content: "\e712";
+  }
+  &.ai-remove:before {
+    content: "\e713";
+  }
+  &.ai-remove-circle:before {
+    content: "\e714";
+  }
+  &.ai-remove-circle-outline:before {
+    content: "\e715";
+  }
+  &.ai-reply:before {
+    content: "\e716";
+  }
+  &.ai-reply-all:before {
+    content: "\e717";
+  }
+  &.ai-report:before {
+    content: "\e718";
+  }
+  &.ai-save:before {
+    content: "\e719";
+  }
+  &.ai-select-all:before {
+    content: "\e71a";
+  }
+  &.ai-send:before {
+    content: "\e71b";
+  }
+  &.ai-sort:before {
+    content: "\e71c";
+  }
+  &.ai-text-format:before {
+    content: "\e71d";
+  }
+  &.ai-undo:before {
+    content: "\e71e";
+  }
+  &.ai-access-alarm:before {
+    content: "\e71f";
+  }
+  &.ai-access-alarms:before {
+    content: "\e720";
+  }
+  &.ai-access-time:before {
+    content: "\e721";
+  }
+  &.ai-add-alarm:before {
+    content: "\e722";
+  }
+  &.ai-airplanemode-off:before {
+    content: "\e723";
+  }
+  &.ai-airplanemode-on:before {
+    content: "\e724";
+  }
+  &.ai-battery-20:before {
+    content: "\e725";
+  }
+  &.ai-battery-30:before {
+    content: "\e726";
+  }
+  &.ai-battery-50:before {
+    content: "\e727";
+  }
+  &.ai-battery-60:before {
+    content: "\e728";
+  }
+  &.ai-battery-80:before {
+    content: "\e729";
+  }
+  &.ai-battery-90:before {
+    content: "\e72a";
+  }
+  &.ai-battery-alert:before {
+    content: "\e72b";
+  }
+  &.ai-battery-charging-20:before {
+    content: "\e72c";
+  }
+  &.ai-battery-charging-30:before {
+    content: "\e72d";
+  }
+  &.ai-battery-charging-50:before {
+    content: "\e72e";
+  }
+  &.ai-battery-charging-60:before {
+    content: "\e72f";
+  }
+  &.ai-battery-charging-80:before {
+    content: "\e730";
+  }
+  &.ai-battery-charging-90:before {
+    content: "\e731";
+  }
+  &.ai-battery-charging-full:before {
+    content: "\e732";
+  }
+  &.ai-battery-full:before {
+    content: "\e733";
+  }
+  &.ai-battery-std:before {
+    content: "\e734";
+  }
+  &.ai-battery-unknown:before {
+    content: "\e735";
+  }
+  &.ai-bluetooth:before {
+    content: "\e736";
+  }
+  &.ai-bluetooth-connected:before {
+    content: "\e737";
+  }
+  &.ai-bluetooth-disabled:before {
+    content: "\e738";
+  }
+  &.ai-bluetooth-searching:before {
+    content: "\e739";
+  }
+  &.ai-brightness-auto:before {
+    content: "\e73a";
+  }
+  &.ai-brightness-high:before {
+    content: "\e73b";
+  }
+  &.ai-brightness-low:before {
+    content: "\e73c";
+  }
+  &.ai-brightness-medium:before {
+    content: "\e73d";
+  }
+  &.ai-data-usage:before {
+    content: "\e73e";
+  }
+  &.ai-developer-mode:before {
+    content: "\e73f";
+  }
+  &.ai-devices:before {
+    content: "\e740";
+  }
+  &.ai-dvr:before {
+    content: "\e741";
+  }
+  &.ai-gps-fixed:before {
+    content: "\e742";
+  }
+  &.ai-gps-not-fixed:before {
+    content: "\e743";
+  }
+  &.ai-gps-off:before {
+    content: "\e744";
+  }
+  &.ai-location-disabled:before {
+    content: "\e745";
+  }
+  &.ai-location-searching:before {
+    content: "\e746";
+  }
+  &.ai-multitrack-audio:before {
+    content: "\e747";
+  }
+  &.ai-network-cell:before {
+    content: "\e748";
+  }
+  &.ai-network-wifi:before {
+    content: "\e749";
+  }
+  &.ai-nfc:before {
+    content: "\e74a";
+  }
+  &.ai-now-wallpaper:before {
+    content: "\e74b";
+  }
+  &.ai-now-widgets:before {
+    content: "\e74c";
+  }
+  &.ai-screen-lock-landscape:before {
+    content: "\e74d";
+  }
+  &.ai-screen-lock-portrait:before {
+    content: "\e74e";
+  }
+  &.ai-screen-lock-rotation:before {
+    content: "\e74f";
+  }
+  &.ai-screen-rotation:before {
+    content: "\e750";
+  }
+  &.ai-sd-storage:before {
+    content: "\e751";
+  }
+  &.ai-settings-system-daydream:before {
+    content: "\e752";
+  }
+  &.ai-signal-cellular-0-bar:before {
+    content: "\e753";
+  }
+  &.ai-signal-cellular-1-bar:before {
+    content: "\e754";
+  }
+  &.ai-signal-cellular-2-bar:before {
+    content: "\e755";
+  }
+  &.ai-signal-cellular-3-bar:before {
+    content: "\e756";
+  }
+  &.ai-signal-cellular-4-bar:before {
+    content: "\e757";
+  }
+  &.ai-signal-cellular-connected-no-internet-0-bar:before {
+    content: "\e758";
+  }
+  &.ai-signal-cellular-connected-no-internet-1-bar:before {
+    content: "\e759";
+  }
+  &.ai-signal-cellular-connected-no-internet-2-bar:before {
+    content: "\e75a";
+  }
+  &.ai-signal-cellular-connected-no-internet-3-bar:before {
+    content: "\e75b";
+  }
+  &.ai-signal-cellular-connected-no-internet-4-bar:before {
+    content: "\e75c";
+  }
+  &.ai-signal-cellular-no-sim:before {
+    content: "\e75d";
+  }
+  &.ai-signal-cellular-null:before {
+    content: "\e75e";
+  }
+  &.ai-signal-cellular-off:before {
+    content: "\e75f";
+  }
+  &.ai-signal-wifi-0-bar:before {
+    content: "\e760";
+  }
+  &.ai-signal-wifi-1-bar:before {
+    content: "\e761";
+  }
+  &.ai-signal-wifi-2-bar:before {
+    content: "\e762";
+  }
+  &.ai-signal-wifi-3-bar:before {
+    content: "\e763";
+  }
+  &.ai-signal-wifi-4-bar:before {
+    content: "\e764";
+  }
+  &.ai-signal-wifi-off:before {
+    content: "\e765";
+  }
+  &.ai-signal-wifi-statusbar-1-bar:before {
+    content: "\e766";
+  }
+  &.ai-signal-wifi-statusbar-2-bar:before {
+    content: "\e767";
+  }
+  &.ai-signal-wifi-statusbar-3-bar:before {
+    content: "\e768";
+  }
+  &.ai-signal-wifi-statusbar-4-bar:before {
+    content: "\e769";
+  }
+  &.ai-signal-wifi-statusbar-connected-no-internet-1:before {
+    content: "\e76a";
+  }
+  &.ai-signal-wifi-statusbar-connected-no-internet-2:before {
+    content: "\e76b";
+  }
+  &.ai-signal-wifi-statusbar-connected-no-internet-3:before {
+    content: "\e76c";
+  }
+  &.ai-signal-wifi-statusbar-connected-no-internet-4:before {
+    content: "\e76d";
+  }
+  &.ai-signal-wifi-statusbar-connected-no-internet:before {
+    content: "\e76e";
+  }
+  &.ai-signal-wifi-statusbar-not-connected:before {
+    content: "\e76f";
+  }
+  &.ai-signal-wifi-statusbar-null:before {
+    content: "\e770";
+  }
+  &.ai-storage:before {
+    content: "\e771";
+  }
+  &.ai-usb:before {
+    content: "\e772";
+  }
+  &.ai-wifi-lock:before {
+    content: "\e773";
+  }
+  &.ai-wifi-tethering:before {
+    content: "\e774";
+  }
+  &.ai-attach-file:before {
+    content: "\e775";
+  }
+  &.ai-attach-money:before {
+    content: "\e776";
+  }
+  &.ai-border-all:before {
+    content: "\e777";
+  }
+  &.ai-border-bottom:before {
+    content: "\e778";
+  }
+  &.ai-border-clear:before {
+    content: "\e779";
+  }
+  &.ai-border-color:before {
+    content: "\e77a";
+  }
+  &.ai-border-horizontal:before {
+    content: "\e77b";
+  }
+  &.ai-border-inner:before {
+    content: "\e77c";
+  }
+  &.ai-border-left:before {
+    content: "\e77d";
+  }
+  &.ai-border-outer:before {
+    content: "\e77e";
+  }
+  &.ai-border-right:before {
+    content: "\e77f";
+  }
+  &.ai-border-style:before {
+    content: "\e780";
+  }
+  &.ai-border-top:before {
+    content: "\e781";
+  }
+  &.ai-border-vertical:before {
+    content: "\e782";
+  }
+  &.ai-format-align-center:before {
+    content: "\e783";
+  }
+  &.ai-format-align-justify:before {
+    content: "\e784";
+  }
+  &.ai-format-align-left:before {
+    content: "\e785";
+  }
+  &.ai-format-align-right:before {
+    content: "\e786";
+  }
+  &.ai-format-bold:before {
+    content: "\e787";
+  }
+  &.ai-format-clear:before {
+    content: "\e788";
+  }
+  &.ai-format-color-fill:before {
+    content: "\e789";
+  }
+  &.ai-format-color-reset:before {
+    content: "\e78a";
+  }
+  &.ai-format-color-text:before {
+    content: "\e78b";
+  }
+  &.ai-format-indent-decrease:before {
+    content: "\e78c";
+  }
+  &.ai-format-indent-increase:before {
+    content: "\e78d";
+  }
+  &.ai-format-ital:before {
+    content: "\e78e";
+  }
+  &.ai-format-line-spacing:before {
+    content: "\e78f";
+  }
+  &.ai-format-list-bulleted:before {
+    content: "\e790";
+  }
+  &.ai-format-list-numbered:before {
+    content: "\e791";
+  }
+  &.ai-format-paint:before {
+    content: "\e792";
+  }
+  &.ai-format-quote:before {
+    content: "\e793";
+  }
+  &.ai-format-size:before {
+    content: "\e794";
+  }
+  &.ai-format-strikethrough:before {
+    content: "\e795";
+  }
+  &.ai-format-textdirection-l-to-r:before {
+    content: "\e796";
+  }
+  &.ai-format-textdirection-r-to-l:before {
+    content: "\e797";
+  }
+  &.ai-format-underline:before {
+    content: "\e798";
+  }
+  &.ai-functions:before {
+    content: "\e799";
+  }
+  &.ai-insert-chart:before {
+    content: "\e79a";
+  }
+  &.ai-insert-comment:before {
+    content: "\e79b";
+  }
+  &.ai-insert-drive-file:before {
+    content: "\e79c";
+  }
+  &.ai-insert-emoticon:before {
+    content: "\e79d";
+  }
+  &.ai-insert-invitation:before {
+    content: "\e79e";
+  }
+  &.ai-insert-link:before {
+    content: "\e79f";
+  }
+  &.ai-insert-photo:before {
+    content: "\e7a0";
+  }
+  &.ai-merge-type:before {
+    content: "\e7a1";
+  }
+  &.ai-mode-comment:before {
+    content: "\e7a2";
+  }
+  &.ai-mode-edit:before {
+    content: "\e7a3";
+  }
+  &.ai-publish:before {
+    content: "\e7a4";
+  }
+  &.ai-vertical-align-bottom:before {
+    content: "\e7a5";
+  }
+  &.ai-vertical-align-center:before {
+    content: "\e7a6";
+  }
+  &.ai-vertical-align-top:before {
+    content: "\e7a7";
+  }
+  &.ai-wrap-text:before {
+    content: "\e7a8";
+  }
+  &.ai-attachment:before {
+    content: "\e7a9";
+  }
+  &.ai-cloud:before {
+    content: "\e7aa";
+  }
+  &.ai-cloud-circle:before {
+    content: "\e7ab";
+  }
+  &.ai-cloud-done:before {
+    content: "\e7ac";
+  }
+  &.ai-cloud-download:before {
+    content: "\e7ad";
+  }
+  &.ai-cloud-off:before {
+    content: "\e7ae";
+  }
+  &.ai-cloud-queue:before {
+    content: "\e7af";
+  }
+  &.ai-cloud-upload:before {
+    content: "\e7b0";
+  }
+  &.ai-file-download:before {
+    content: "\e7b1";
+  }
+  &.ai-file-upload:before {
+    content: "\e7b2";
+  }
+  &.ai-folder:before {
+    content: "\e7b3";
+  }
+  &.ai-folder-open:before {
+    content: "\e7b4";
+  }
+  &.ai-folder-shared:before {
+    content: "\e7b5";
+  }
+  &.ai-cast:before {
+    content: "\e7b6";
+  }
+  &.ai-cast-connected:before {
+    content: "\e7b7";
+  }
+  &.ai-computer:before {
+    content: "\e7b8";
+  }
+  &.ai-desktop-mac:before {
+    content: "\e7b9";
+  }
+  &.ai-desktop-windows:before {
+    content: "\e7ba";
+  }
+  &.ai-dock:before {
+    content: "\e7bb";
+  }
+  &.ai-gamepad:before {
+    content: "\e7bc";
+  }
+  &.ai-headset:before {
+    content: "\e7bd";
+  }
+  &.ai-headset-m:before {
+    content: "\e7be";
+  }
+  &.ai-keyboard:before {
+    content: "\e7bf";
+  }
+  &.ai-keyboard-alt:before {
+    content: "\e7c0";
+  }
+  &.ai-keyboard-arrow-down:before {
+    content: "\e7c1";
+  }
+  &.ai-keyboard-arrow-left:before {
+    content: "\e7c2";
+  }
+  &.ai-keyboard-arrow-right:before {
+    content: "\e7c3";
+  }
+  &.ai-keyboard-arrow-up:before {
+    content: "\e7c4";
+  }
+  &.ai-keyboard-backspace:before {
+    content: "\e7c5";
+  }
+  &.ai-keyboard-capslock:before {
+    content: "\e7c6";
+  }
+  &.ai-keyboard-control:before {
+    content: "\e7c7";
+  }
+  &.ai-keyboard-hide:before {
+    content: "\e7c8";
+  }
+  &.ai-keyboard-return:before {
+    content: "\e7c9";
+  }
+  &.ai-keyboard-tab:before {
+    content: "\e7ca";
+  }
+  &.ai-keyboard-voice:before {
+    content: "\e7cb";
+  }
+  &.ai-laptop:before {
+    content: "\e7cc";
+  }
+  &.ai-laptop-chromebook:before {
+    content: "\e7cd";
+  }
+  &.ai-laptop-mac:before {
+    content: "\e7ce";
+  }
+  &.ai-laptop-windows:before {
+    content: "\e7cf";
+  }
+  &.ai-memory:before {
+    content: "\e7d0";
+  }
+  &.ai-mouse:before {
+    content: "\e7d1";
+  }
+  &.ai-phone-android:before {
+    content: "\e7d2";
+  }
+  &.ai-phone-iphone:before {
+    content: "\e7d3";
+  }
+  &.ai-phonelink:before {
+    content: "\e7d4";
+  }
+  &.ai-phonelink-off:before {
+    content: "\e7d5";
+  }
+  &.ai-security:before {
+    content: "\e7d6";
+  }
+  &.ai-sim-card:before {
+    content: "\e7d7";
+  }
+  &.ai-smartphone:before {
+    content: "\e7d8";
+  }
+  &.ai-speaker:before {
+    content: "\e7d9";
+  }
+  &.ai-tablet:before {
+    content: "\e7da";
+  }
+  &.ai-tablet-android:before {
+    content: "\e7db";
+  }
+  &.ai-tablet-mac:before {
+    content: "\e7dc";
+  }
+  &.ai-tv:before {
+    content: "\e7dd";
+  }
+  &.ai-watch:before {
+    content: "\e7de";
+  }
+  &.ai-add-to-photos:before {
+    content: "\e7df";
+  }
+  &.ai-adjust:before {
+    content: "\e7e0";
+  }
+  &.ai-assistant-photo:before {
+    content: "\e7e1";
+  }
+  &.ai-audiotrack:before {
+    content: "\e7e2";
+  }
+  &.ai-blur-circular:before {
+    content: "\e7e3";
+  }
+  &.ai-blur-linear:before {
+    content: "\e7e4";
+  }
+  &.ai-blur-off:before {
+    content: "\e7e5";
+  }
+  &.ai-blur-on:before {
+    content: "\e7e6";
+  }
+  &.ai-brightness-1:before {
+    content: "\e7e7";
+  }
+  &.ai-brightness-2:before {
+    content: "\e7e8";
+  }
+  &.ai-brightness-3:before {
+    content: "\e7e9";
+  }
+  &.ai-brightness-4:before {
+    content: "\e7ea";
+  }
+  &.ai-brightness-5:before {
+    content: "\e7eb";
+  }
+  &.ai-brightness-6:before {
+    content: "\e7ec";
+  }
+  &.ai-brightness-7:before {
+    content: "\e7ed";
+  }
+  &.ai-brush:before {
+    content: "\e7ee";
+  }
+  &.ai-camera:before {
+    content: "\e7ef";
+  }
+  &.ai-camera-alt:before {
+    content: "\e7f0";
+  }
+  &.ai-camera-front:before {
+    content: "\e7f1";
+  }
+  &.ai-camera-rear:before {
+    content: "\e7f2";
+  }
+  &.ai-camera-roll:before {
+    content: "\e7f3";
+  }
+  &.ai-center-focus-strong:before {
+    content: "\e7f4";
+  }
+  &.ai-center-focus-weak:before {
+    content: "\e7f5";
+  }
+  &.ai-collections:before {
+    content: "\e7f6";
+  }
+  &.ai-color-lens:before {
+    content: "\e7f7";
+  }
+  &.ai-colorize:before {
+    content: "\e7f8";
+  }
+  &.ai-compare:before {
+    content: "\e7f9";
+  }
+  &.ai-control-point:before {
+    content: "\e7fa";
+  }
+  &.ai-control-point-duplicate:before {
+    content: "\e7fb";
+  }
+  &.ai-crop-3-2:before {
+    content: "\e7fc";
+  }
+  &.ai-crop-5-4:before {
+    content: "\e7fd";
+  }
+  &.ai-crop-7-5:before {
+    content: "\e7fe";
+  }
+  &.ai-crop-16-9:before {
+    content: "\e7ff";
+  }
+  &.ai-crop:before {
+    content: "\e800";
+  }
+  &.ai-crop-din:before {
+    content: "\e801";
+  }
+  &.ai-crop-free:before {
+    content: "\e802";
+  }
+  &.ai-crop-landscape:before {
+    content: "\e803";
+  }
+  &.ai-crop-original:before {
+    content: "\e804";
+  }
+  &.ai-crop-portrait:before {
+    content: "\e805";
+  }
+  &.ai-crop-square:before {
+    content: "\e806";
+  }
+  &.ai-dehaze:before {
+    content: "\e807";
+  }
+  &.ai-details:before {
+    content: "\e808";
+  }
+  &.ai-edit:before {
+    content: "\e809";
+  }
+  &.ai-exposure:before {
+    content: "\e80a";
+  }
+  &.ai-exposure-minus-1:before {
+    content: "\e80b";
+  }
+  &.ai-exposure-minus-2:before {
+    content: "\e80c";
+  }
+  &.ai-exposure-plus-1:before {
+    content: "\e80d";
+  }
+  &.ai-exposure-plus-2:before {
+    content: "\e80e";
+  }
+  &.ai-exposure-zero:before {
+    content: "\e80f";
+  }
+  &.ai-filter-1:before {
+    content: "\e810";
+  }
+  &.ai-filter-2:before {
+    content: "\e811";
+  }
+  &.ai-filter-3:before {
+    content: "\e812";
+  }
+  &.ai-filter-4:before {
+    content: "\e813";
+  }
+  &.ai-filter-5:before {
+    content: "\e814";
+  }
+  &.ai-filter-6:before {
+    content: "\e815";
+  }
+  &.ai-filter-7:before {
+    content: "\e816";
+  }
+  &.ai-filter-8:before {
+    content: "\e817";
+  }
+  &.ai-filter-9:before {
+    content: "\e818";
+  }
+  &.ai-filter-9-plus:before {
+    content: "\e819";
+  }
+  &.ai-filter:before {
+    content: "\e81a";
+  }
+  &.ai-filter-b-and-w:before {
+    content: "\e81b";
+  }
+  &.ai-filter-center-focus:before {
+    content: "\e81c";
+  }
+  &.ai-filter-drama:before {
+    content: "\e81d";
+  }
+  &.ai-filter-frames:before {
+    content: "\e81e";
+  }
+  &.ai-filter-hdr:before {
+    content: "\e81f";
+  }
+  &.ai-filter-none:before {
+    content: "\e820";
+  }
+  &.ai-filter-tilt-shift:before {
+    content: "\e821";
+  }
+  &.ai-filter-vintage:before {
+    content: "\e822";
+  }
+  &.ai-flare:before {
+    content: "\e823";
+  }
+  &.ai-flash-auto:before {
+    content: "\e824";
+  }
+  &.ai-flash-off:before {
+    content: "\e825";
+  }
+  &.ai-flash-on:before {
+    content: "\e826";
+  }
+  &.ai-flip:before {
+    content: "\e827";
+  }
+  &.ai-gradient:before {
+    content: "\e828";
+  }
+  &.ai-grain:before {
+    content: "\e829";
+  }
+  &.ai-grid-off:before {
+    content: "\e82a";
+  }
+  &.ai-grid-on:before {
+    content: "\e82b";
+  }
+  &.ai-hdr-off:before {
+    content: "\e82c";
+  }
+  &.ai-hdr-on:before {
+    content: "\e82d";
+  }
+  &.ai-hdr-strong:before {
+    content: "\e82e";
+  }
+  &.ai-hdr-weak:before {
+    content: "\e82f";
+  }
+  &.ai-healing:before {
+    content: "\e830";
+  }
+  &.ai-image:before {
+    content: "\e831";
+  }
+  &.ai-image-aspect-ratio:before {
+    content: "\e832";
+  }
+  &.ai-iso:before {
+    content: "\e833";
+  }
+  &.ai-landscape:before {
+    content: "\e834";
+  }
+  &.ai-leak-add:before {
+    content: "\e835";
+  }
+  &.ai-leak-remove:before {
+    content: "\e836";
+  }
+  &.ai-lens:before {
+    content: "\e837";
+  }
+  &.ai-looks-3:before {
+    content: "\e838";
+  }
+  &.ai-looks-4:before {
+    content: "\e839";
+  }
+  &.ai-looks-5:before {
+    content: "\e83a";
+  }
+  &.ai-looks-6:before {
+    content: "\e83b";
+  }
+  &.ai-looks:before {
+    content: "\e83c";
+  }
+  &.ai-looks-one:before {
+    content: "\e83d";
+  }
+  &.ai-looks-two:before {
+    content: "\e83e";
+  }
+  &.ai-loupe:before {
+    content: "\e83f";
+  }
+  &.ai-movie-creation:before {
+    content: "\e840";
+  }
+  &.ai-nature:before {
+    content: "\e841";
+  }
+  &.ai-nature-people:before {
+    content: "\e842";
+  }
+  &.ai-navigate-before:before {
+    content: "\e843";
+  }
+  &.ai-navigate-next:before {
+    content: "\e844";
+  }
+  &.ai-palette:before {
+    content: "\e845";
+  }
+  &.ai-panorama:before {
+    content: "\e846";
+  }
+  &.ai-panorama-fisheye:before {
+    content: "\e847";
+  }
+  &.ai-panorama-horizontal:before {
+    content: "\e848";
+  }
+  &.ai-panorama-vertical:before {
+    content: "\e849";
+  }
+  &.ai-panorama-wide-angle:before {
+    content: "\e84a";
+  }
+  &.ai-photo:before {
+    content: "\e84b";
+  }
+  &.ai-photo-album:before {
+    content: "\e84c";
+  }
+  &.ai-photo-camera:before {
+    content: "\e84d";
+  }
+  &.ai-photo-library:before {
+    content: "\e84e";
+  }
+  &.ai-portrait:before {
+    content: "\e84f";
+  }
+  &.ai-remove-red-eye:before {
+    content: "\e850";
+  }
+  &.ai-rotate-left:before {
+    content: "\e851";
+  }
+  &.ai-rotate-right:before {
+    content: "\e852";
+  }
+  &.ai-slideshow:before {
+    content: "\e853";
+  }
+  &.ai-straighten:before {
+    content: "\e854";
+  }
+  &.ai-style:before {
+    content: "\e855";
+  }
+  &.ai-switch-camera:before {
+    content: "\e856";
+  }
+  &.ai-switch-video:before {
+    content: "\e857";
+  }
+  &.ai-tag-faces:before {
+    content: "\e858";
+  }
+  &.ai-texture:before {
+    content: "\e859";
+  }
+  &.ai-timelapse:before {
+    content: "\e85a";
+  }
+  &.ai-timer-3:before {
+    content: "\e85b";
+  }
+  &.ai-timer-10:before {
+    content: "\e85c";
+  }
+  &.ai-timer:before {
+    content: "\e85d";
+  }
+  &.ai-user:before {
+    content: "\e85e";
+  }
+  &.ai-timer-off:before {
+    content: "\e85f";
+  }
+  &.ai-tonality:before {
+    content: "\e860";
+  }
+  &.ai-transform:before {
+    content: "\e861";
+  }
+  &.ai-tune:before {
+    content: "\e862";
+  }
+  &.ai-wb-auto:before {
+    content: "\e863";
+  }
+  &.ai-wb-cloudy:before {
+    content: "\e864";
+  }
+  &.ai-wb-incandescent:before {
+    content: "\e865";
+  }
+  &.ai-wb-irradescent:before {
+    content: "\e866";
+  }
+  &.ai-wb-sunny:before {
+    content: "\e867";
+  }
+  &.ai-beenhere:before {
+    content: "\e868";
+  }
+  &.ai-directions:before {
+    content: "\e869";
+  }
+  &.ai-directions-bike:before {
+    content: "\e86a";
+  }
+  &.ai-directions-bus:before {
+    content: "\e86b";
+  }
+  &.ai-directions-car:before {
+    content: "\e86c";
+  }
+  &.ai-directions-ferry:before {
+    content: "\e86d";
+  }
+  &.ai-directions-subway:before {
+    content: "\e86e";
+  }
+  &.ai-directions-train:before {
+    content: "\e86f";
+  }
+  &.ai-directions-transit:before {
+    content: "\e870";
+  }
+  &.ai-directions-walk:before {
+    content: "\e871";
+  }
+  &.ai-flight:before {
+    content: "\e872";
+  }
+  &.ai-hotel:before {
+    content: "\e873";
+  }
+  &.ai-layers:before {
+    content: "\e874";
+  }
+  &.ai-layers-clear:before {
+    content: "\e875";
+  }
+  &.ai-local-airport:before {
+    content: "\e876";
+  }
+  &.ai-local-atm:before {
+    content: "\e877";
+  }
+  &.ai-local-attraction:before {
+    content: "\e878";
+  }
+  &.ai-local-bar:before {
+    content: "\e879";
+  }
+  &.ai-local-cafe:before {
+    content: "\e87a";
+  }
+  &.ai-local-car-wash:before {
+    content: "\e87b";
+  }
+  &.ai-local-convenience-store:before {
+    content: "\e87c";
+  }
+  &.ai-local-drink:before {
+    content: "\e87d";
+  }
+  &.ai-local-florist:before {
+    content: "\e87e";
+  }
+  &.ai-local-gas-station:before {
+    content: "\e87f";
+  }
+  &.ai-local-grocery-store:before {
+    content: "\e880";
+  }
+  &.ai-local-hospital:before {
+    content: "\e881";
+  }
+  &.ai-local-hotel:before {
+    content: "\e882";
+  }
+  &.ai-local-laundry-service:before {
+    content: "\e883";
+  }
+  &.ai-local-library:before {
+    content: "\e884";
+  }
+  &.ai-local-mall:before {
+    content: "\e885";
+  }
+  &.ai-local-movies:before {
+    content: "\e886";
+  }
+  &.ai-local-offer:before {
+    content: "\e887";
+  }
+  &.ai-local-parking:before {
+    content: "\e888";
+  }
+  &.ai-local-pharmacy:before {
+    content: "\e889";
+  }
+  &.ai-local-phone:before {
+    content: "\e88a";
+  }
+  &.ai-local-pizza:before {
+    content: "\e88b";
+  }
+  &.ai-local-play:before {
+    content: "\e88c";
+  }
+  &.ai-local-post-office:before {
+    content: "\e88d";
+  }
+  &.ai-local-print-shop:before {
+    content: "\e88e";
+  }
+  &.ai-local-restaurant:before {
+    content: "\e88f";
+  }
+  &.ai-local-see:before {
+    content: "\e890";
+  }
+  &.ai-local-shipping:before {
+    content: "\e891";
+  }
+  &.ai-local-taxi:before {
+    content: "\e892";
+  }
+  &.ai-location-history:before {
+    content: "\e893";
+  }
+  &.ai-map:before {
+    content: "\e894";
+  }
+  &.ai-my-location:before {
+    content: "\e895";
+  }
+  &.ai-navigation:before {
+    content: "\e896";
+  }
+  &.ai-pin-drop:before {
+    content: "\e897";
+  }
+  &.ai-place:before {
+    content: "\e898";
+  }
+  &.ai-rate-review:before {
+    content: "\e899";
+  }
+  &.ai-restaurant-menu:before {
+    content: "\e89a";
+  }
+  &.ai-satellite:before {
+    content: "\e89b";
+  }
+  &.ai-store-mall-directory:before {
+    content: "\e89c";
+  }
+  &.ai-terrain:before {
+    content: "\e89d";
+  }
+  &.ai-traff:before {
+    content: "\e89e";
+  }
+  &.ai-apps:before {
+    content: "\e89f";
+  }
+  &.ai-arrow-back:before {
+    content: "\e8a0";
+  }
+  &.ai-arrow-drop-down:before {
+    content: "\e8a1";
+  }
+  &.ai-arrow-drop-down-circle:before {
+    content: "\e8a2";
+  }
+  &.ai-arrow-drop-up:before {
+    content: "\e8a3";
+  }
+  &.ai-arrow-forward:before {
+    content: "\e8a4";
+  }
+  &.ai-cancel:before {
+    content: "\e8a5";
+  }
+  &.ai-check:before {
+    content: "\e8a6";
+  }
+  &.ai-chevron-left:before {
+    content: "\e8a7";
+  }
+  &.ai-chevron-right:before {
+    content: "\e8a8";
+  }
+  &.ai-close:before {
+    content: "\e8a9";
+  }
+  &.ai-expand-less:before {
+    content: "\e8aa";
+  }
+  &.ai-expand-more:before {
+    content: "\e8ab";
+  }
+  &.ai-fullscreen:before {
+    content: "\e8ac";
+  }
+  &.ai-fullscreen-exit:before {
+    content: "\e8ad";
+  }
+  &.ai-menu:before {
+    content: "\e8ae";
+  }
+  &.ai-more-horiz:before {
+    content: "\e8af";
+  }
+  &.ai-more-vert:before {
+    content: "\e8b0";
+  }
+  &.ai-refresh:before {
+    content: "\e8b1";
+  }
+  &.ai-unfold-less:before {
+    content: "\e8b2";
+  }
+  &.ai-unfold-more:before {
+    content: "\e8b3";
+  }
+  &.ai-adb:before {
+    content: "\e8b4";
+  }
+  &.ai-bluetooth-audio:before {
+    content: "\e8b5";
+  }
+  &.ai-disc-full:before {
+    content: "\e8b6";
+  }
+  &.ai-dnd-forwardslash:before {
+    content: "\e8b7";
+  }
+  &.ai-do-not-disturb:before {
+    content: "\e8b8";
+  }
+  &.ai-drive-eta:before {
+    content: "\e8b9";
+  }
+  &.ai-event-available:before {
+    content: "\e8ba";
+  }
+  &.ai-event-busy:before {
+    content: "\e8bb";
+  }
+  &.ai-event-note:before {
+    content: "\e8bc";
+  }
+  &.ai-folder-special:before {
+    content: "\e8bd";
+  }
+  &.ai-mms:before {
+    content: "\e8be";
+  }
+  &.ai-more:before {
+    content: "\e8bf";
+  }
+  &.ai-network-locked:before {
+    content: "\e8c0";
+  }
+  &.ai-phone-bluetooth-speaker:before {
+    content: "\e8c1";
+  }
+  &.ai-phone-forwarded:before {
+    content: "\e8c2";
+  }
+  &.ai-phone-in-talk:before {
+    content: "\e8c3";
+  }
+  &.ai-phone-locked:before {
+    content: "\e8c4";
+  }
+  &.ai-phone-missed:before {
+    content: "\e8c5";
+  }
+  &.ai-phone-paused:before {
+    content: "\e8c6";
+  }
+  &.ai-play-download:before {
+    content: "\e8c7";
+  }
+  &.ai-play-install:before {
+    content: "\e8c8";
+  }
+  &.ai-sd-card:before {
+    content: "\e8c9";
+  }
+  &.ai-sim-card-alert:before {
+    content: "\e8ca";
+  }
+  &.ai-sms:before {
+    content: "\e8cb";
+  }
+  &.ai-sms-failed:before {
+    content: "\e8cc";
+  }
+  &.ai-sync:before {
+    content: "\e8cd";
+  }
+  &.ai-sync-disabled:before {
+    content: "\e8ce";
+  }
+  &.ai-sync-problem:before {
+    content: "\e8cf";
+  }
+  &.ai-system-update:before {
+    content: "\e8d0";
+  }
+  &.ai-tap-and-play:before {
+    content: "\e8d1";
+  }
+  &.ai-time-to-leave:before {
+    content: "\e8d2";
+  }
+  &.ai-vibration:before {
+    content: "\e8d3";
+  }
+  &.ai-voice-chat:before {
+    content: "\e8d4";
+  }
+  &.ai-vpn-lock:before {
+    content: "\e8d5";
+  }
+  &.ai-cake:before {
+    content: "\e8d6";
+  }
+  &.ai-domain:before {
+    content: "\e8d7";
+  }
+  &.ai-group:before {
+    content: "\e8d8";
+  }
+  &.ai-group-add:before {
+    content: "\e8d9";
+  }
+  &.ai-location-city:before {
+    content: "\e8da";
+  }
+  &.ai-mood:before {
+    content: "\e8db";
+  }
+  &.ai-notifications:before {
+    content: "\e8dc";
+  }
+  &.ai-notifications-none:before {
+    content: "\e8dd";
+  }
+  &.ai-notifications-off:before {
+    content: "\e8de";
+  }
+  &.ai-notifications-on:before {
+    content: "\e8df";
+  }
+  &.ai-notifications-paused:before {
+    content: "\e8e0";
+  }
+  &.ai-pages:before {
+    content: "\e8e1";
+  }
+  &.ai-party-mode:before {
+    content: "\e8e2";
+  }
+  &.ai-people:before {
+    content: "\e8e3";
+  }
+  &.ai-people-outline:before {
+    content: "\e8e4";
+  }
+  &.ai-person:before {
+    content: "\e8e5";
+  }
+  &.ai-person-add:before {
+    content: "\e8e6";
+  }
+  &.ai-person-outline:before {
+    content: "\e8e7";
+  }
+  &.ai-plus-one:before {
+    content: "\e8e8";
+  }
+  &.ai-poll:before {
+    content: "\e8e9";
+  }
+  &.ai-publ:before {
+    content: "\e8ea";
+  }
+  &.ai-school:before {
+    content: "\e8eb";
+  }
+  &.ai-share:before {
+    content: "\e8ec";
+  }
+  &.ai-whatshot:before {
+    content: "\e8ed";
+  }
+  &.ai-check-box:before {
+    content: "\e8ee";
+  }
+  &.ai-check-box-outline-blank:before {
+    content: "\e8ef";
+  }
+  &.ai-radio-button-off:before {
+    content: "\e8f0";
+  }
+  &.ai-radio-button-on:before {
+    content: "\e8f1";
+  }
+  &.ai-star:before {
+    content: "\e8f2";
+  }
+  &.ai-star-half:before {
+    content: "\e8f3";
+  }
+  &.ai-star-outline:before {
+    content: "\e8f4";
+  }
+}

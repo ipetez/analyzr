@@ -1,0 +1,12 @@
+*.pdf
+*.ai
+*.bak
+.tmp
+.sass-cache
+node_modules
+bower_components
+dist
+docs
+mockup
+composer.lock
+composer.phar

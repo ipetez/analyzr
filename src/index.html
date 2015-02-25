@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html
+  data-ng-controller="coreSettingsCtrl"
+  data-ng-class="{
+    'page-loading': core.settings.pageLoading,
+    'header-fixed': core.settings.headerFixed, 
+    'sidebar-left-fixed': core.settings.sidebarLeftFixed,
+    'sidebar-left-collapse': core.settings.sidebarLeftCollapse || core.screen.sm,
+    'sidebar-open-ltr': core.settings.sidebarLeftOpen,
+  }">
+  <head>
+    <!-- <base href="/"> - set this tag if HTML5 router mode is enable -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Analyzr - Angular Admin App</title>
+    <meta name="author" content="pampersdry.info">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="app, web app, responsive, responsive layout, admin, admin panel, admin dashboard, flat, flat ui, ui kit, angular, webpack, browserify, commonjs, AMD, ui-router, lazy load, lazy loaded, bower, npm, grunt, gulp, solid workflow">
+
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/images/touch/apple-touch-icon-144x144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/images/touch/apple-touch-icon-114x114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/images/touch/apple-touch-icon-72x72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/images/touch/pple-touch-icon-57x57-precomposed.png">
+    <link rel="shortcut icon" href="assets/images/favicon.png">
+
+    <!-- start: application main stylesheet -->
+    <link rel="stylesheet" href="assets/styles/bootstrap.css">
+    <link rel="stylesheet" href="assets/styles/fontawesome.css">
+    <link rel="stylesheet" href="assets/styles/layout.css">
+    <link rel="stylesheet" href="assets/styles/component.css">
+    <!--/ end: application main stylesheet -->
+  </head>
+  <body>
+    <!-- start: application wrapper -->
+    <section id="app-wrapper" data-ui-view></section>
+    <!--/ end: application wrapper -->
+
+    <!-- start: vendor and app script -->
+    <script src="bundles/vendor.js"></script>
+    <script src="bundles/app.js"></script>
+    <!--/ end: vendor and app script -->
+  </body>
+</html>

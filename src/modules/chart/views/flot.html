@@ -1,0 +1,147 @@
+<!-- start: page header -->
+<div class="page-header">
+  <div class="box-layout">
+    <div class="col-sm-6 va-m">
+      <h3>Flot Chart</h3>
+    </div>
+    <div class="col-sm-6 va-m">
+      <ol class="breadcrumb pull-right-sm mb-0">
+        <li><a href="#">Chart</a></li>
+        <li class="active">Flot</li>
+      </ol>
+    </div>
+  </div>
+</div>
+<!--/ end: page header -->
+
+<!-- start: padder -->
+<div class="pa-md">
+  <div class="row">
+    <!-- bar chart -->
+    <div class="col-md-6">
+      <div class="panel">
+        <div class="panel-heading">
+          <div class="panel-title">Bar chart</div>
+        </div>
+        <div class="panel-body">
+          <div class="chart" data-ng-controller="flotBarChartCtrl">
+            <div ui-jq="plot" ui-options="{{dataset}}, {{options}}" style="height:220px;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--/ bar chart -->
+
+    <!-- bar + line chart -->
+    <div class="col-md-6">
+      <div class="panel">
+        <div class="panel-heading">
+          <div class="panel-title">Bar + line chart</div>
+        </div>
+        <div class="panel-body">
+          <div class="chart" data-ng-controller="flotBarLineChartCtrl">
+            <div ui-jq="plot" ui-options="{{dataset}}, {{options}}" style="height:220px;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--/ bar + line chart -->
+  </div>
+
+  <div class="row">
+    <!-- line chart -->
+    <div class="col-md-6">
+      <div class="panel">
+        <div class="panel-heading">
+          <div class="panel-title">Line chart</div>
+        </div>
+        <div class="panel-body">
+          <div class="chart" data-ng-controller="flotLineChartCtrl">
+            <div ui-jq="plot" ui-options="{{dataset}}, {{options}}" style="height:220px;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--/ line chart -->
+
+    <!-- line + spline chart -->
+    <div class="col-md-6">
+      <div class="panel">
+        <div class="panel-heading">
+          <div class="panel-title">Line + Spline chart</div>
+        </div>
+        <div class="panel-body">
+          <div class="chart" data-ng-controller="flotLineSplineChartCtrl">
+            <div ui-jq="plot" ui-options="{{dataset}}, {{options}}" style="height:220px;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--/ line + spline chart -->
+  </div>
+
+  <div class="row">
+    <!-- area chart -->
+    <div class="col-md-6">
+      <div class="panel">
+        <div class="panel-heading">
+          <div class="panel-title">Area chart</div>
+        </div>
+        <div class="panel-body">
+          <div class="chart" data-ng-controller="flotAreaChartCtrl">
+            <div ui-jq="plot" ui-options="{{dataset}}, {{options}}" style="height:220px;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--/ area chart -->
+
+    <!-- area spline chart -->
+    <div class="col-md-6">
+      <div class="panel">
+        <div class="panel-heading">
+          <div class="panel-title">Area + Spline chart</div>
+        </div>
+        <div class="panel-body">
+          <div class="chart" data-ng-controller="flotAreaSplineChartCtrl">
+            <div ui-jq="plot" ui-options="{{dataset}}, {{options}}" style="height:220px;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--/ area spline chart -->
+  </div>
+
+  <div class="row">
+    <!-- donut chart -->
+    <div class="col-md-6">
+      <div class="panel">
+        <div class="panel-heading">
+          <div class="panel-title">Donut chart</div>
+        </div>
+        <div class="panel-body">
+          <div class="chart" data-ng-controller="flotDonutChartCtrl">
+            <div ui-jq="plot" ui-options="{{dataset}}, {{options}}" style="height:220px;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--/ donut chart -->
+
+    <!-- pie chart -->
+    <div class="col-md-6">
+      <div class="panel">
+        <div class="panel-heading">
+          <div class="panel-title">Pie chart</div>
+        </div>
+        <div class="panel-body">
+          <div class="chart" data-ng-controller="flotPieChartCtrl">
+            <div ui-jq="plot" ui-options="{{dataset}}, {{options}}" style="height:220px;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--/ pie chart -->
+  </div>
+</div>
+<!--/ end: padder -->

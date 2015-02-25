@@ -1,0 +1,76 @@
+//
+// Brand
+// --------------------------------------------------
+
+.brand {
+  display: block;
+  width: 100%;
+  font-size: 20px;
+  font-weight: 700;
+
+  &,
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    color: @color-gray-50;
+  }
+
+  .brand-figure,
+  .brand-text {
+    display: inline-block;
+    vertical-align: top;
+    text-decoration: none;
+    height: 38px;
+  }
+  .brand-figure {
+    width: 38px;
+    background-image: url("../images/logo/logo-figure.png");
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    background-size: 38px 38px;
+  }
+  .brand-text {
+    line-height: 38px;
+  }
+
+  &.brand-inverse {
+    .brand-figure {
+      background-image: url("../images/logo/logo-figure-inverse.png");
+    }
+  }
+
+  &.brand-lg {
+    .brand-figure,
+    .brand-text {
+      height: 48px;
+    }
+
+    .brand-figure {
+      width: 48px;
+      background-size: 48px 48px;
+    }
+    .brand-text {
+      line-height: 48px;
+    }
+  }
+
+  @media only screen and (-Webkit-min-device-pixel-ratio: 1.5),
+  only screen and (-moz-min-device-pixel-ratio: 1.5),
+  only screen and (-o-min-device-pixel-ratio: 3/2),
+  only screen and (min-device-pixel-ratio: 1.5) {
+    .brand-figure {
+      background-image: url("../images/logo/logo-figure@2x.png");
+      background-size: 38px 38px;
+
+      .brand-inverse & {
+        background-image: url("../images/logo/logo-figure-inverse@2x.png");
+      }
+    }
+
+    &.brand-inverse {
+      .brand-figure {
+        background-image: url("../images/logo/logo-figure-inverse@2x.png");
+      }
+    }
+  }
+}

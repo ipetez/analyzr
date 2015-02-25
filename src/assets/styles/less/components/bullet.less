@@ -1,0 +1,19 @@
+//
+// bullet
+// --------------------------------------------------
+
+.bullet {
+  display: inline-block;
+  vertical-align: middle;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: @color-gray-500;
+
+  // contextual
+  &.bullet-primary { background-color: @color-blue-500; }
+  &.bullet-success { background-color: @color-green-500; }
+  &.bullet-info { background-color: @color-cyan-500; }
+  &.bullet-warning { background-color: @color-yellow-500; }
+  &.bullet-danger { background-color: @color-red-500; }
+}

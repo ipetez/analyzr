@@ -1,0 +1,136 @@
+//
+// Date and time picker
+// --------------------------------------------------
+
+// Datepicker
+
+[ng-switch="datepickerMode"] {
+  display: inline-block;
+  min-width: 280px;
+  border-radius: @border-radius-base;
+  border: 1px solid @border-color;
+  background-color: #fff;
+  overflow: hidden;
+
+  > table {
+    width: 100%;
+    border-collapse: inherit;
+
+    &:focus {
+      outline: 0;
+    }
+
+    // datepicker header
+    // --------------------------
+    > thead {
+      tr {
+        &:nth-of-type(1) {
+          th {
+            &:nth-of-type(1) {
+              background-color: @color-gray-50;
+            }
+            &:nth-of-type(3) {
+              background-color: @color-gray-50;
+            }
+            border-bottom: 1px solid @border-color;
+            background-color: @color-gray-50;
+          }
+        }
+        &:nth-of-type(2) {
+          th {
+            &:first-child {
+              background-color: @color-gray-50;
+            }
+            padding-top: 6px;
+            padding-bottom: 6px;
+            color: @secondary-text-color;
+          }
+        }
+
+        th {
+          .btn {
+            border-width: 0;
+            padding: 8px 0;
+            font-size: @font-size-base + 1;
+            background-color: transparent;
+            color: lighten(@text-color, 10%);
+
+            &:focus,
+            &:active,
+            &:hover {
+              box-shadow: none;
+              color: @text-color;
+            }
+            .glyphicon {
+              line-height: inherit;
+            }
+            strong {
+              font-weight: 500;
+            }
+          }
+
+          &:nth-of-type(1),
+          &:nth-of-type(3) {
+            .btn {
+              width: 32px;
+            }
+          }
+        }
+      }
+    }
+
+    // datepicker body
+    // --------------------------
+    > tbody {
+      tr {
+        td {
+          padding: 1px;
+          &:first-child {
+            background-color: @color-gray-50;
+          }
+          .btn {
+            border-color: transparent;
+            font-size: @font-size-base;
+            padding: 4px;
+
+            &.btn-info,
+            &.btn-info .text-info {
+              color: #fff !important;
+            }
+
+            &.active,
+            &:active,
+            &:focus {
+              box-shadow: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  > table[ng-switch-when="month"],
+  > table[ng-switch-when="year"] {
+    > tbody {
+      tr {
+        td {
+          &:first-child {
+            background-color: transparent;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Datepicker inside dropdown
+.dropdown-menu {
+  [ng-switch="datepickerMode"] {
+    margin-top: -5px;
+    margin-bottom: -8px;
+    border-width: 0;
+    border-bottom-width: 1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}

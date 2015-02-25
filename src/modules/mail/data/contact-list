@@ -1,0 +1,97 @@
+[{
+  "id": 1,
+  "group": "family",
+  "list": [{
+    "id": 1,
+    "avatar": "avatar1",
+    "status": "online",
+    "name": "Sebastian Gates",
+    "country": "El Salvador",
+    "email": "Nulla@ullamcorperviverra.co.uk",
+    "group": "malesuada"
+  }, {
+    "id": 2,
+    "avatar": "avatar2",
+    "status": "online",
+    "name": "Kennedy Moses",
+    "country": "Singapore",
+    "email": "non@ut.edu",
+    "group": "luctus"
+  }, {
+    "id": 3,
+    "avatar": "avatar3",
+    "status": "offline",
+    "name": "Wilma Jefferson",
+    "country": "London",
+    "email": "felis@molestiein.org",
+    "group": "tellus"
+  }, {
+    "id": 4,
+    "avatar": "avatar4",
+    "status": "offline",
+    "name": "Ahmed Noel",
+    "country": "Belgium",
+    "email": "non.quam@sitamet.edu",
+    "group": "taciti"
+  }]
+}, {
+  "id": 2,
+  "group": "friends",
+  "list": [{
+    "id": 1,
+    "avatar": "avatar5",
+    "status": "offline",
+    "name": "Carly Burks",
+    "country": "Åland Islands",
+    "email": "mollis.non.cursus@volutpatnunc.edu",
+    "group": "habitant"
+  }, {
+    "id": 2,
+    "avatar": "avatar6",
+    "status": "online",
+    "name": "Joelle Bush",
+    "country": "Korea, North",
+    "email": "enim@massarutrum.co.uk",
+    "group": "augue"
+  }, {
+    "id": 3,
+    "avatar": "avatar7",
+    "status": "online",
+    "name": "Alec Porter",
+    "country": "Slovenia",
+    "email": "lectus.Cum@liberoest.co.uk",
+    "group": "in,"
+  }, {
+    "id": 4,
+    "avatar": "avatar8",
+    "status": "away",
+    "name": "Nomlanga Clayton",
+    "country": "Poland",
+    "email": "Nullam.nisl.Maecenas@adipiscing.ca",
+    "group": "Ut"
+  }, {
+    "id": 5,
+    "avatar": "avatar9",
+    "status": "away,",
+    "name": "Ava Michael",
+    "country": "Ecuador",
+    "email": "arcu@scelerisqueduiSuspendisse.co.uk",
+    "group": "nunc"
+  }, {
+    "id": 6,
+    "avatar": "avatar10",
+    "status": "away.",
+    "name": "Astra Charles",
+    "country": "Nepal",
+    "email": "ullamcorper@sedpede.ca",
+    "group": "elit"
+  }, {
+    "id": 7,
+    "avatar": "avatar11",
+    "status": "offline",
+    "name": "Nigel Bird",
+    "country": "Tunisia",
+    "email": "vestibulum.lorem.sit@id.net",
+    "group": "rhoncus."
+  }]
+}]

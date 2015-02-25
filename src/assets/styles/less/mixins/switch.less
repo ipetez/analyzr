@@ -1,0 +1,40 @@
+//
+// Switch
+// --------------------------------------------------
+
+// Switch size
+// ------------------------
+.switch-size(@height) {
+  input {
+    ~ .text {
+      line-height: @height;
+    }
+
+    ~ .switch {
+      font-size: @height;
+      height: @height;
+      width: (@height * 1.6);
+      border-radius: @height;
+      
+      &:after {
+        border-radius: @height;
+        height: @height;
+        width: @height;
+      }
+    }
+  }
+}
+
+// Switch color
+// ------------------------
+.switch-color(@color) {
+  input {
+    &:checked {
+      ~ .switch {
+        border-color: @color;
+        box-shadow: inset 0 0 0 0.6em @color;
+        &:after { border-color: @color; }
+      }
+    }
+  }
+}

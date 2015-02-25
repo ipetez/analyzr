@@ -1,0 +1,130 @@
+//
+// Variables
+// --------------------------------------------------
+
+//== Colors palette
+//
+//## Colors for use across application.
+@import "palette.less";
+
+
+//== Globals
+//
+//## global variable
+@text-color:                                @color-gray-900;    // #212121
+@secondary-text-color:                      @color-gray-500;    // #757575
+@hint-text-color:                           @color-gray-400;    // #BDBDBD
+@border-color:                              @color-gray-100;    // #E0E0E0
+@body-bg-color:                             @color-gray-50;    // #EEEEEE
+
+
+//== Components
+//
+//## Define common padding and border radius sizes and more. Values based on 14px text and 1.428 line-height (~20px to start).
+@padding-base-vertical:                     6px;
+@padding-base-horizontal:                   12px;
+
+@padding-lg-vertical:                       8px;
+@padding-lg-horizontal:                     15px;
+
+@padding-sm-vertical:                       4px;
+@padding-sm-horizontal:                     10px;
+
+@padding-xs-vertical:                       2px;
+@padding-xs-horizontal:                     5px;
+
+@line-height-computed:                      floor((@font-size-base * @line-height-base));
+@line-height-lg:                            1.3;
+@line-height-base:                          1.54;
+@line-height-sm:                            1.51;
+@line-height-xs:                            1.46;
+
+@border-radius-base:                        2px;
+@border-radius-lg:                          2px;
+@border-radius-sm:                          2px;
+@border-radius-xs:                          2px;
+
+@input-height-base:                         (@line-height-computed + (@padding-base-vertical * 2) + 2);
+@input-height-lg:                           (ceil(@font-size-lg * @line-height-lg) + (@padding-lg-vertical * 2) + 1);
+@input-height-sm:                           (floor(@font-size-sm * @line-height-sm) + (@padding-sm-vertical * 2) + 2);
+@input-border:                              #ccc;
+@input-border-radius:                       @border-radius-base;
+@input-border-focus:                        #66afe9;
+
+
+//== Typography
+//
+//## Font, line-height, and color for body text, headings, and more.
+@icon-font-path:                            "../fonts/";
+@font-family-base:                          "Open Sans", Helvetica, Arial, sans-serif;
+
+@font-size-lg:                              ceil((@font-size-base * 1.25)); // ~18px
+@font-size-base:                            13px;
+@font-size-sm:                              ceil((@font-size-base * 0.90)); // ~13px;
+@font-size-xs:                              ceil((@font-size-base * 0.80)); // ~11px
+
+@font-size-h1:                              floor((@font-size-base * 2.6)); // ~36px
+@font-size-h2:                              floor((@font-size-base * 2.15)); // ~30px
+@font-size-h3:                              ceil((@font-size-base * 1.7)); // ~18px
+@font-size-h4:                              ceil((@font-size-base * 1.25)); // ~16px
+@font-size-h5:                              ceil((@font-size-base * 1.05)); // ~14px
+@font-size-h6:                              @font-size-base; // 13px
+
+@headings-font-family:                      inherit;
+@headings-font-weight:                      500;
+@headings-line-height:                      1.1;
+@headings-color:                            inherit;
+
+
+//== Header layout
+//
+//## common main header variable.
+@header-bg-color:                           #fdfdfe;
+@header-height:                             56px;
+@header-height-lg:                          60px;
+@header-zindex:                             1005;
+
+
+//== Sidebar layout
+//
+//## common main sidebar variable.
+@sidebar-zindex:                            1010;
+//** left sidebar option
+@sidebar-left-bg-color:                     @color-gray-900;
+@sidebar-left-header-bg-color:              @color-gray-800;
+@sidebar-left-width:                        250px;
+@sidebar-left-collapse-width:               68px;
+
+
+//== Content layout
+//
+//## common main content variable.
+@content-zindex:                            995;
+
+
+//== Footer layout
+//
+//## common footer variable.
+@footer-height:                             46px;
+@footer-bg-color:                           #fff;
+@footer-zindex:                             955;
+
+
+//== Backdrop layout
+//
+//## common backdrop variable.
+@backdrop-bg-color:                         rgba(0,0,0,0.2);
+@backdrop-zindex:                           1009;
+
+
+//== Media queries breakpoints
+//
+//## Define the breakpoints at which your layout will change, adapting to different screen sizes.
+@screen-xs-min:                             480px;   // Extra small screen / phone
+@screen-sm-min:                             768px;   // Small screen / tablet
+@screen-md-min:                             992px;   // Medium screen / desktop
+@screen-lg-min:                             1200px;  // Large screen / wide desktop
+// So media queries don't overlap when required, provide a maximum
+@screen-xs-max:                             (@screen-sm-min - 1);
+@screen-sm-max:                             (@screen-md-min - 1);
+@screen-md-max:                             (@screen-lg-min - 1);

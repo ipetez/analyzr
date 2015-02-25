@@ -1,0 +1,30 @@
+//
+// Panels
+// --------------------------------------------------
+
+
+// Base class
+// -------------------------
+.panel {
+  border: 1px solid @border-color;
+  border-radius: @border-radius-base;
+}
+.panel-heading {
+  border-top-left-radius: @border-radius-base;
+  border-top-right-radius: @border-radius-base;
+}
+
+// Within heading, strip any `h*` tag of its default margins for spacing.
+.panel-title {
+  line-height: normal;
+  font-size: ceil((@font-size-base * 1.05));
+  color: inherit;
+}
+
+// Collapsable panels (aka, accordion)
+.panel-group {
+  // Tighten up margin so it's only between panels
+  .panel {
+    border-radius: @border-radius-base;
+  }
+}

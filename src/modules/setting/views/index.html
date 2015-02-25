@@ -1,0 +1,66 @@
+<!-- start: box layout -->
+<div class="box-layout">
+  <div class="col-sm-3 bg-white height-auto">
+    <!-- profile -->
+    <div class="bg-picture text-center pt-lg pb-lg bdr-b" style="background-image:url('assets/images/background/dashboard-chart-bg.jpg');min-height:0;">
+      <span class="img-wrapper img-rounded mb-md center-block" style="width:64px;">
+        <img src="assets/images/avatar/avatar2.jpg" alt="">
+      </span>
+      <h4 class="fw-sb">Ike Peters</h4>
+      <p class="mb-md text-muted">Senior Developer</p>
+      <a href="" class="btn btn-danger"><span class="ai ai-settings-ethernet fs-14 pos-t-1 mr-xs"></span> Connect</a>
+    </div>
+    <!--/ profile -->
+
+    <!-- navigation -->
+    <ul class="nav">
+      <li class="nav-heading mt-xs">MAIN</li>
+      <li>
+        <a ui-sref="default.setting.profile" ui-sref-active="active">
+          <span class="ai ai-account-circle fs-16 pos-t-2 mr-sm"></span> Profile
+        </a>
+      </li>
+      <li>
+        <a ui-sref="default.setting.account" ui-sref-active="active">
+          <span class="ai ai-recent-actors fs-16 pos-t-2 mr-sm"></span> Account
+        </a>
+      </li>
+      <li>
+        <a ui-sref="default.setting.security" ui-sref-active="active">
+          <span class="ai ai-security fs-16 pos-t-2 mr-sm"></span> Security And Privacy
+        </a>
+      </li>
+    </ul>
+    <!--/ navigation -->
+  </div>
+  <div class="col-sm-9 height-auto bg-auto bdr-l bdr-t-xs">
+    <!-- header -->
+    <div class="page-header">
+      <!-- profile heading -->
+      <div data-ng-show="$state.includes('default.setting.profile')">
+        <h4>Profile</h4>
+        <p class="text-muted mb-0">This information appears on your public profile, search results, and beyond.</p>
+      </div>
+      <!--/ profile heading -->
+
+      <!-- account heading -->
+      <div data-ng-show="$state.includes('default.setting.account')">
+        <h4>Account</h4>
+        <p class="text-muted mb-0">Change your basic account and language settings.</p>
+      </div>
+      <!--/ account heading -->
+
+      <!-- security heading -->
+      <div data-ng-show="$state.includes('default.setting.security')">
+        <h4>Security and privacy</h4>
+        <p class="text-muted mb-0">Change your security and privacy settings.</p>
+      </div>
+      <!--/ security heading -->
+    </div>
+    <!-- header -->
+    <div class="container-fluid pt-md pb-md">
+      <div class="slide-top" data-ui-view></div>
+    </div>
+  </div>
+</div>
+<!--/ end: box layout -->

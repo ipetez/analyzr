@@ -1,0 +1,23 @@
+//
+// Pagination (multiple pages)
+// --------------------------------------------------
+.pagination {
+  border-radius: @border-radius-base;
+
+  > li {
+    &:first-child {
+      > a,
+      > span {
+        border-top-left-radius: @border-radius-base;
+        border-bottom-left-radius: @border-radius-base;
+      }
+    }
+    &:last-child {
+      > a,
+      > span {
+        border-top-right-radius: @border-radius-base;
+        border-bottom-right-radius: @border-radius-base;
+      }
+    }
+  }
+}

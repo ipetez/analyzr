@@ -1,0 +1,159 @@
+<!-- start: box layout -->
+<div class="box-layout" data-ng-controller="mailMainCtrl">
+  <!-- menu container -->
+  <div class="col-md-3 col-sm-4">
+    <!-- header -->
+    <div class="page-header">
+      <a ui-sref="default.mail.compose" class="btn btn-danger"><span class="fa fa-pencil fs-14 mr-xs"></span> New Email</a>
+      <div class="clearfix pull-right">
+        <a href="" class="btn btn-default"><span class="fa fa-refresh"></span></a>
+        <a href="" class="btn btn-default visible-xs-inline-block" data-ng-click="core.screen.xs = !core.screen.xs" data-ng-class="{'active': !core.screen.xs}"><span class="fa fa-navicon fs-14"></span></a>
+      </div>
+    </div>
+    <!-- header -->
+
+    <!-- navigation -->
+    <ul class="nav" collapse="core.screen.xs">
+      <li class="nav-heading mt-xs">FOLDERS</li>
+      <li data-ng-repeat="folder in countMail = (config.folders)" data-ng-class="{'active': folder.name == config.stateParam.folder}">
+        <a ui-sref="default.mail.folder.param({folder:folder.name})">{{folder.name | capitalize}} <span class="label label-primary pull-right">{{(mails | filter:{folder:folder.name}).length}}</span></a>
+      </li>
+      <li class="nav-divider"></li>
+      <li class="nav-heading">LABELS</li>
+      <li data-ng-repeat="label in config.labels" data-ng-class="{'active': label.name == config.stateParam.label}">
+        <a ui-sref="default.mail.label.param({label:label.name})"><span class="ai ai-label fs-18 pos-t-2 text-{{label.color}} mr-sm"></span> {{label.name | capitalize}}</a>
+      </li>
+      <li class="nav-divider"></li>
+      <li class="nav-heading mb-xs">CONTACT</li>
+      <li>
+        <!-- scrollable container -->
+        <div class="scroll-content" style="height:240px;" slim-scroll="{height:'240px'}" data-ng-controller="contactListCtrl">
+          <ul class="media-list mb-0" data-ng-repeat="contact in count = (contacts | filter:{group:'friends'})">
+            <li class="media media-sm bdr-w-0" data-ng-repeat="list in contact.list">
+              <a href="" class="media-left media-middle">
+                <span class="img-wrapper img-rounded">
+                  <img data-ng-src="assets/images/avatar/{{list.avatar}}.jpg">
+                </span>
+              </a>
+              <div class="media-body media-middle">
+                <h5 class="media-heading mb-2 fw-sb">
+                  <a href=""><span data-ng-init="color = (config.status | filter:{name:list.status})" class="bullet bullet-{{color[0].color}} mnt-1"></span> {{list.name}}</a>
+                </h5>
+                <p class="mb-0">{{list.country}}</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!-- scrollable container -->
+      </li>
+    </ul>
+    <!-- navigation -->
+  </div>
+  <!--/ menu container -->
+
+  <!-- mail container -->
+  <div class="col-md-9 col-sm-8 bg-white bdr-l">
+    <!-- page header -->
+    <div class="page-header">
+      <!-- compose toolbar -->
+      <div class="clearfix" data-ng-show="$state.includes('default.mail.compose')">
+        <div class="btn-group">
+          <a class="btn btn-default" tooltip="Save"><i class="fa fa-file"></i></a>
+          <a ui-sref="default.mail.folder.param({folder:'inbox'})" class="btn btn-default" tooltip="Discard"><i class="fa fa-trash-o"></i></a>
+        </div>
+      </div>
+      <!--/ compose toolbar -->
+
+      <!-- mail lists toolbar -->
+      <div class="clearfix" data-ng-show="$state.includes('default.mail.folder') || $state.includes('default.mail.label')">
+        <!-- check all -->
+        <div class="checkbox custom-primary pull-left nm pl-0 pr-xs pt-sm pb-0 mnt-2">
+          <label>
+            <input type="checkbox" value="" data-ng-model="checkAll">
+            <span></span>
+          </label>
+        </div>
+        <!-- check all -->
+
+        <!-- button group 1 -->
+        <div class="btn-group">
+          <a href="" class="btn btn-default" tooltip="Reply"><span class="fa fa-mail-reply"></span></a>
+          <a href="" class="btn btn-default" tooltip="Forward"><span class="fa fa-mail-forward"></span></a>
+        </div>
+        <!--/ button group 1 -->
+
+        <!-- button group 2 -->
+        <div class="btn-group pull-right-xs">
+          <div class="btn-group" dropdown>
+            <a href="" class="btn btn-default dropdown-toggle">
+              <span class="fa fa-tags fs-14"></span> <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li data-ng-repeat="label in config.labels"><a href="">{{label.name | capitalize}}</a></li>
+            </ul>
+          </div>
+          <div class="btn-group" dropdown>
+            <a href="" class="btn btn-default dropdown-toggle">
+              <span class="fa fa-folder-open fs-14"></span> <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li data-ng-repeat="folder in config.folders"><a href="">{{folder.name | capitalize}}</a></li>
+            </ul>
+          </div>
+        </div>
+        <!--/ button group 2 -->
+
+        <!-- button group 3 -->
+        <div class="btn-group hidden-xs">
+          <a href="" class="btn btn-default" data-ng-class="{'disabled': !checkAll}" tooltip="Archive"><span class="fa fa-archive"></span></a>
+          <a href="" class="btn btn-default" data-ng-class="{'disabled': !checkAll}" tooltip="Delete"><span class="fa fa-trash-o"></span></a>
+        </div>
+        <!--/ button group 3 -->
+
+        <!-- pagination -->
+        <div class="mb-sm visible-xs"></div>
+        <div class="pull-right-sm">
+          <div class="btn btn-link pull-left-xs">1-100 <span class="fw-n">of</span> 2154</div>
+          <div class="btn-group pull-right-xs">
+            <a href="" class="btn btn-default"><span class="fa fa-angle-left"></span></a>
+            <a href="" class="btn btn-default"><span class="fa fa-angle-right"></span></a>
+          </div>
+        </div>
+        <!--/ pagination -->
+      </div>
+      <!--/ mail lists toolbar -->
+
+      <!-- mail view toolbar -->
+      <div class="clearfix" data-ng-show="$state.includes('default.mail.view')">
+        <!-- button group 1 -->
+        <div class="btn-group">
+          <a ui-sref="default.mail.folder.param({folder:'inbox'})" class="btn btn-default" tooltip="Back"><span class="fa fa-arrow-left"></span></a>
+        </div>
+        <!--/ button group 1 -->
+
+        <!-- button group 2 -->
+        <div class="btn-group">
+          <a href="" class="btn btn-default" tooltip="Reply"><span class="fa fa-mail-reply"></span></a>
+          <a href="" class="btn btn-default" tooltip="Reply to all"><span class="fa fa-mail-reply-all"></span></a>
+          <a href="" class="btn btn-default" tooltip="Forward"><span class="fa fa-mail-forward"></span></a>
+        </div>
+        <!--/ button group 2 -->
+
+        <!-- button group 3 -->
+        <div class="btn-group pull-right">
+          <a href="" class="btn btn-default" tooltip="Archive"><span class="fa fa-archive"></span></a>
+          <a href="" class="btn btn-default" tooltip="Delete"><span class="fa fa-trash"></span></a>
+        </div>
+        <!--/ button group 3 -->
+      </div>
+      <!--/ mail view toolbar -->
+    </div>
+    <!--/ page header -->
+
+    <!-- load mail list -->
+    <div class="slide-top" ui-view></div>
+    <!--/ load mail list -->
+  </div>
+  <!--/ mail container -->
+</div>
+<!--/ end: box layout -->

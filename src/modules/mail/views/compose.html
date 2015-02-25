@@ -1,0 +1,32 @@
+<!-- start: container fluid -->
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <form class="mt-md">
+        <div class="form-group">
+          <select ui-jq="select2" multiple placeholder="Recipient">
+            <option value="1">vel@duiFuscediam.net</option>
+            <option value="2">in@scelerisque.edu</option>
+            <option value="3">tempus.risus@anteNunc.co.uk</option>
+            <option value="4">massa@magnaSed.org</option>
+            <option value="5">sem.consequat.nec@mollis.net</option>
+          </select>
+        </div>
+        <hr class="mnr-md mnl-md"><!-- horizontal rule -->
+        <div class="form-group">
+          <input type="text" class="form-control" name="subject" placeholder="Subject">
+        </div>
+        <hr class="mnr-md mnl-md"><!-- horizontal rule -->
+        <div class="form-group">
+          <!-- summernote editor -->
+          <div class="summernote" ui-jq="summernote" ui-options="{height: 250}"></div>
+          <!--/ summernote editor -->
+        </div>
+        <div class="form-group">
+          <button class="btn btn-primary"><span class="fa fa-paper-plane"></span> Sent Email</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<!--/ end: container fluid -->

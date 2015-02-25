@@ -1,0 +1,545 @@
+<!-- start: page header -->
+<div class="page-header">
+  <div class="box-layout">
+    <div class="col-sm-6 va-m">
+      <h3>Bootstrap</h3>
+    </div>
+    <div class="col-sm-6 va-m">
+      <ol class="breadcrumb pull-right-sm mb-0">
+        <li><a href="#">UI Elements</a></li>
+        <li class="active">Bootstrap</li>
+      </ol>
+    </div>
+  </div>
+</div>
+<!--/ end: page header -->
+
+<!-- start: container fluid -->
+<div class="container-fluid pt-md">
+  <div class="row">
+    <!-- alert -->
+    <div class="col-md-6">
+      <!-- start: panel -->
+      <div class="panel panel-default" data-ng-controller="BsAlertCtrl">
+        <div class="panel-heading">
+          <h5 class="panel-title">Alert</h5>
+        </div>
+        <div class="panel-body">
+          <alert data-ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</alert>
+          <button class='btn btn-success' data-ng-click="addAlert()"><span class="fa fa-plus"></span> Add Alert</button>
+        </div>
+      </div>
+      <!--/ end: panel -->
+    </div>
+    <!--/ alert -->
+
+    <!-- accordion -->
+    <div class="col-md-6" data-ng-controller="BsAccordionCtrl">
+      <!-- start: panel -->
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h5 class="panel-title">Accordion</h5>
+        </div>
+        <div class="panel-body">
+          <!-- toolbar -->
+          <button class="btn btn-default" data-ng-click="status.open = !status.open">Toggle last panel</button>
+          <button class="btn btn-default" data-ng-click="status.isFirstDisabled = ! status.isFirstDisabled">Enable / Disable first panel</button>
+          <p class="mt-md mb-0">
+            <label class="switch switch-xs switch-warning">
+              <input type="checkbox" data-ng-model="oneAtATime">
+              <span class="switch"></span><span class="text ml-xs">Open only one at a time</span>
+            </label>
+          </p>
+          <!--/ toolbar -->
+        </div>
+      </div>
+      <!--/ end: panel -->
+
+      <!-- the accordion -->
+      <accordion close-others="oneAtATime">
+        <accordion-group heading="Static Header, initially expanded" is-open="status.isFirstOpen" is-disabled="status.isFirstDisabled">
+          This content is straight in the template.
+        </accordion-group>
+        <accordion-group heading="{{group.title}}" data-ng-repeat="group in groups">
+          {{group.content}}
+        </accordion-group>
+        <accordion-group heading="Dynamic Body Content">
+          <p>The body of the accordion group grows to fit the contents</p>
+          <button class="btn btn-success btn-sm mb-sm" data-ng-click="addItem()">Add Item</button>
+          <div data-ng-repeat="item in items">{{item}}</div>
+        </accordion-group>
+        <accordion-group is-open="status.open">
+          <accordion-heading>
+            I can have markup, too! <i class="pull-right fa" data-ng-class="{'fa-caret-down': status.open, 'fa-caret-right': !status.open}" style="margin-top:2px;"></i>
+          </accordion-heading>
+          This is just some content to illustrate fancy headings.
+        </accordion-group>
+      </accordion>
+      <!--/ the accordion -->
+    </div>
+    <!--/ accordion -->
+  </div>
+
+  <div class="row">
+    <!-- tabs -->
+    <div class="col-md-6">
+      <!-- start: panel -->
+      <div class="panel panel-default" data-ng-controller="BsTabsCtrl">
+        <div class="panel-heading">
+          <h5 class="panel-title">Tabs</h5>
+        </div>
+        <div class="panel-body">
+          <p>Select a tab by setting active binding to true:</p>
+          <p>
+            <button class="btn btn-default" data-ng-click="tabs[0].active = true">Select second tab</button>
+            <button class="btn btn-default" data-ng-click="tabs[1].active = true">Select third tab</button>
+          </p>
+          <p>
+            <button class="btn btn-default" data-ng-click="tabs[1].disabled = ! tabs[1].disabled">Enable / Disable third tab</button>
+          </p>
+
+          <tabset>
+            <tab heading="Static title">
+              <div class="pa-md">
+                pede et risus. Quisque libero lacus, varius et, euismod et, commodo at, libero. 
+                Morbi accumsan laoreet ipsum. Curabitur consequat, lectus sit amet luctus vulputate, 
+                nisi sem semper erat, in consectetuer ipsum nunc id enim. Curabitur massa.
+              </div>
+            </tab>
+            <tab data-ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active" disabled="tab.disabled">
+              <div class="pa-md">{{tab.content}}</div>
+            </tab>
+          </tabset>
+          <hr class="mnr-md mnl-md"><!-- horizontal rule -->
+
+          <tabset vertical="true" type="pills">
+            <tab heading="Vertical 1">
+              <div class="pa-md">
+                felis orci, adipiscing non, luctus sit amet, faucibus ut, nulla. 
+                Cras eu tellus eu augue porttitor interdum. Sed auctor odio a purus. 
+                Duis elementum, dui quis accumsan convallis
+              </div>
+            </tab>
+            <tab heading="Vertical 2">
+              <div class="pa-md">
+                pede et risus. Quisque libero lacus, varius et, euismod et, commodo at, libero. 
+                Morbi accumsan laoreet ipsum. Curabitur consequat, lectus sit amet luctus vulputate, 
+                nisi sem semper erat, in consectetuer.
+              </div>
+            </tab>
+          </tabset>
+          <hr class="mnr-md mnl-md"><!-- horizontal rule -->
+
+          <tabset justified="true">
+            <tab heading="Justified">
+              <div class="pa-md">
+                felis orci, adipiscing non, luctus sit amet, faucibus ut, nulla. 
+                Cras eu tellus eu augue porttitor interdum. Sed auctor odio a purus. 
+                Duis elementum, dui quis accumsan convallis.
+              </div>
+            </tab>
+            <tab heading="SJ">
+              <div class="pa-md">
+                pede et risus. Quisque libero lacus, varius et, euismod et, commodo at, libero. 
+                Morbi accumsan laoreet ipsum. Curabitur consequat, lectus sit amet luctus vulputate, 
+                nisi sem semper erat, in consectetuer.
+              </div>
+            </tab>
+            <tab heading="Long Justified">
+              <div class="pa-m"do>
+                eu lacus. Quisque imperdiet, erat nonummy ultricies ornare, elit elit fermentum risus, 
+                at fringilla purus mauris a nunc. In at pede. Cras vulputate velit eu sem. 
+                Pellentesque ut ipsum ac mi eleifend egestas.
+              </div>
+            </tab>
+          </tabset>
+        </div>
+      </div>
+      <!--/ end: panel -->
+    </div>
+    <!--/ tabs -->
+
+    <!-- carousel -->
+    <div class="col-md-6">
+      <!-- start: panel -->
+      <div class="panel panel-default" data-ng-controller="BsCarouselCtrl">
+        <div class="panel-heading">
+          <h5 class="panel-title">Carousel</h5>
+        </div>
+        <carousel interval="myInterval">
+          <slide data-ng-repeat="slide in slides" active="slide.active">
+            <img data-ng-src="{{slide.image}}">
+            <div class="carousel-caption">
+              <h4>Slide {{$index}}</h4>
+              <p>{{slide.text}}</p>
+            </div>
+          </slide>
+        </carousel>
+        <div class="pa-md">
+          <div class="row">
+            <div class="col-md-4">
+              <button type="button" class="btn btn-info" data-ng-click="addSlide()">Add Slide</button>
+            </div>
+            <div class="col-md-8 form-horizontal">
+              <div class="form-group mb-0">
+                <label class="control-label col-md-4">Interval:</label>
+                <div class="col-md-8">
+                  <input type="number" class="form-control pull-left" data-ng-model="myInterval">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--/ end: panel -->
+    </div>
+    <!--/ carousel -->
+
+    <!-- collapse -->
+    <div class="col-md-6">
+      <!-- start: panel -->
+      <div class="panel panel-default" data-ng-controller="BsCollapseCtrl">
+        <div class="panel-heading">
+          <h5 class="panel-title">Collapse</h5>
+        </div>
+        <div class="panel-body">
+          <button class="btn btn-default" data-ng-click="isCollapsed = !isCollapsed">Toggle collapse</button>
+        </div>
+        <div collapse="isCollapsed">
+          <div class="container-fluid pb-md">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </div>
+        </div>
+      </div>
+      <!--/ end: panel -->
+    </div>
+    <!--/ collapse -->
+  </div>
+
+  <div class="row">
+    <!-- datepicker -->
+    <div class="col-md-6">
+      <!-- start: panel -->
+      <div class="panel panel-default" data-ng-controller="BsDatepickerCtrl">
+        <div class="panel-heading">
+          <h5 class="panel-title">Datepicker</h5>
+        </div>
+        <div class="panel-body">
+          <pre>Selected date is: <em>{{dt | date:'fullDate' }}</em></pre>
+
+          <h5 class="mb-xs">Inline</h5>
+          <datepicker data-ng-model="dt" min-date="minDate" show-weeks="true" class="datepicker"></datepicker>
+          <hr class="mnr-md mnl-md"><!-- horizontal rule -->
+
+          <h5 class="mb-xs">Popup</h5>
+          <div class="row">
+            <div class="col-md-6">
+              <p class="input-group">
+                <input type="text" class="form-control" datepicker-popup="{{format}}" data-ng-model="dt" is-open="opened" min-date="minDate" max-date="'2015-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" data-ng-required="true" close-text="Close" />
+                <span class="input-group-btn">
+                  <button type="button" class="btn btn-default" data-ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                </span>
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <label>Format:</label> <select class="form-control" data-ng-model="format" data-ng-options="f for f in formats"><option></option></select>
+            </div>
+          </div>
+          <hr class="mnr-md mnl-md"><!-- horizontal rule -->
+
+          <button type="button" class="btn btn-info" data-ng-click="today()">Today</button>
+          <button type="button" class="btn btn-default" data-ng-click="dt = '2009-08-24'">2009-08-24</button>
+          <button type="button" class="btn btn-danger" data-ng-click="clear()">Clear</button>
+          <button type="button" class="btn btn-default" data-ng-click="toggleMin()" tooltip="After today restriction">Min date</button>
+        </div>
+      </div>
+      <!--/ end: panel -->
+    </div>
+    <!--/ datepicker -->
+
+    <!-- dropdown -->
+    <div class="col-md-6">
+      <!-- start: panel -->
+      <div class="panel panel-default" data-ng-controller="BsDropdownCtrl">
+        <div class="panel-heading">
+          <h5 class="panel-title">Dropdown</h5>
+        </div>
+        <div class="panel-body">
+          <!-- Simple dropdown -->
+          <span class="dropdown" on-toggle="toggled(open)">
+            <a href class="dropdown-toggle">Click me for a dropdown, yo!</a>
+            <ul class="dropdown-menu">
+              <li data-ng-repeat="choice in items"><a href>{{choice}}</a></li>
+            </ul>
+          </span>
+
+          <!-- Single button -->
+          <div class="btn-group" dropdown is-open="status.isopen">
+            <button type="button" class="btn btn-primary dropdown-toggle" data-ng-disabled="disabled">Button dropdown <span class="caret"></span></button>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+            </ul>
+          </div>
+          <!--/ Single button -->
+
+          <!-- Split button -->
+          <div class="btn-group" dropdown>
+            <button type="button" class="btn btn-danger">Action</button>
+            <button type="button" class="btn btn-danger dropdown-toggle">
+              <span class="caret"></span>
+              <span class="sr-only">Split button!</span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+            </ul>
+          </div>
+          <!--/ Split button -->
+          <hr class="mnr-md mnl-md"><!-- horizontal rule -->
+
+          <button type="button" class="btn btn-default" data-ng-click="toggleDropdown($event)">Toggle button dropdown</button>
+          <button type="button" class="btn btn-warning" data-ng-click="disabled = !disabled">Enable/Disable</button>
+        </div>
+      </div>
+      <!--/ end: panel -->
+    </div>
+    <!--/ dropdown -->
+
+    <!-- modal -->
+    <div class="col-md-6">
+      <!-- start: panel -->
+      <div class="panel panel-default" data-ng-controller="BsModalCtrl">
+        <div class="panel-heading">
+          <h5 class="panel-title">Modal</h5>
+        </div>
+        <div class="panel-body">
+          <script type="text/data-ng-template" id="myModalContent.html">
+            <div data-ng-include="'views/partials/modal.html'"></div>
+          </script>
+
+          <button class="btn btn-default" data-ng-click="open()">Open me!</button>
+          <button class="btn btn-default" data-ng-click="open('lg')">Large modal</button>
+          <button class="btn btn-default" data-ng-click="open('sm')">Small modal</button>
+          <div data-ng-show="selected">Selection from a modal: {{ selected }}</div>
+        </div>
+      </div>
+      <!--/ end: panel -->
+    </div>
+    <!--/ modal -->
+
+    <!-- popover -->
+    <div class="col-md-6">
+      <!-- start: panel -->
+      <div class="panel panel-default" data-ng-controller="BsPopoverCtrl">
+        <div class="panel-heading">
+          <h5 class="panel-title">Popover</h5>
+        </div>
+        <div class="panel-body">
+          <h5 class="mb-xs">Positional</h5>
+          <button popover-trigger="click" popover-placement="top" popover="On the Top!" class="btn btn-default">Top</button>
+          <button popover-trigger="click" popover-placement="left" popover="On the Left!" class="btn btn-default">Left</button>
+          <button popover-trigger="click" popover-placement="right" popover="On the Right!" class="btn btn-default">Right</button>
+          <button popover-trigger="click" popover-placement="bottom" popover="On the Bottom!" class="btn btn-default">Bottom</button>
+          <hr class="mnr-md mnl-md"><!-- horizontal rule -->
+
+          <h5 class="mb-xs">Triggers</h5>
+          <button popover="I appeared on mouse enter!" popover-trigger="mouseenter" popover-placement="top" class="btn btn-default mb-xs">Mouseenter</button>
+          <input type="text" value="Click me!" popover="I appeared on focus! Click away and I'll vanish..."  popover-trigger="focus" popover-placement="top" class="form-control">
+        </div>
+      </div>
+      <!--/ end: panel -->
+    </div>
+    <!--/ popover -->
+  </div>
+
+  <div class="row">
+    <!-- pagination -->
+    <div class="col-md-6">
+      <!-- start: panel -->
+      <div class="panel panel-default" data-ng-controller="BsPaginationCtrl">
+        <div class="panel-heading">
+          <h5 class="panel-title">Pagination</h5>
+        </div>
+        <div class="panel-body">
+          <h5 class="mb-xs">Default</h5>
+          <pagination total-items="totalItems" data-ng-model="currentPage" data-ng-change="pageChanged()"></pagination>
+          <pagination boundary-links="true" total-items="totalItems" data-ng-model="currentPage" class="pagination-sm" previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;"></pagination>
+          <pager total-items="totalItems" data-ng-model="currentPage"></pager>
+          <pre>The selected page no: {{currentPage}}</pre>
+          <button class="btn btn-info" data-ng-click="setPage(3)">Set current page to: 3</button>
+          <hr class="mnr-md mnl-md"><!-- horizontal rule -->
+
+          <h5 class="mb-xs">Limit the maximum visible buttons</h5>
+          <pagination total-items="bigTotalItems" data-ng-model="bigCurrentPage" max-size="maxSize" class="pagination-sm" boundary-links="true"></pagination>
+          <pagination total-items="bigTotalItems" data-ng-model="bigCurrentPage" max-size="maxSize" class="pagination-sm" boundary-links="true" rotate="false" num-pages="numPages"></pagination>
+          <pre>Page: {{bigCurrentPage}} / {{numPages}}</pre>
+        </div>
+      </div>
+      <!--/ end: panel -->
+    </div>
+    <!--/ pagination -->
+
+    <!-- progress -->
+    <div class="col-md-6">
+      <!-- start: panel -->
+      <div class="panel panel-default" data-ng-controller="BsProgressCtrl">
+        <div class="panel-heading">
+          <h5 class="panel-title">Progress</h5>
+        </div>
+        <div class="panel-body">
+          <h5 class="mb-xs">Static</h5>
+          <progressbar value="55" class="progress-xs mb-sm"></progressbar>
+          <progressbar class="progress-striped progress-sm mb-sm" value="22" type="warning"></progressbar>
+          <progressbar class="progress-striped progress-md mb-sm" value="20" type="success"></progressbar>
+          <progressbar class="progress-striped active mb-sm" max="200" value="166" type="danger"></progressbar>
+          <hr class="mnr-md mnl-md"><!-- horizontal rule -->
+
+          <h5 class="mb-xs">Dynamic <a href data-ng-click="random()" class="ml-xs"><span class="fa fa-refresh"></span></a></h5>
+          <progressbar max="max" value="dynamic"><span>{{dynamic}} / {{max}}</span></progressbar>
+
+          <small><em>No animation</em></small>
+          <progressbar animate="false" value="dynamic" type="success"><b>{{dynamic}}%</b></progressbar>
+
+          <small><em>Object (changes type based on value)</em></small>
+          <progressbar class="progress-striped active mb-0" value="dynamic" type="{{type}}">{{type}} <i data-ng-show="showWarning">!!! Watch out !!!</i></progressbar>
+        </div>
+      </div>
+      <!--/ end: panel -->
+    </div>
+    <!--/ progress -->
+
+    <!-- typehead -->
+    <div class="col-md-6">
+      <!-- start: panel -->
+      <div class="panel panel-default" data-ng-controller="BsTypeaheadCtrl">
+        <div class="panel-heading">
+          <h5 class="panel-title">Typehead</h5>
+        </div>
+        <div class="panel-body">
+          <pre>Model: {{selected | json}}</pre>
+          <input type="text" data-ng-model="selected" typeahead="state for state in states | filter:$viewValue | limitTo:8" class="form-control">
+        </div>
+      </div>
+      <!--/ end: panel -->
+    </div>
+    <!--/ typehead -->
+  </div>
+
+  <div class="row">
+    <!-- rating -->
+    <div class="col-md-6">
+      <!-- start: panel -->
+      <div class="panel panel-default" data-ng-controller="BsRatingCtrl">
+        <div class="panel-heading">
+          <h5 class="panel-title">Rating</h5>
+        </div>
+        <div class="panel-body">
+          <h5 class="mb-xs">Default</h5>
+          <rating data-ng-model="rate" max="max" readonly="isReadonly" on-hover="hoveringOver(value)" on-leave="overStar = null"></rating>
+          <span class="label" data-ng-class="{'label-warning': percent<30, 'label-info': percent>=30 && percent<70, 'label-success': percent>=70}" data-ng-show="overStar && !isReadonly">{{percent}}%</span>
+          <pre class="mt-xs">Rate: <b>{{rate}}</b> - Readonly is: <i>{{isReadonly}}</i> - Hovering over: <b>{{overStar || "none"}}</b></pre>
+
+          <button class="btn btn-danger" data-ng-click="rate = 0" data-ng-disabled="isReadonly">Clear</button>
+          <button class="btn btn-default" data-ng-click="isReadonly = ! isReadonly">Toggle Readonly</button>
+          <hr class="mnr-md mnl-md"><!-- horizontal rule -->
+
+          <h5 class="mb-xs">Custom icons</h5>
+          <div data-ng-init="star = 2" class="mb-xs fs-14">
+            <rating data-ng-model="star" max="5" state-on="'fa fa-star text-warning'" state-off="'fa fa-star-o'"></rating> - <b>{{star}}</b>
+          </div>
+          <div data-ng-init="love = 5" class="fs-14">
+            <rating data-ng-model="love" max="10" state-on="'fa fa-heart text-danger'" state-off="'fa fa-heart-o'"></rating> - <b>{{love}}</b>
+          </div>
+        </div>
+      </div>
+      <!--/ end: panel -->
+    </div>
+    <!--/ rating -->
+
+    <!-- timepicker -->
+    <div class="col-md-6">
+      <!-- start: panel -->
+      <div class="panel panel-default" data-ng-controller="BsTimepickerCtrl">
+        <div class="panel-heading">
+          <h5 class="panel-title">Timepicker</h5>
+        </div>
+        <div class="panel-body">
+          <timepicker data-ng-model="mytime" data-ng-change="changed()" hour-step="hstep" minute-step="mstep" show-meridian="ismeridian"></timepicker>
+          <pre class="alert alert-info">Time is: {{mytime | date:'shortTime' }}</pre>
+
+          <div class="row"> 
+            <div class="col-xs-6">
+              Hours step is:
+              <select class="form-control" data-ng-model="hstep" data-ng-options="opt for opt in options.hstep"></select>
+            </div>
+            <div class="col-xs-6">
+              Minutes step is:
+              <select class="form-control" data-ng-model="mstep" data-ng-options="opt for opt in options.mstep"></select>
+            </div>
+          </div>
+          <hr class="mnr-md mnl-md"><!-- horizontal rule -->
+
+          <button class="btn btn-info" data-ng-click="toggleMode()">12H / 24H</button>
+          <button class="btn btn-default" data-ng-click="update()">Set to 14:00</button>
+          <button class="btn btn-danger" data-ng-click="clear()">Clear</button>
+        </div>
+      </div>
+      <!--/ end: panel -->
+    </div>
+    <!--/ timepicker -->
+  </div>
+
+  <div class="row">
+    <!-- tooltip -->
+    <div class="col-md-6">
+      <!-- start: panel -->
+      <div class="panel panel-default" data-ng-controller="BsTooltipCtrl">
+        <div class="panel-heading">
+          <h5 class="panel-title">Tooltip</h5>
+        </div>
+        <div class="panel-body">
+          <p>
+            Pellentesque <a href="#" class="text-info" tooltip="{{dynamicTooltip}}">{{dynamicTooltipText}}</a>,
+            sit amet venenatis urna cursus eget nunc scelerisque viverra mauris, in
+            aliquam. Tincidunt lobortis feugiat vivamus at 
+            <a href="#" class="text-info" tooltip-placement="left" tooltip="On the Left!">left</a> eget
+            arcu dictum varius duis at consectetur lorem. Vitae elementum curabitur
+            <a href="#" class="text-info" tooltip-placement="right" tooltip="On the Right!">right</a> 
+            nunc sed velit dignissim sodales ut eu sem integer vitae. Turpis egestas 
+            <a href="#" class="text-info" tooltip-placement="bottom" tooltip="On the Bottom!">bottom</a> 
+            pharetra convallis posuere morbi leo urna, 
+            <a href="#" class="text-info" tooltip-animation="false" tooltip="I don't fade. :-(">fading</a>
+            at elementum eu, facilisis sed odio morbi quis commodo odio. In cursus
+            <a href="#" class="text-info" tooltip-popup-delay='1000' tooltip='appears with delay'>delayed</a> turpis massa tincidunt dui ut.
+            </p>
+          <p>
+            I can even contain HTML. <a href="#" tooltip-html-unsafe="{{htmlTooltip}}">Check me out!</a>
+          </p>
+          <form role="form">
+            <div class="form-group">
+              <label>Or use custom triggers, like focus: </label>
+              <input type="text" value="Click me!" tooltip="See? Now click away..."  tooltip-trigger="focus" tooltip-placement="right" class="form-control" />
+            </div>
+          </form>
+        </div>
+      </div>
+      <!--/ end: panel -->
+    </div>
+    <!--/ tooltip -->
+  </div>
+</div>
+<!--/ end: container fluid -->

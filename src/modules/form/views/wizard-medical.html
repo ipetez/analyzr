@@ -1,0 +1,105 @@
+<!-- start: medial info form -->
+<form name="formWizard" novalidate data-ng-submit="$state.go('default.form.wizard.suggestion')"><!-- replace data-ng-submit expression with your controller logic -->
+  <div class="form-group mb-0" data-ng-class="{ 'has-error': formWizard.medicationLists.$dirty && formWizard.medicationLists.$invalid }">
+    <label class="control-label">Please list any medication allergies that you have <span class="text-danger">*</span></label>
+    <textarea class="form-control" rows="5" name="medicationLists" data-ng-model="medication.list" required></textarea>
+    <p class="help-block text-danger fs-12 mb-0" data-ng-show="formWizard.medicationLists.$dirty && formWizard.medicationLists.$invalid">- Fill in your medication allergies</p>
+  </div>
+  <hr class="mnr-md mnl-md"><!-- horizontal line -->
+
+  <div class="form-group mb-0">
+    <label class="control-label">Check all that apply to you or your immediate family (parents, siblings, grandparents)</label>
+    <div class="checkbox custom-info">
+      <label>
+        <input type="checkbox" name="asthma" value="asthma">
+        <span></span> Asthma / Lung Problems
+      </label>
+    </div>
+    <div class="checkbox custom-info">
+      <label>
+        <input type="checkbox" name="cancer" value="cancer">
+        <span></span> Cancer
+      </label>
+    </div>
+    <div class="checkbox custom-info">
+      <label>
+        <input type="checkbox" name="cardiacDisease" value="cardiac">
+        <span></span> Cardiac Disease
+      </label>
+    </div>
+    <div class="checkbox custom-info">
+      <label>
+        <input type="checkbox" name="diabetes" value="diabetes">
+        <span></span> Diabetes
+      </label>
+    </div>
+    <div class="checkbox custom-info">
+      <label>
+        <input type="checkbox" name="backPaint" value="backpaint">
+        <span></span> History of Back Pain
+      </label>
+    </div>
+    <div class="checkbox custom-info">
+      <label>
+        <input type="checkbox" name="stroke" value="stroke">
+        <span></span> Stroke
+      </label>
+    </div>
+    <div class="checkbox custom-info">
+      <label>
+        <input type="checkbox" name="none" value="none">
+        <span></span> None
+      </label>
+    </div>
+  </div>
+  <hr class="mnr-md mnl-md"><!-- horizontal line -->
+
+  <div class="form-group mb-0">
+    <label class="control-label">Please describe your alcohol consumption :</label>
+    <div class="radio custom-info">
+      <label>
+        <input type="radio" name="alcoholConsumption" value="1" checked>
+        <span></span> Daily
+      </label>
+    </div>
+    <div class="radio custom-info">
+      <label>
+        <input type="radio" name="alcoholConsumption" value="2">
+        <span></span> Weekly
+      </label>
+    </div>
+    <div class="radio custom-info">
+      <label>
+        <input type="radio" name="alcoholConsumption" value="3">
+        <span></span> Monthly
+      </label>
+    </div>
+    <div class="radio custom-info">
+      <label>
+        <input type="radio" name="alcoholConsumption" value="4">
+        <span></span> Occasionally
+      </label>
+    </div>
+    <div class="radio custom-info">
+      <label>
+        <input type="radio" name="alcoholConsumption" value="5">
+        <span></span> Rarely
+      </label>
+    </div>
+    <div class="radio custom-info">
+      <label>
+        <input type="radio" name="alcoholConsumption" value="6">
+        <span></span> Never
+      </label>
+    </div>
+  </div>
+  <hr class="mnr-md mnl-md"><!-- horizontal line -->
+
+  <!-- Buttons -->
+  <div class="clearfix">
+    <a ui-sref="default.form.wizard" class="btn btn-primary"><span class="fa fa-long-arrow-left"></span> Back</a>
+    <button type="submit" class="btn btn-primary pull-right" data-ng-disabled="formWizard.$invalid">Proceed <span class="fa fa-long-arrow-right"></span></button>
+  </div>
+  <!--/ Buttons -->
+</form>
+<!--/ end: medial info form -->

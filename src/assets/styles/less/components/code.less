@@ -1,0 +1,19 @@
+//
+// Code (inline and block)
+// --------------------------------------------------
+
+
+// Blocks of code
+pre {
+  padding: 15px;
+  background-color: darken(@color-gray-50, 2%);
+  border: 1px solid @border-color;
+  border-radius: @border-radius-base;
+
+  &.scroll-x {
+    width: 100%;
+    word-break: normal;
+    word-wrap: normal;
+    overflow-x: scroll-x;
+  }
+}

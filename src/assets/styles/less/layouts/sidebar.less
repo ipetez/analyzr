@@ -1,0 +1,211 @@
+//
+// Layout Sidebar
+// --------------------------------------------------
+
+@media (max-width: @screen-xs-max) {
+  // animate `app-sidebar` on sidebar-left opened
+  .csstransforms3d.sidebar-open-ltr {
+    .app-sidebar.sidebar-left {
+      transform: translate3d(@sidebar-left-width, 0, 0);
+      transition: transform .3s ease;
+      box-shadow: 3px 0 10px -3px rgba(0,0,0,0.7);
+    }
+  }
+  .no-csstransforms3d.sidebar-open-ltr {
+    .app-sidebar.sidebar-left {
+      left: 0;
+    }
+  }
+}
+
+// The sidebar itself
+// -------------------------
+.app-sidebar {
+  position: fixed;
+  z-index: @sidebar-zindex;
+  top: 0;
+  bottom: 0;
+  transition: transform .3s ease;
+
+  // sidebar left
+  // -------------------------
+  &.sidebar-left {
+    width: @sidebar-left-width;
+    left: -@sidebar-left-width;
+    background-color: @sidebar-left-bg-color;
+    border-right: 1px solid rgba(0,0,0,0.1);
+    color: fade(contrast(@sidebar-left-bg-color), 55%);
+
+    // sidebar header
+    // -------------------------
+    .sidebar-header {
+      width: @sidebar-left-width;
+      background-color: @sidebar-left-header-bg-color;
+
+      // sidebar brand
+      // -------------------------
+      .brand {
+        &,
+        &:hover,
+        &:focus {
+          color: fade(contrast(@sidebar-left-header-bg-color), 90%);
+        }
+      }
+    }
+
+    // nav-sidebar color variants
+    // -------------------------
+    .nav-sidebar {
+      .nav-sidebar-variants(@sidebar-left-bg-color);
+    }
+
+    // sidebar collapse
+    // -------------------------
+    .sidebar-left-collapse & {
+      width: @sidebar-left-collapse-width;
+
+      .sidebar-header {
+        width: @sidebar-left-collapse-width;
+        padding: 0;
+        text-align: center;
+
+        .brand {
+          > .brand-text {
+            display: none;
+          }
+        }
+      }
+
+      .sidebar-content {
+        .scroll-wrapper,
+        .scroll-content {
+          overflow: visible !important;
+        }
+        .scroll-wrapper {
+          > .scroll-bar {
+            display: none !important;
+          }
+        }
+      }
+    }
+  }
+
+  // sidebar header
+  // -------------------------
+  .sidebar-header {
+    position: absolute;
+    z-index: 10;
+    height: @header-height;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.05);
+
+    // sidebar header fixed
+    // -------------------------
+    .header-fixed & {
+      box-shadow: 0 5px 5px -5px rgba(0,0,0,0.15), 0 1px 0 rgba(0,0,0,0.03);
+    }
+
+    // add top space to `sidebar-content` if header is present
+    // -------------------------
+    ~ .sidebar-content {
+      padding-top: @header-height;
+    }
+
+    // sidebar brand
+    // -------------------------
+    .brand {
+      height: @header-height;
+      > .brand-figure,
+      > .brand-text {
+        height: @header-height;
+        line-height: @header-height - 1; 
+        background-position: -2px ((@header-height - 38) / 2) - 1;
+      }
+    }
+  }
+
+  // sidebar content
+  // -------------------------
+  .sidebar-content {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+  }
+}
+
+// breakpoint screen-sm and up
+// -------------------------
+@media (min-width: @screen-sm-min) {
+  // sidebar
+  // -------------------------
+  .app-sidebar {
+    // fixed sidebar
+    &.sidebar-fixed {
+      position: fixed !important;
+      height: 100%;
+      overflow-y: scroll;
+      &:before {
+        display: none;
+      }
+    }
+
+    // 100% height hack
+    &:before {
+      content: "";
+      position: fixed;
+      z-index: -1;
+      top: 0;
+      bottom: 0;
+      width: inherit;
+      background-color: inherit;
+      border: inherit;
+    }
+
+    // sidebar left
+    // -------------------------
+    &.sidebar-left {
+      position: relative;
+      float: left;
+      left: auto;
+
+      // sidebar header
+      // -------------------------
+      .sidebar-header {
+        height: @header-height-lg;
+        .header-fixed & {
+          position: fixed;
+          top: 0;
+        }
+      }
+
+      // sidebar content
+      .sidebar-content {
+        position: relative;
+      }
+    }
+
+    // sidebar header
+    // -------------------------
+    .sidebar-header {
+      // add top space to `sidebar-content` if header is present
+      // -------------------------
+      ~ .sidebar-content {
+        padding-top: @header-height-lg;
+      }
+
+      // sidebar brand
+      // -------------------------
+      .brand {
+        height: @header-height-lg;
+        > .brand-figure,
+        > .brand-text {
+          height: @header-height-lg;
+          line-height: @header-height-lg - 1; 
+          background-position: -2px ((@header-height-lg - 38) / 2) - 1;
+        }
+      }
+    }
+  }
+}

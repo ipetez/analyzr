@@ -1,0 +1,142 @@
+<!-- start: box layout -->
+<div class="box-layout bg-white">
+  <!-- left section -->
+  <div class="col-md-9 bdr-r height-auto">
+    <!-- header -->
+    <div class="page-header">
+      <h3>Dashboard</h3>
+    </div>
+    <!--/ header -->
+
+    <!-- big chart -->
+    <div class="bg-picture bdr-b" style="background-image:url('assets/images/background/dashboard-chart-bg.jpg');">
+      <div class="pa-md">
+        <div class="clearfix mb-md">
+          <h4 class="mb-xs">Invoice Stats</h4>
+        </div>
+        <div class="chart" data-ng-controller="invoiceChartCtrl">
+          <div ui-jq="plot" ui-options="{{dataset}}, {{options}}" style="height:260px;"></div>
+        </div>
+      </div>
+    </div>
+    <!--/ big chart -->
+
+    <!-- donut chat -->
+    <div class="box-layout bdr-b">
+      <div class="col-sm-6 bg-auto va-m">
+        <div class="pa-md text-center">
+          <h1 class="mb-lg fw-b">86.542 <span class="fw-b fs-14 text-muted">%</span></h1>
+          <div class="clearfix">
+            <p>
+              <span class="fa fa-circle text-danger mr-xs"></span> Return Invoice - <strong class="text-muted">14%</strong>
+            </p>
+            <p>
+              <span class="fa fa-circle text-success mr-xs"></span> Receive Invoice - <strong class="text-muted">29%</strong>
+            </p>
+            <p>
+              <span class="fa fa-circle text-info mr-xs"></span> Send Invoice - <strong class="text-muted">43%</strong>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 bdr-l bdr-t-xs">
+        <div class="pa-md">
+          <div class="chart" data-ng-controller="donutChartCtrl">
+            <div ui-jq="plot" ui-options="{{dataset}}, {{options}}" style="height:240px;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--/ donut chat -->
+
+    <!-- vector map -->
+    <div class="box-layout">
+      <div class="col-md-6 bdr-b-sm bdr-b-xs va-m" data-ng-controller="vectorMapCtrl">
+        <div class="pa-md" ui-jq="vectorMap" ui-options="{{options}}" style="height:280px;"></div>
+      </div>
+      <div class="col-md-6 bg-auto bdr-l va-m">
+        <div class="pa-md">
+          <div class="table-responsive">
+            <table class="table table-bordered table-striped mb-0">
+              <thead>
+                <tr>
+                  <th>Country / Territory</th>
+                  <th>Session</th>
+                  <th width="5%" class="text-center">%</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <span class="mr-xs">1.</span> China
+                  </td>
+                  <td>5,507</td>
+                  <td>11.42%</td>
+                </tr>
+                <tr>
+                  <td>
+                    <span class="mr-xs">2.</span> United State
+                  </td>
+                  <td>5,087</td>
+                  <td>10.56%</td>
+                </tr>
+                <tr>
+                  <td>
+                    <span class="mr-xs">3.</span> Brazil
+                  </td>
+                  <td>4,486</td>
+                  <td>9.31%</td>
+                </tr>
+                <tr>
+                  <td>
+                    <span class="mr-xs">4.</span> France
+                  </td>
+                  <td>4,145</td>
+                  <td>9.11%</td>
+                </tr>
+                <tr>
+                  <td>
+                    <span class="mr-xs">5.</span> Egypt
+                  </td>
+                  <td>3,891</td>
+                  <td>8.85%</td>
+                </tr>
+                <tr>
+                  <td>
+                    <span class="mr-xs">6.</span> Malaysia
+                  </td>
+                  <td>3,259</td>
+                  <td>8.21%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- vector map -->
+  </div>
+  <!--/ left section -->
+
+  <!-- right section -->
+  <div class="col-md-3 bdr-t-xs bdr-t-sm">
+    <!-- recent activities -->
+    <div class="pa-md">
+      <h4 class="mt-sm mb-md">Activity Feed</h4>
+      <ul class="media-list" data-ng-controller="activitiesFeedCtrl">
+        <li class="media bdr-w-0 pl-0 pr-0" data-ng-repeat="activity in activities">
+          <div class="media-left text-muted">
+            <i class="ai {{activity.icon}} fs-24" data-ng-class="{'text-success': activity.featured}"></i>
+          </div>
+          <div class="media-body">
+            <h5 class="media-heading mb-2 fw-sb"><a href="">{{activity.name}}</a></h5>
+            <p class="mb-0"><span class="text-muted">{{activity.text}}</span></p>
+            <small>{{activity.date}}</small>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <!--/ recent activities -->
+  </div>
+  <!--/ right section -->
+</div>

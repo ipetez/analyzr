@@ -1,0 +1,51 @@
+#flotTip {
+  position: relative;
+  z-index: 5;
+  padding: 4px 5px;
+  border-radius: 2px !important;
+  border-color: transparent !important;
+  background-color: #444 !important;
+  color: #eee;
+}
+.chart .legend > table {
+  color: inherit !important;
+}
+.chart .legend > table tr td {
+  padding: 3px;
+}
+.chart .legend > table tr td:first-child {
+  padding-left: 5px;
+}
+.chart .legend > table tr td:last-child {
+  padding-right: 5px;
+}
+.chart .legend > table tr + tr td {
+  padding-top: 0px;
+}
+.chart .legend > div:first-child {
+  background-color: transparent !important;
+}
+.chart .legend .legendColorBox > div {
+  border-color: rgba(0, 0, 0, 0.1) !important;
+}
+.chart .legend .legendColorBox > div,
+.chart .legend .legendColorBox > div > div {
+  border-radius: 50%;
+}
+.chart .flot-text,
+.chart .flot-tick-label {
+  color: inherit !important;
+  opacity: 0.8;
+}
+.chart.hidden-y-axis-data .flot-y-axis {
+  display: none !important;
+}
+.chart.bold-y-axis-data .flot-y-axis {
+  font-weight: 700;
+}
+.chart.hidden-x-axis-data .flot-x-axis {
+  display: none !important;
+}
+.chart.bold-x-axis-data .flot-x-axis {
+  font-weight: 700;
+}

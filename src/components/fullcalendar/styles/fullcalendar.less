@@ -1,0 +1,128 @@
+//
+// Fullcalendar
+// --------------------------------------------------
+
+// Core variables and mixins
+@import "../../../assets/styles/less/variables.less";
+@import "../../../assets/styles/less/mixins.less";
+
+// Inside panel
+// -------------------------
+.panel.fullcalendar {
+  background-color: transparent;
+  border-radius: 0;
+  border-width: 0;
+  margin-bottom: 0;
+  box-shadow: none;
+
+  .fc-view {
+    > table {
+      > thead > tr > td.fc-widget-header {
+        border-width: 0;
+      }
+    }
+  }
+  .fc-toolbar {
+    margin: 0;
+    padding: 15px;
+    border-bottom: 1px solid @border-color;
+  }
+  .fc-widget-content {
+    border-left-width: 0;
+  }
+}
+
+// Popover
+// -------------------------
+.fc-popover {
+  box-shadow: 0 2px 6px rgba(0,0,0,.15);
+  overflow: hidden;
+  border-radius: @border-radius-base;
+  border: 1px solid @border-color;
+}
+.fc-popover .fc-header {
+  background-color: transparent !important;
+  padding: @padding-base-vertical @padding-base-horizontal;
+}
+
+// Main table
+// -------------------------
+.fc th {
+  &.fc-day-header.fc-widget-header {
+    padding: 8px 0;
+    background-color: #fdfdfe;
+    text-transform: uppercase;
+  }
+  &.fc-axis.fc-widget-header {
+    background-color: #fdfdfe;
+  }
+}
+
+// Day Row (used within the header and the DayGrid)
+// -------------------------
+.fc-row {
+  .fc-bg {
+    .fc-other-month {
+      background-color: lighten(@color-gray-50, 1%);
+    }
+  }
+}
+
+// Global Event Styles
+// -------------------------
+.fc-event {
+  padding: @padding-sm-vertical @padding-sm-horizontal;
+  display: block;
+  font-size: @font-size-sm;
+  border-radius: @border-radius-base;
+  background-color: lighten(@color-gray-50, 2%);
+  color: lighten(@text-color, 10%);
+  cursor: pointer;
+  border: 1px solid rgba(0,0,0,0.05);
+
+  .fc-content {
+    .text-overflow();
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: -1px;
+    top: -1px;
+    bottom: -1px;
+    width: 5px;
+    background-color: @color-blue-500;
+    border-top-left-radius: @border-radius-base;
+    border-bottom-left-radius: @border-radius-base;
+  }
+
+  &.fc-not-start {
+    &:after {
+      display: none;
+    }
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: @text-color;
+  }
+
+  &.fc-event-danger {
+    &:after { background-color: @color-red-500; }
+  }
+
+  &.fc-event-warning {
+    &:after { background-color: @color-yellow-600; }
+  }
+
+  &.fc-event-success {
+    &:after { background-color: @color-green-500; }
+  }
+}
+
+// BasicView
+// -------------------------
+.fc-row.fc-rigid {
+  overflow: visible;
+}

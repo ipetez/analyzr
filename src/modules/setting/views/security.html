@@ -1,0 +1,91 @@
+<!-- START security form -->
+<form class="form-horizontal">
+  <div class="form-group">
+    <label class="col-sm-2 control-label">Password</label>
+    <div class="col-sm-6">
+      <input type="password" name="cpassword" class="form-control">
+      <a href="" class="help-block text-primary mb-0">forgot your password?</a>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-2 control-label">New password</label>
+    <div class="col-sm-6">
+      <input type="password" name="npassword" class="form-control">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-2 control-label">Verify password</label>
+    <div class="col-sm-6">
+      <input type="password" name="vpassword" class="form-control">
+    </div>
+  </div>
+
+  <hr class="mnr-md mnl-md"><!-- horizontal rule -->
+
+  <h4 class="fw-sb mb-lg">Security</h4>
+  <div class="form-group">
+    <label class="col-sm-2 control-label">Login verification</label>
+    <div class="col-sm-6">
+      <div class="radio custom-info">
+        <label>
+          <input type="radio" name="login-verification" checked="">
+          <span></span> Don't verify login requests
+        </label>
+      </div>
+      <div class="radio custom-info">
+        <label>
+          <input type="radio" name="login-verification">
+          <span></span> Send login verification requests to my phone
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-2 control-label">Password reset</label>
+    <div class="col-sm-6">
+      <div class="checkbox-inline custom-primary">
+        <label>
+        <input type="checkbox" name="password-reset" value="">
+          <span></span> Require personal information to reset my password
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <hr class="mnr-md mnl-md"><!-- horizontal rule -->
+  
+  <h4 class="fw-sb mb-lg">Privacy</h4>
+  <div class="form-group">
+    <label class="col-sm-2 control-label">Photo tagging</label>
+    <div class="col-sm-6">
+      <div class="radio custom-info">
+        <label>
+          <input type="radio" name="photo-tagging" checked="">
+          <span></span> Allow anyone to tag me in photos
+        </label>
+      </div>
+      <div class="radio custom-info">
+        <label>
+          <input type="radio" name="photo-tagging">
+          <span></span> Only allow people I follow to tag me in photos
+        </label>
+      </div>
+      <div class="radio custom-info">
+        <label>
+          <input type="radio" name="photo-tagging">
+          <span></span> Do not allow anyone to tag me in photos
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <hr class="mnr-md mnl-md"><!-- horizontal rule -->
+
+  <div class="form-group mb-0">
+    <label class="col-sm-2 control-label"></label>
+    <div class="col-sm-10">
+      <button type="submit" class="btn btn-primary">Save change</button>
+    </div>
+  </div>
+</form>
+<!--/ END security form -->

@@ -1,0 +1,31 @@
+<!-- start: application sidebar (left) -->
+<aside data-ng-include src="'modules/core/views/partials/sidebar-left.html'" class="app-sidebar sidebar-left"></aside>
+<!--/ end: application sidebar (left) -->
+
+<!-- start: application header -->
+<header data-ng-include src="'modules/core/views/partials/header.html'" id="app-header" class="navbar"></header>
+<!-- end: application header -->
+
+<!-- start: application footer -->
+<footer data-ng-include src="'modules/core/views/partials/footer.html'" id="app-footer"></footer>
+<!--/ end: application footer -->
+
+<!-- start: application content -->
+<section id="app-content" class="clearfix" data-ng-style="{'min-height':+core.screen.height+'px'}">
+  <!-- start: indicator -->
+  <div class="spinner-wrapper"><div data-indicator></div></div>
+  <!--/ end: indicator -->
+
+  <!-- start: content-body -->
+  <div class="content-body slide-down" data-ng-style="{'min-height':+core.screen.height+'px'}" data-ui-view></div>
+  <!--/ end: content-body -->
+</section>
+<!--/ end: application content -->
+
+<!-- start: application backdrop -->
+<section id="app-backdrop"
+  data-ng-class="{'show': core.settings.sidebarLeftOpen}"
+  data-ng-click="core.settings.sidebarLeftOpen = !core.settings.sidebarLeftOpen"
+>
+</section>
+<!--/ end: application backdrop -->

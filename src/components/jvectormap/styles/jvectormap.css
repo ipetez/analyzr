@@ -1,0 +1,49 @@
+.jvectormap-label {
+  font-size: 11px;
+  position: absolute;
+  display: none;
+  border-radius: 2px;
+  background-color: #444 !important;
+  color: #eee;
+  padding: 4px 5px;
+}
+.jvectormap-zoomin,
+.jvectormap-zoomout {
+  position: absolute;
+  left: 10px;
+  color: white;
+  width: 24px;
+  height: 24px;
+  font-size: 0px;
+  cursor: pointer;
+  background-color: #f2f5f8;
+  border: 1px solid #dbdfe3;
+  text-align: center;
+}
+.jvectormap-zoomin:after,
+.jvectormap-zoomout:after {
+  font-family: "FontAwesome";
+  font-size: 12px;
+  line-height: 24px;
+  color: #7f8992;
+}
+.jvectormap-zoomin:hover:after,
+.jvectormap-zoomout:hover:after {
+  color: #243342;
+}
+.jvectormap-zoomin {
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  top: 10px;
+}
+.jvectormap-zoomin:after {
+  content: "\f067";
+}
+.jvectormap-zoomout {
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  top: 33px;
+}
+.jvectormap-zoomout:after {
+  content: "\f068";
+}

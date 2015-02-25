@@ -1,0 +1,84 @@
+//
+// Typography
+// --------------------------------------------------
+
+// Headings
+// -------------------------
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-weight: 400;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: inherit;
+}
+
+h1, .h1 { font-size: @font-size-h1; }
+h2, .h2 { font-size: @font-size-h2; }
+h3, .h3 { font-size: @font-size-h3; }
+h4, .h4 { font-size: @font-size-h4; }
+h5, .h5 { font-size: @font-size-h5; }
+h6, .h6 { font-size: @font-size-h6; }
+
+// Page Header
+// -------------------------
+.page-header {
+  background-color: #fdfdfe;
+  padding: 25px 15px;
+  margin: 0;
+  border-bottom: 1px solid @border-color;
+
+  // breadcrumb
+  .breadcrumb {
+    padding: 0;
+    background-color: inherit;
+    border-radius: 0;
+  }
+}
+
+// Contextual colors
+// -------------------------
+.text-muted { .text-emphasis-variant(@secondary-text-color); }
+.text-white { .text-emphasis-variant(#fff); }
+.text-primary { .text-emphasis-variant(@color-blue-500); }
+.text-success { .text-emphasis-variant(@color-green-500); }
+.text-warning { .text-emphasis-variant(@color-yellow-700); }
+.text-danger { .text-emphasis-variant(@color-red-500); }
+.text-info { .text-emphasis-variant(@color-cyan-500); }
+
+// Blockquote
+// -------------------------
+blockquote {
+  padding-left: 40px;
+  border-width: 0px;
+
+  > p {
+    position: relative;
+    font-style: italic;
+    font-size: 18px !important;
+  }
+
+  > p:before {
+    position: absolute;
+    top: -1px;
+    margin-left: -25px;
+    font-family: "FontAwesome";
+    font-size: 18px;
+    content: "\f10d";
+    color: @hint-text-color;
+  }
+
+  > p:after {
+    position: absolute;
+    bottom: -1px;
+    margin-left: 5px;
+    font-family: "FontAwesome";
+    font-size: 18px;
+    content: "\f10e";
+    color: @hint-text-color;
+  }
+}
+.blockquote-reverse {
+  padding-left: 20px;
+  padding-right: 40px;
+  border-width: 0px;
+}

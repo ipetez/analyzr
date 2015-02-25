@@ -1,0 +1,23 @@
+//
+// Backdrop
+// --------------------------------------------------
+
+// tha backdrop itself
+#app-backdrop {
+  opacity: 0;
+  position: absolute;
+  z-index: @backdrop-zindex;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  background-color: @backdrop-bg-color;
+
+  .sidebar-open-ltr &,
+  .sidebar-open-rtl & {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    transition: opacity .3s ease;
+  }
+}

@@ -1,0 +1,76 @@
+//
+// Scaffolding
+// --------------------------------------------------
+
+// Body reset
+// -------------------------
+body {
+  font-family: @font-family-base;
+  font-size: @font-size-base;
+  line-height: @line-height-base;
+  color: @text-color;
+  background-color: @body-bg-color;
+}
+
+// Reset fonts spacing
+// -------------------------
+body,
+.form-control,
+.btn {
+  letter-spacing: 0.2px;
+}
+
+// Horizontal rules
+// -------------------------
+hr, .hr-expand {
+  margin-top:    15px;
+  margin-bottom: 15px;
+  border-top: 1px solid lighten(@border-color, 3%);
+
+  &.hr-w-2 {
+    border-width: 2px;
+  }
+  &.hr-w-3 {
+    border-width: 3px;
+  }
+}
+.hr-expand {
+  a.arrow {
+    display: inline-block;
+    position: relative;
+    top: -1px;
+    z-index: 1;
+    background-color: @color-gray-50;
+    padding: 0 15px;
+    margin: 0 15px;
+    border: 1px solid @border-color;
+    border-top-width: 0;
+    border-bottom-left-radius: @border-radius-base;
+    border-bottom-right-radius: @border-radius-base;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.03);
+
+    > .caret {
+      margin-left: 0;
+    }
+  }
+  &.hr-w-2 {
+    a.arrow {
+      top: -2px;
+    }
+  }
+  &.hr-w-3 {
+    a.arrow {
+      top: -3px;
+    }
+  }
+}
+
+// Global anchor reset
+// -------------------------
+a {
+  &,
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}

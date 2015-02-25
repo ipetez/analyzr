@@ -1,0 +1,63 @@
+//
+// Jvectormap
+// --------------------------------------------------
+
+// Core variables and mixins
+@import "../../../assets/styles/less/variables.less";
+@import "../../../assets/styles/less/mixins.less";
+
+
+//
+// Jvectormap
+// --------------------------------------------------
+
+.jvectormap-label {
+  font-size: 11px;
+  position: absolute;
+  display: none;
+  border-radius: @border-radius-base;
+  background-color: #444 !important;
+  color: #eee;
+  padding: 4px 5px;
+}
+.jvectormap-zoomin, 
+.jvectormap-zoomout {
+  position: absolute;
+  left: 10px;
+  color: white;
+  width: 24px;
+  height: 24px;
+  font-size: 0px;
+  cursor: pointer;
+  background-color: @color-gray-50;
+  border: 1px solid @color-gray-100;
+  text-align: center;
+
+  &:after {
+    font-family: "FontAwesome";
+    font-size: 12px;
+    line-height: 24px;
+    color: @secondary-text-color;
+  }
+  &:hover {
+    &:after {
+      color: @text-color;
+    }
+  }
+}
+.jvectormap-zoomin {
+  border-top-left-radius: @border-radius-base;
+  border-top-right-radius: @border-radius-base;
+  top: 10px;
+  &:after {
+    content: "\f067";
+  }
+}
+.jvectormap-zoomout {
+  border-bottom-left-radius: @border-radius-base;
+  border-bottom-right-radius: @border-radius-base;
+  top: 33px;
+  &:after {
+    content: "\f068";
+  }
+}

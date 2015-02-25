@@ -1,0 +1,26 @@
+<!-- the mail -->
+<ul class="media-list mb-0" data-ng-controller="mailListCtrl">
+  <li class="media {{mail.status}}"
+    data-ng-repeat="mail in filteredMail"
+    data-ng-class="{'selected': markThis || checkAll}"
+  >
+    <div class="media-left pt-3">
+      <div class="checkbox custom-primary nm">
+        <label>
+          <input type="checkbox" value="" data-ng-checked="checkAll" data-ng-model="markThis">
+          <span></span>
+        </label>
+      </div>
+    </div>
+    <div class="media-body">
+      <h5 class="media-heading mb-2 fw-sb">
+        <a ui-sref="default.mail.view.param({view:mail.id})">
+          <span data-ng-init="color = (config.labels | filter:{name:mail.label})" class="ai ai-label fs-18 pos-t-2 text-{{color[0].color}}"></span> {{mail.content.title}}
+        </a>
+      </h5>
+      <p class="mb-0">{{mail.sender.name}} - <span class="text-muted">{{mail.content.message}}</span></p>
+      <small>{{mail.time}}</small>
+    </div>
+  </li>
+</ul>
+<!--/ the mail -->

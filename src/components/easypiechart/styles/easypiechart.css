@@ -1,0 +1,12 @@
+.easypiechart {
+  display: inline-block;
+  position: relative;
+}
+.easypiechart > .meta {
+  position: absolute;
+  left: 15px;
+  right: 15px;
+}
+.easypiechart + .easypiechart {
+  margin-left: 15px;
+}

@@ -1,0 +1,389 @@
+[{
+  "id": 1,
+  "status": "media-read",
+  "sender": {
+    "avatar": "avatar1.jpg",
+    "name": "Chase Walters",
+    "email": "orlando.neus.net"
+  },
+  "content": {
+    "title": "Lobortis tellus justo sit amet nulla.",
+    "message": "enim. Nunc ut erat. Sed nunc est, mollis non, cursus non, egestas a, dui. Cras pellentesque. Sed dictum. Proin eget odio. Aliquam vulputate...",
+    "attachment": [{
+      "name": "index.html",
+      "size": 9566,
+      "type": "code"
+    }, {
+      "name": "proposal.pdf",
+      "size": 6351432,
+      "type": "pdf"
+    }, {
+      "name": "price_list.xslt",
+      "size": 23143,
+      "type": "excel"
+    }]
+  },
+  "time": "Jul 31, 2015",
+  "folder": "inbox",
+  "label": "family"
+}, {
+  "id": 2,
+  "status": "media-new",
+  "sender": {
+    "avatar": "avatar2.jpg",
+    "name": "Drew Pate",
+    "email": "sed.hendrerit@adipiscing.org"
+  },
+  "content": {
+    "title": "neque tellus, imperdiet non, vestibulum nec, euismod",
+    "message": "Donec felis orci, adipiscing non, luctus sit amet, faucibus ut, nulla. Cras eu tellus eu augue porttitor interdum. Sed auctor odio a purus...",
+    "attachment": [{
+      "name": "index.html",
+      "size": 1253,
+      "type": "code"
+    }, {
+      "name": "image1.jpg",
+      "size": 32442,
+      "type": "image"
+    }]
+  },
+  "time": "May 22, 2015",
+  "folder": "inbox",
+  "label": "work"
+}, {
+  "id": 3,
+  "status": "media-new",
+  "sender": {
+    "avatar": "avatar3.jpg",
+    "name": "Ina Matthews",
+    "email": "urna.Nunc@pellentesque.ca"
+  },
+  "content": {
+    "title": "orci luctus et ultrices posuere cubilia Curae",
+    "message": "lacus. Cras interdum. Nunc sollicitudin commodo ipsum. Suspendisse non leo. Vivamus nibh dolor, nonummy ac, feugiat non, lobortis quis, pede...",
+    "attachment": [{
+      "name": "index.html",
+      "size": 1253,
+      "type": "code"
+    }, {
+      "name": "image1.jpg",
+      "size": 32442,
+      "type": "image"
+    }]
+  },
+  "time": "May 10, 2014",
+  "folder": "sent",
+  "label": "social"
+}, {
+  "id": 4,
+  "status": "media-read",
+  "sender": {
+    "avatar": "avatar4.jpg",
+    "name": "Emerson Curry",
+    "email": "ornare@augueeutellus.net"
+  },
+  "content": {
+    "title": "erat volutpat. Nulla facilisis. Suspendisse commodo tincidunt",
+    "message": "Nunc mauris sapien, cursus in, hendrerit consectetuer, cursus et, magna. Praesent interdum ligula eu enim. Etiam imperdiet dictum magna...",
+    "attachment": [{
+      "name": "image1.jpg",
+      "size": 32442,
+      "type": "image"
+    }, {
+      "name": "image2.jpg",
+      "size": 4321,
+      "type": "image"
+    }, {
+      "name": "image3.jpg",
+      "size": 6543,
+      "type": "image"
+    }, {
+      "name": "image4.jpg",
+      "size": 6596,
+      "type": "image"
+    }]
+  },
+  "time": "Sep 3, 2014",
+  "folder": "inbox",
+  "label": "social"
+}, {
+  "id": 5,
+  "status": "media-read",
+  "sender": {
+    "avatar": "avatar5.jpg",
+    "name": "Megan Puckett",
+    "email": "fermentum.fermentum.arcu@arcuvel.ca"
+  },
+  "content": {
+    "title": "id ante dictum cursus. Nunc mauris elit",
+    "message": "ac mattis ornare, lectus ante dictum mi, ac mattis velit justo nec ante. Maecenas mi felis, adipiscing fringilla, porttitor vulputate, posuere vulputate, lacus...",
+    "attachment": [{
+      "name": "image1.jpg",
+      "size": 32442,
+      "type": "image"
+    }]
+  },
+  "time": "Mar 24, 2015",
+  "folder": "draft",
+  "label": "reading"
+}, {
+  "id": 6,
+  "status": "media-read",
+  "sender": {
+    "avatar": "avatar6.jpg",
+    "name": "Avram Talley",
+    "email": "turpis.In.condimentum@arcuimperdiet.edu"
+  },
+  "content": {
+    "title": "congue a, aliquet vel, vulputate eu, odio.",
+    "message": "dignissim pharetra. Nam ac nulla. In tincidunt congue turpis. In condimentum. Donec at arcu. Vestibulum ante ipsum primis in faucibus orci luctus...",
+    "attachment": [{
+      "name": "image1.jpg",
+      "size": 32442,
+      "type": "image"
+    }, {
+      "name": "spec.docx",
+      "size": 546372,
+      "type": "word"
+    }, {
+      "name": "presentation.pptx",
+      "size": 7653912,
+      "type": "powerpoint"
+    }]
+  },
+  "time": "Jul 8, 2014",
+  "folder": "inbox",
+  "label": "family"
+}, {
+  "id": 7,
+  "status": "media-read",
+  "sender": {
+    "avatar": "avatar7.jpg",
+    "name": "Ulysses Fuller",
+    "email": "tempor.est@orciUt.edu"
+  },
+  "content": {
+    "title": "Aliquam ultrices iaculis odio. Nam interdum enim",
+    "message": "auctor ullamcorper, nisl arcu iaculis enim, sit amet ornare lectus justo eu arcu. Morbi sit amet massa. Quisque porttitor eros nec tellus...",
+    "attachment": []
+  },
+  "time": "Sep 15, 2013",
+  "folder": "trash",
+  "label": "work"
+}, {
+  "id": 8,
+  "status": "media-read",
+  "sender": {
+    "avatar": "avatar8.jpg",
+    "name": "Chase Cooper",
+    "email": "non@ornareIn.net"
+  },
+  "content": {
+    "title": "vestibulum. Mauris magna. Duis dignissim tempor arcu.",
+    "message": "Suspendisse aliquet, sem ut cursus luctus, ipsum leo elementum sem, vitae aliquam eros turpis non enim. Mauris quis turpis vitae purus gravida sagittis...",
+    "attachment": [{
+      "name": "image1.jpg",
+      "size": 32442,
+      "type": "image"
+    }, {
+      "name": "spec.docx",
+      "size": 546372,
+      "type": "word"
+    }, {
+      "name": "presentation.pptx",
+      "size": 7653912,
+      "type": "powerpoint"
+    }]
+  },
+  "time": "Jul 31, 2014",
+  "folder": "inbox",
+  "label": "reading"
+}, {
+  "id": 9,
+  "status": "media-read",
+  "sender": {
+    "avatar": "avatar9.jpg",
+    "name": "Keegan Stokes",
+    "email": "Aliquam@sem.com"
+  },
+  "content": {
+    "title": "eu turpis. Nulla aliquet. Proin velit. Sed",
+    "message": "Donec sollicitudin adipiscing ligula. Aenean gravida nunc sed pede. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus...",
+    "attachment": [{
+      "name": "image1.jpg",
+      "size": 32442,
+      "type": "image"
+    }, {
+      "name": "image2.jpg",
+      "size": 4321,
+      "type": "image"
+    }, {
+      "name": "image3.jpg",
+      "size": 6543,
+      "type": "image"
+    }, {
+      "name": "image4.jpg",
+      "size": 6596,
+      "type": "image"
+    }]
+  },
+  "time": "Jan 1, 2015",
+  "folder": "inbox",
+  "label": "social"
+}, {
+  "id": 10,
+  "status": "media-new",
+  "sender": {
+    "avatar": "avatar10.jpg",
+    "name": "Thane Henderson",
+    "email": "dolor@Quisquenonummy.edu"
+  },
+  "content": {
+    "title": "eu turpis. Nulla aliquet. Proin velit. Sed",
+    "message": "eget, dictum placerat, augue. Sed molestie. Sed id risus quis diam luctus lobortis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Mauris ut quam vel sapien imperdiet ornare...",
+    "attachment": [{
+      "name": "image1.jpg",
+      "size": 32442,
+      "type": "image"
+    }, {
+      "name": "image2.jpg",
+      "size": 4321,
+      "type": "image"
+    }]
+  },
+  "time": "Apr 13, 2014",
+  "folder": "inbox",
+  "label": "reading"
+}, {
+  "id": 11,
+  "status": "media-new",
+  "sender": {
+    "avatar": "avatar11.jpg",
+    "name": "Mira Lewis",
+    "email": "dolor.egestas@volutpat.co.uk"
+  },
+  "content": {
+    "title": "tempus scelerisque, lorem ipsum sodales purus, in",
+    "message": "nec, cursus a, enim. Suspendisse aliquet, sem ut cursus luctus, ipsum leo elementum sem, vitae aliquam eros turpis non enim. Mauris quis turpis vitae purus gravida sagittis. Duis gravida...",
+    "attachment": [{
+      "name": "video.mov",
+      "size": 9852745,
+      "type": "video"
+    }, {
+      "name": "image1.jpg",
+      "size": 44651,
+      "type": "image"
+    }, {
+      "name": "image2.jpg",
+      "size": 33213,
+      "type": "image"
+    }]
+  },
+  "time": "Jun 9, 2014",
+  "folder": "inbox",
+  "label": "work"
+}, {
+  "id": 12,
+  "status": "media-new",
+  "sender": {
+    "avatar": "avatar12.jpg",
+    "name": "Murphy Mcclain",
+    "email": "urna@euenim.ca"
+  },
+  "content": {
+    "title": "auctor odio a purus. Duis elementum, dui",
+    "message": "elementum, lorem ut aliquam iaculis, lacus pede sagittis augue, eu tempor erat neque non quam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam fringilla cursus purus...",
+    "attachment": []
+  },
+  "time": "Nov 27, 2013",
+  "folder": "draft",
+  "label": "family"
+}, {
+  "id": 13,
+  "status": "new",
+  "sender": {
+    "avatar": "avatar13.jpg",
+    "name": "Quamar Hardin",
+    "email": "massa@aliquetmolestie.org"
+  },
+  "content": {
+    "title": "diam dictum sapien. Aenean massa. Integer vitae",
+    "message": "Nullam nisl. Maecenas malesuada fringilla est. Mauris eu turpis. Nulla aliquet. Proin velit. Sed malesuada augue ut lacus. Nulla tincidunt, neque vitae semper egestas, urna justo faucibus lectus, a sollicitudin orci sem eget massa...",
+    "attachment": [{
+      "name": "index.html",
+      "size": 9566,
+      "type": "code"
+    }, {
+      "name": "proposal.pdf",
+      "size": 6351432,
+      "type": "pdf"
+    }, {
+      "name": "price_list.xslt",
+      "size": 23143,
+      "type": "excel"
+    }]
+  },
+  "time": "Dec 18, 2014",
+  "folder": "inbox",
+  "label": "social"
+}, {
+  "id": 14,
+  "status": "media-new",
+  "sender": {
+    "avatar": "avatar14.jpg",
+    "name": "Jamalia Berry",
+    "email": "egestas.a.dui@nostra.co.uk"
+  },
+  "content": {
+    "title": "nibh. Phasellus nulla. Integer vulputate, risus a",
+    "message": "nunc sed pede. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin vel arcu eu odio tristique pharetra. Quisque ac libero nec ligula consectetuer rhoncus...",
+    "attachment": [{
+      "name": "image1.jpg",
+      "size": 32442,
+      "type": "image"
+    }, {
+      "name": "spec.docx",
+      "size": 546372,
+      "type": "word"
+    }, {
+      "name": "presentation.pptx",
+      "size": 7653912,
+      "type": "powerpoint"
+    }]
+  },
+  "time": "Jan 15, 2014",
+  "folder": "inbox",
+  "label": "family"
+}, {
+  "id": 15,
+  "status": "media-new",
+  "sender": {
+    "avatar": "avatar15.jpg",
+    "name": "Irene Cox",
+    "email": "nec.urna.suscipit@massa.co.uk"
+  },
+  "content": {
+    "title": "eu dui. Cum sociis natoque penatibus et",
+    "message": "aliquet magna a neque. Nullam ut nisi a odio semper cursus. Integer mollis. Integer tincidunt aliquam arcu. Aliquam ultrices iaculis odio. Nam interdum enim non nisi. Aenean eget metus...",
+    "attachment": [{
+      "name": "image1.jpg",
+      "size": 32442,
+      "type": "image"
+    }, {
+      "name": "image2.jpg",
+      "size": 4321,
+      "type": "image"
+    }, {
+      "name": "image3.jpg",
+      "size": 6543,
+      "type": "image"
+    }, {
+      "name": "image4.jpg",
+      "size": 6596,
+      "type": "image"
+    }]
+  },
+  "time": "Oct 10, 2014",
+  "folder": "sent",
+  "label": "social"
+}]

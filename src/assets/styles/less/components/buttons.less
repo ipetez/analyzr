@@ -1,0 +1,93 @@
+//
+// Buttons
+// --------------------------------------------------
+
+
+// Base styles
+// -------------------------
+.btn {
+  &,
+  &:active,
+  &.active {
+    &:focus,
+    &.focus {
+      outline: 0;
+    }
+  }
+
+  &:hover,
+  &:focus,
+  &.focus {
+    //color: @btn-default-color;
+    text-decoration: none;
+  }
+
+  // flat button
+  &.btn-flat {
+    &,
+    &:hover,
+    &:focus,
+    &.focus {
+      background-color: transparent;
+      box-shadow: none;
+      border-color: transparent;
+    }
+    &.btn-default,
+    &.btn-gray {
+      color: @text-color;
+    }
+  }
+
+  // rounded button
+  &.btn-rounded {
+    border-radius: 34px;
+  }
+}
+
+// Various btn-group reset
+// -------------------------
+.btn-group {
+  
+}
+
+// Alternate buttons
+// -------------------------
+.btn-default,
+.btn-gray {
+  .button-variant(@color-gray-800; @color-gray-50; @color-gray-100);
+}
+.btn-primary,
+.btn-blue {
+  .button-variant(@color-blue-50; @color-blue-500; @color-blue-500);
+}
+.btn-danger,
+.btn-red {
+  .button-variant(@color-red-50; @color-red-500; @color-red-500);
+}
+.btn-info,
+.btn-cyan {
+  .button-variant(@color-cyan-50; @color-cyan-500; @color-cyan-500);
+}
+.btn-warning,
+.btn-yellow {
+  .button-variant(@color-yellow-50; @color-yellow-700; @color-yellow-700);
+}
+.btn-success,
+.btn-green {
+  .button-variant(@color-green-50; @color-green-500; @color-green-500);
+}
+
+// Button Sizes
+// -------------------------
+.btn {
+  .button-size(@padding-base-vertical; @padding-base-horizontal; @font-size-base; @line-height-base; @border-radius-base);
+}
+.btn-lg {
+  .button-size(@padding-lg-vertical; @padding-lg-horizontal; @font-size-lg; @line-height-lg; @border-radius-lg);
+}
+.btn-sm {
+  .button-size(@padding-sm-vertical; @padding-sm-horizontal; @font-size-sm; @line-height-sm; @border-radius-sm);
+}
+.btn-xs {
+  .button-size(@padding-xs-vertical; @padding-xs-horizontal; @font-size-xs; @line-height-xs; @border-radius-xs);
+}

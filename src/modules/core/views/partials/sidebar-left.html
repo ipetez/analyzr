@@ -1,0 +1,226 @@
+<!-- start: sidebar header -->
+<div class="sidebar-header">
+  <!-- brand -->
+  <a class="brand" href="">
+    <span class="brand-figure"></span>
+    <span class="brand-text">Analyzr</span>
+  </a>
+  <!--/ brand -->
+</div>
+<!--/ end: sidebar header -->
+
+<!-- start: sidebar content -->
+<div class="sidebar-content">
+  <!-- scroll-content -->
+  <div class="scroll-content" slim-scroll>
+    <!-- navigation -->
+    <ul class="nav nav-sidebar">
+      <li class="nav-heading">APPLICATIONS</li>
+      <li class="nav-group" ui-sref-active="active">
+        <a class="nav-toggle" ui-sref="default.dashboard">
+          <span class="figure figure-left icon">
+            <i class="ai ai-dashboard"></i>
+          </span>
+          <span class="text ellipsis">Dashboard</span>
+        </a>
+      </li>
+      <li class="nav-group" data-ng-class="{ active:$state.includes('default.mail') }">
+        <a class="nav-toggle" data-ui-sref="default.mail.folder.param({folder:'inbox'})">
+          <span class="figure figure-left icon">
+            <i class="ai ai-email"></i>
+          </span>
+          <span class="text ellipsis">Mail</span>
+          <span class="figure figure-right">
+            <span class="label label-primary ellipsis pos-t-n-1">42</span>
+          </span>
+        </a>
+      </li>
+      <li class="nav-group" data-ng-class="{ active:$state.includes('default.setting') }">
+        <a class="nav-toggle" data-ui-sref="default.setting.profile">
+          <span class="figure figure-left icon">
+            <i class="ai ai-tune"></i>
+          </span>
+          <span class="text ellipsis">Setting</span>
+        </a>
+      </li>
+      <li class="nav-group" data-ng-class="{ active:$state.includes('default.calendar') }">
+        <a class="nav-toggle" data-ui-sref="default.calendar">
+          <span class="figure figure-left icon">
+            <i class="ai ai-event-available"></i>
+          </span>
+          <span class="text ellipsis">Calendar</span>
+          <span class="figure figure-right">
+            <span class="label label-info ellipsis pos-t-n-1">6</span>
+          </span>
+        </a>
+      </li>
+      <li class="nav-heading mt-lg">COMPONENTS</li>
+      <li class="nav-group" data-ng-class="{ active:$state.includes('default.ui') }">
+        <a class="nav-toggle" href="javascript:void(0);">
+          <span class="figure figure-left icon">
+            <i class="ai ai-style"></i>
+          </span>
+          <span class="text ellipsis">UI Elements</span>
+          <span class="figure figure-right arrow"></span>
+        </a>
+        <!-- START 2nd Level Menu -->
+        <ul id="uielements" class="nav-submenu">
+          <li data-ui-sref-active="active">
+            <a data-ui-sref="default.ui.buttons">
+              <span class="text">Buttons</span>
+            </a>
+          </li>
+          <li data-ui-sref-active="active">
+            <a data-ui-sref="default.ui.grids">
+              <span class="text">Grids</span>
+            </a>
+          </li>
+          <li data-ui-sref-active="active">
+            <a data-ui-sref="default.ui.icons">
+              <span class="text">Icons</span>
+              <span class="figure figure-right">
+                <span class="label label-success ellipsis pos-t-n-1">2</span>
+              </span>
+            </a>
+          </li>
+          <li data-ui-sref-active="active">
+            <a data-ui-sref="default.ui.bootstrap">
+              <span class="text">Bootstrap</span>
+            </a>
+          </li>
+          <li data-ui-sref-active="active">
+            <a data-ui-sref="default.ui.widgets">
+              <span class="text">Widgets</span>
+            </a>
+          </li>
+        </ul>
+        <!--/ END 2nd Level Menu -->
+      </li>
+      <li class="nav-group" data-ng-class="{ active:$state.includes('default.form') }">
+        <a class="nav-toggle" href="javascript:void(0)">
+          <span class="figure figure-left icon">
+            <i class="ai ai-edit"></i>
+          </span>
+          <span class="text ellipsis">Forms</span>
+          <span class="figure figure-right arrow"></span>
+        </a>
+        <!-- START 2nd Level Menu -->
+        <ul id="forms" class="nav-submenu">
+          <li data-ui-sref-active="active">
+            <a data-ui-sref="default.form.elements">
+              <span class="text">Elements</span>
+            </a>
+          </li>
+          <li data-ui-sref-active="active">
+            <a data-ui-sref="default.form.validation">
+              <span class="text">Validation</span>
+            </a>
+          </li>
+          <li data-ui-sref-active="active">
+            <a data-ui-sref="default.form.wizard.basic">
+              <span class="text">Wizard</span>
+            </a>
+          </li>
+          <li data-ui-sref-active="active">
+            <a data-ui-sref="default.form.upload">
+              <span class="text">File Upload</span>
+            </a>
+          </li>
+        </ul>
+        <!--/ END 2nd Level Menu -->
+      </li>
+      <li class="nav-group" data-ng-class="{ active:$state.includes('default.page')}">
+        <a class="nav-toggle" href="javascript:void(0)">
+          <span class="figure figure-left icon">
+            <i class="ai ai-insert-drive-file"></i>
+          </span>
+          <span class="text ellipsis">Pages</span>
+          <span class="figure figure-right arrow"></span>
+        </a>
+        <!-- START 2nd Level Menu -->
+        <ul id="pages" class="nav-submenu">
+          <li data-ui-sref-active="active">
+            <a data-ui-sref="default.page.blank">
+              <span class="text">Blank</span>
+            </a>
+          </li>
+          <li data-ui-sref-active="active">
+            <a data-ui-sref="minimal.page.signin">
+              <span class="text">Sign In</span>
+            </a>
+          </li>
+          <li data-ui-sref-active="active">
+            <a data-ui-sref="minimal.page.signup">
+              <span class="text">Sign Up</span>
+            </a>
+          </li>
+          <li data-ui-sref-active="active">
+            <a data-ui-sref="minimal.page.lostpassword">
+              <span class="text">Lost Password</span>
+            </a>
+          </li>
+          <li data-ui-sref-active="active">
+            <a data-ui-sref="default.page.profile">
+              <span class="text">Profile</span>
+            </a>
+          </li>
+          <li data-ui-sref-active="active">
+            <a data-ui-sref="minimal.page.error">
+              <span class="text">Error</span>
+            </a>
+          </li>
+        </ul>
+        <!--/ END 2nd Level Menu -->
+      </li>
+      <li class="nav-group" data-ng-class="{ active:$state.includes('default.table.*') }">
+        <a class="nav-toggle" href="javascript:void(0)">
+          <span class="figure figure-left icon">
+            <i class="ai ai-view-carousel"></i>
+          </span>
+          <span class="text ellipsis">Tables</span>
+          <span class="figure figure-right arrow"></span>
+        </a>
+        <!-- START 2nd Level Menu -->
+        <ul id="tables" class="nav-submenu">
+          <li data-ui-sref-active="active">
+            <a data-ui-sref="default.table.static">
+              <span class="text">Static</span>
+            </a>
+          </li>
+          <li data-ui-sref-active="active">
+            <a data-ui-sref="default.table.datatable">
+              <span class="text">Datatable</span>
+            </a>
+          </li>
+        </ul>
+        <!--/ END 2nd Level Menu -->
+      </li>
+      <li class="nav-group" data-ng-class="{ active:$state.includes('default.chart.*') }">
+        <a class="nav-toggle" href="javascript:void(0)">
+          <span class="figure figure-left icon">
+            <i class="ai ai-trending-up"></i>
+          </span>
+          <span class="text ellipsis">Chart</span>
+          <span class="figure figure-right arrow"></span>
+        </a>
+        <!-- START 2nd Level Menu -->
+        <ul id="chart" class="nav-submenu">
+          <li data-ui-sref-active="active">
+            <a data-ui-sref="default.chart.flot">
+              <span class="text">Flot</span>
+            </a>
+          </li>
+          <li data-ui-sref-active="active">
+            <a data-ui-sref="default.chart.others">
+              <span class="text">Others</span>
+            </a>
+          </li>
+        </ul>
+        <!--/ END 2nd Level Menu -->
+      </li>
+    </ul>
+    <!--/ navigation -->
+  </div>
+  <!--/ scroll-content -->
+</div>
+<!-- start: sidebar content -->

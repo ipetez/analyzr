@@ -1,0 +1,6 @@
+.flow-upload .flow-drop {
+  background-color: rgba(242, 245, 248, 0.01);
+  padding: 25px;
+  border-radius: 2px;
+  border: 2px dashed #dbdfe3;
+}

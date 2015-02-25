@@ -1,0 +1,148 @@
+<!-- start: page header -->
+<div class="page-header">
+  <div class="box-layout">
+    <div class="col-sm-6 va-m">
+      <h3>Others</h3>
+    </div>
+    <div class="col-sm-6 va-m">
+      <ol class="breadcrumb pull-right-sm mb-0">
+        <li><a href="#">Chart</a></li>
+        <li class="active">Others</li>
+      </ol>
+    </div>
+  </div>
+</div>
+<!--/ end: page header -->
+
+<!-- start: easy pie chart -->
+<div class="pa-md">
+  <h4 class="mb-md">Easy pie chart</h4>
+</div>
+<div class="box-layout mb-md">
+  <div class="col-md-3 text-center">
+    <div class="easypiechart mb-xs" ui-jq="easyPieChart" ui-options="{barColor:'#F44336'}" data-percent="86">
+      <div class="meta text-center" style="top:37px;">
+        <h1 class="text-danger"><i class="ai ai-notifications-on"></i></h1>
+      </div>
+    </div>
+    <h4 class="mb-md">43 New Order</h4>
+    <span class="disp-ib center-block text-muted bg-gray-100 pa-xs bdr-rds">12 active</span>
+  </div>
+
+  <div class="col-md-3 text-center">
+    <div class="easypiechart mb-xs" ui-jq="easyPieChart" ui-options="{barColor:'#2196F3'}" data-percent="92">
+      <div class="meta text-center" style="top:37px;">
+        <h1 class="text-primary"><i class="ai ai-trending-up"></i></h1>
+      </div>
+    </div>
+    <h4 class="mb-md">$214 Generated</h4>
+    <span class="disp-ib center-block text-muted bg-gray-100 pa-xs bdr-rds">$80 deducted</span>
+  </div>
+
+  <div class="col-md-3 text-center">
+    <div class="easypiechart mb-xs" ui-jq="easyPieChart" ui-options="{barColor:'#FBC02D'}" data-percent="92">
+      <div class="meta text-center" style="top:37px;">
+        <h1 class="text-warning"><i class="ai ai-account-balance-wallet"></i></h1>
+      </div>
+    </div>
+    <h4 class="mb-md">$1,714 Balance</h4>
+    <span class="disp-ib center-block text-muted bg-gray-100 pa-xs bdr-rds">$120 debt</span>
+  </div>
+
+  <div class="col-md-3 text-center">
+    <div class="easypiechart mb-xs" ui-jq="easyPieChart" ui-options="{barColor:'#4CAF50'}" data-percent="60">
+      <div class="meta text-center" style="top:37px;">
+        <h1 class="text-success"><i class="ai ai-done-all"></i></h1>
+      </div>
+    </div>
+    <h4 class="mb-md">60 Task Complete</h4>
+    <span class="disp-ib center-block text-muted bg-gray-100 pa-xs bdr-rds">15 remaining</span>
+  </div>
+</div>
+<!--/ end: easy pie chart -->
+
+<!-- start: sparkline -->
+<div class="pa-md">
+  <h4 class="mb-md">Sparkline</h4>
+  <div class="row">
+    <div class="col-sm-3">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <div class="panel-title">Sparkline - pie</div>
+        </div>
+        <div class="panel-body">
+          <div class="text-center" data-ng-init="data=[3,1,2]" ui-jq="sparkline"
+          ui-options="{{data}}, {
+            type:'pie',
+            width: '100px',
+            height: '100px',
+            sliceColors: ['#F44336','#2196F3','#4CAF50']
+          }">loading...</div>
+        </div>
+        <div class="panel-body text-center bdr-t">
+          <div class="row">
+            <div class="col-xs-4"><i class="fa fa-circle text-primary"></i><p class="mb-0">Inbound</p></div>
+            <div class="col-xs-4"><i class="fa fa-circle text-danger"></i><p class="mb-0">Outbound</p></div>
+            <div class="col-xs-4"><i class="fa fa-circle text-success"></i><p class="mb-0">Click</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-3">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <div class="panel-title">Sparkline - bar</div>
+        </div>
+        <div class="panel-body">
+          <div class="text-center" data-ng-init="data=[[2,8],[4,6],[6,4],[8,2],[10,0],[8,2],[6,4],[4,6],[2,8]]" ui-jq="sparkline"
+          ui-options="{{data}}, {
+            type:'bar',
+            barWidth: 8,
+            barSpacing: 6,
+            height: '95px',
+            stackedBarColor:['#00BCD4', '#F2F5F8']
+          }">loading...</div>
+        </div>
+        <div class="panel-body text-center">
+          <div class="row">
+            <div class="col-xs-6">
+              <span class="text-muted">Active devices</span>
+              <h3 class="fw-b">2947</h3>
+            </div>
+            <div class="col-xs-6">
+              <span class="text-muted">Data charge</span>
+              <h3 class="fw-b">$832</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-3">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <div class="panel-title">Sparkline - line</div>
+        </div>
+        <div class="panel-body">
+          <div class="text-center" data-ng-init="data=[5,6,7,9,9,5,5,8,8,4,6,7]" ui-jq="sparkline"
+          ui-options="{{data}}, {
+            type:'line',
+            width: '180px',
+            height: '98px',
+            lineColor: '#F9A825',
+            fillColor: '#FFF176',
+            lineWidth: 3,
+            spotRadius: 4,
+            spotColor: '#ff0000',
+            minSpotColor: '#ff0000',
+            maxSpotColor: '#ff0000'
+          }">loading...</div>
+        </div>
+        <div class="panel-body text-center">
+          Lorem ipsum dolor sit amet, consectetur.
+      </div>
+    </div>
+  </div>
+</div>
+<!--/ end: sparkline -->

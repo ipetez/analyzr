@@ -1,0 +1,40 @@
+//
+// Layout Base
+// --------------------------------------------------
+
+// html + body
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+}
+body {
+  // app wrapper
+  // -------------------------
+  > #app-wrapper {
+    overflow: hidden;
+    position: relative;
+    height: auto;
+    min-height: 100%;
+    width: 100%;
+  }
+}
+
+.sidebar-open-ltr,
+.sidebar-open-rtl {
+  overflow: hidden;
+  
+  body {
+    > #app-wrapper {
+      overflow-x: hidden;
+    }
+  }
+}
+
+// breakpoint screen-sm and up
+// -------------------------
+@media (min-width: @screen-sm-min) {
+  body {
+    overflow-x: hidden;
+  }
+}
